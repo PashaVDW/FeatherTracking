@@ -2,24 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\TaskProcessed;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\AcceptHeader;
 
 class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
+    public function index()
     {
-        return view('test');
+        return view('dashboard');
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): void
     {
-        //
+        TaskProcessed::dispatch();
     }
 
     /**

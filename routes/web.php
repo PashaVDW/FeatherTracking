@@ -14,4 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource("task", TaskController::class);
+Route::controller(TaskController::class)->name('task.')->group(function () {
+   Route::get('/', 'index')->name('index');
+   Route::post('/task-create', 'create')->name('create');
+});
+
+

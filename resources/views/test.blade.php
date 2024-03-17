@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST">
+    <form method="POST" , action="{{ route('task.create') }}">
+        @csrf
         <button type="submit" name="submit">Click Me</button>
     </form>
 </body>
