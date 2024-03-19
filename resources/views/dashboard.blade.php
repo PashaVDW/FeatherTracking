@@ -1,4 +1,4 @@
-@extends("layout.layout")
+@extends("dashboard.layout")
 
 @section("content")
     <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
@@ -11,16 +11,21 @@
                     <!--begin::Lists Widget 19-->
                     <div class="card card-flush h-xl-100">
                         <!--begin::Heading-->
-                        <div class="card-header rounded bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start h-250px" style="background-image:url("{{ asset('/media/svg/shapes/top-green.png') }}" data-bs-theme="light">
+                        <div
+                            class="card-header rounded bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start h-250px"
+                            style="background-image:url("{{ asset('/media/svg/shapes/top-green.png') }}"
+                        data-bs-theme="light">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column text-white pt-15">
                             <span class="fw-bold fs-2x mb-3">My Tasks</span>
                             <div class="fs-4 text-white">
                                 <span class="opacity-75">You have</span>
                                 <span class="position-relative d-inline-block">
-														<a href="pages/user-profile/projects.html" class="link-white opacity-75-hover fw-bold d-block mb-1">4 tasks</a>
+														<a href="pages/user-profile/projects.html"
+                                                           class="link-white opacity-75-hover fw-bold d-block mb-1">4 tasks</a>
                                     <!--begin::Separator-->
-														<span class="position-absolute opacity-50 bottom-0 start-0 border-2 border-body border-bottom w-100"></span>
+														<span
+                                                            class="position-absolute opacity-50 bottom-0 start-0 border-2 border-body border-bottom w-100"></span>
                                     <!--end::Separator-->
 													</span>
                                 <span class="opacity-75">to comlete</span>
@@ -30,7 +35,10 @@
                         <!--begin::Toolbar-->
                         <div class="card-toolbar pt-5">
                             <!--begin::Menu-->
-                            <button class="btn btn-sm btn-icon btn-active-color-primary btn-color-white bg-white bg-opacity-25 bg-hover-opacity-100 bg-hover-white bg-active-opacity-25 w-20px h-20px" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
+                            <button
+                                class="btn btn-sm btn-icon btn-active-color-primary btn-color-white bg-white bg-opacity-25 bg-hover-opacity-100 bg-hover-white bg-active-opacity-25 w-20px h-20px"
+                                data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
+                                data-kt-menu-overflow="true">
                                 <i class="ki-duotone ki-dots-square fs-4">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
@@ -39,7 +47,9 @@
                                 </i>
                             </button>
                             <!--begin::Menu 2-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px" data-kt-menu="true">
+                            <div
+                                class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+                                data-kt-menu="true">
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <div class="menu-content fs-6 text-gray-900 fw-bold px-3 py-4">Quick Actions</div>
@@ -59,7 +69,8 @@
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
-                                <div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
+                                <div class="menu-item px-3" data-kt-menu-trigger="hover"
+                                     data-kt-menu-placement="right-start">
                                     <!--begin::Menu item-->
                                     <a href="#" class="menu-link px-3">
                                         <span class="menu-title">New Group</span>
@@ -132,7 +143,8 @@
                                         <!--begin::Stats-->
                                         <div class="m-0">
                                             <!--begin::Number-->
-                                            <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                                            <span
+                                                class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
                                             <!--end::Number-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-500 fw-semibold fs-6">Courses</span>
@@ -160,7 +172,8 @@
                                         <!--begin::Stats-->
                                         <div class="m-0">
                                             <!--begin::Number-->
-                                            <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">6</span>
+                                            <span
+                                                class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">6</span>
                                             <!--end::Number-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-500 fw-semibold fs-6">Certificates</span>
@@ -189,7 +202,8 @@
                                         <!--begin::Stats-->
                                         <div class="m-0">
                                             <!--begin::Number-->
-                                            <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">4,7</span>
+                                            <span
+                                                class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">4,7</span>
                                             <!--end::Number-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-500 fw-semibold fs-6">Avg. Score</span>
@@ -218,7 +232,8 @@
                                         <!--begin::Stats-->
                                         <div class="m-0">
                                             <!--begin::Number-->
-                                            <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">822</span>
+                                            <span
+                                                class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">822</span>
                                             <!--end::Number-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-500 fw-semibold fs-6">Hours Learned</span>
@@ -246,7 +261,9 @@
                     <!--begin::Col-->
                     <div class="col-xl-6 mb-xl-10">
                         <!--begin::Slider Widget 1-->
-                        <div id="kt_sliders_widget_1_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div id="kt_sliders_widget_1_slider"
+                             class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100"
+                             data-bs-ride="carousel" data-bs-interval="5000">
                             <!--begin::Header-->
                             <div class="card-header pt-5">
                                 <!--begin::Title-->
@@ -259,9 +276,12 @@
                                 <div class="card-toolbar">
                                     <!--begin::Carousel Indicators-->
                                     <ol class="p-0 m-0 carousel-indicators carousel-indicators-bullet carousel-indicators-active-primary">
-                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="0" class="active ms-1"></li>
-                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="1" class="ms-1"></li>
-                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="2" class="ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="0"
+                                            class="active ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="1"
+                                            class="ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="2"
+                                            class="ms-1"></li>
                                     </ol>
                                     <!--end::Carousel Indicators-->
                                 </div>
@@ -278,7 +298,8 @@
                                         <div class="d-flex align-items-center mb-5">
                                             <!--begin::Chart-->
                                             <div class="w-80px flex-shrink-0 me-2">
-                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_1" style="height: 100px"></div>
+                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_1"
+                                                     style="height: 100px"></div>
                                             </div>
                                             <!--end::Chart-->
                                             <!--begin::Info-->
@@ -291,14 +312,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>3 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -309,14 +332,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -333,7 +358,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Skip This</a>
-                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Continue</a>
+                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_app">Continue</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -344,7 +370,8 @@
                                         <div class="d-flex align-items-center mb-5">
                                             <!--begin::Chart-->
                                             <div class="w-80px flex-shrink-0 me-2">
-                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_2" style="height: 100px"></div>
+                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_2"
+                                                     style="height: 100px"></div>
                                             </div>
                                             <!--end::Chart-->
                                             <!--begin::Info-->
@@ -357,14 +384,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>3 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -375,14 +404,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -399,7 +430,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Skip This</a>
-                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Continue</a>
+                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_app">Continue</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -410,7 +442,8 @@
                                         <div class="d-flex align-items-center mb-5">
                                             <!--begin::Chart-->
                                             <div class="w-80px flex-shrink-0 me-2">
-                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_3" style="height: 100px"></div>
+                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_3"
+                                                     style="height: 100px"></div>
                                             </div>
                                             <!--end::Chart-->
                                             <!--begin::Info-->
@@ -423,14 +456,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>3 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -441,14 +476,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -465,7 +502,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Skip This</a>
-                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Continue</a>
+                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_app">Continue</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -481,7 +519,9 @@
                     <!--begin::Col-->
                     <div class="col-xl-6 mb-5 mb-xl-10">
                         <!--begin::Slider Widget 2-->
-                        <div id="kt_sliders_widget_2_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100" data-bs-ride="carousel" data-bs-interval="5500">
+                        <div id="kt_sliders_widget_2_slider"
+                             class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100"
+                             data-bs-ride="carousel" data-bs-interval="5500">
                             <!--begin::Header-->
                             <div class="card-header pt-5">
                                 <!--begin::Title-->
@@ -494,9 +534,12 @@
                                 <div class="card-toolbar">
                                     <!--begin::Carousel Indicators-->
                                     <ol class="p-0 m-0 carousel-indicators carousel-indicators-bullet carousel-indicators-active-success">
-                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="0" class="active ms-1"></li>
-                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="1" class="ms-1"></li>
-                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="2" class="ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="0"
+                                            class="active ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="1"
+                                            class="ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="2"
+                                            class="ms-1"></li>
                                     </ol>
                                     <!--end::Carousel Indicators-->
                                 </div>
@@ -531,14 +574,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>5 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -549,14 +594,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>60 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -573,7 +620,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Details</a>
-                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join Event</a>
+                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_campaign">Join Event</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -602,14 +650,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>12 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -620,14 +670,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -644,7 +696,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Details</a>
-                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join Event</a>
+                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_campaign">Join Event</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -673,14 +726,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>3 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -691,14 +746,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -715,7 +772,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Details</a>
-                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join Event</a>
+                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_campaign">Join Event</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -740,23 +798,30 @@
                             <div class="position-relative fs-2x z-index-2 fw-bold text-white mb-7">
 												<span class="me-2">You have got
 												<span class="position-relative d-inline-block text-danger">
-													<a href="pages/user-profile/overview.html" class="text-danger opacity-75-hover">2300 bonus</a>
+													<a href="pages/user-profile/overview.html"
+                                                       class="text-danger opacity-75-hover">2300 bonus</a>
                                                     <!--begin::Separator-->
-													<span class="position-absolute opacity-50 bottom-0 start-0 border-4 border-danger border-bottom w-100"></span>
+													<span
+                                                        class="position-absolute opacity-50 bottom-0 start-0 border-4 border-danger border-bottom w-100"></span>
                                                     <!--end::Separator-->
 												</span></span>points.
-                                <br />Feel free to use them in your lessons</div>
+                                <br/>Feel free to use them in your lessons
+                            </div>
                             <!--end::Title-->
                             <!--begin::Action-->
                             <div class="mb-3">
-                                <a href='#' class="btn btn-danger fw-semibold me-2" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Get Reward</a>
-                                <a href="apps/support-center/overview.html" class="btn btn-color-white bg-white bg-opacity-15 bg-hover-opacity-25 fw-semibold">How to</a>
+                                <a href='#' class="btn btn-danger fw-semibold me-2" data-bs-toggle="modal"
+                                   data-bs-target="#kt_modal_upgrade_plan">Get Reward</a>
+                                <a href="apps/support-center/overview.html"
+                                   class="btn btn-color-white bg-white bg-opacity-15 bg-hover-opacity-25 fw-semibold">How
+                                    to</a>
                             </div>
                             <!--begin::Action-->
                         </div>
                         <!--begin::Wrapper-->
                         <!--begin::Illustration-->
-                        <img src="{{ asset('/media/illustrations/sigma-1/17-dark.png') }}" class="position-absolute me-3 bottom-0 end-0 h-200px" alt="" />
+                        <img src="{{ asset('/media/illustrations/sigma-1/17-dark.png') }}"
+                             class="position-absolute me-3 bottom-0 end-0 h-200px" alt=""/>
                         <!--end::Illustration-->
                     </div>
                     <!--end::Body-->
@@ -798,12 +863,14 @@
                             <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                 <!--begin:Author-->
                                 <div class="flex-grow-1 me-2">
-                                    <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">UI/UX Design</a>
+                                    <a href="pages/user-profile/overview.html"
+                                       class="text-gray-800 text-hover-primary fs-6 fw-bold">UI/UX Design</a>
                                     <span class="text-muted fw-semibold d-block fs-7">40+ Courses</span>
                                 </div>
                                 <!--end:Author-->
                                 <!--begin::Actions-->
-                                <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <a href="#"
+                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                     <i class="ki-duotone ki-arrow-right fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -828,12 +895,14 @@
                             <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                 <!--begin:Author-->
                                 <div class="flex-grow-1 me-2">
-                                    <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">QA Analysis</a>
+                                    <a href="pages/user-profile/overview.html"
+                                       class="text-gray-800 text-hover-primary fs-6 fw-bold">QA Analysis</a>
                                     <span class="text-muted fw-semibold d-block fs-7">18 Courses</span>
                                 </div>
                                 <!--end:Author-->
                                 <!--begin::Actions-->
-                                <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <a href="#"
+                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                     <i class="ki-duotone ki-arrow-right fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -858,12 +927,14 @@
                             <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                 <!--begin:Author-->
                                 <div class="flex-grow-1 me-2">
-                                    <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Web Development</a>
+                                    <a href="pages/user-profile/overview.html"
+                                       class="text-gray-800 text-hover-primary fs-6 fw-bold">Web Development</a>
                                     <span class="text-muted fw-semibold d-block fs-7">120+ Courses</span>
                                 </div>
                                 <!--end:Author-->
                                 <!--begin::Actions-->
-                                <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <a href="#"
+                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                     <i class="ki-duotone ki-arrow-right fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -888,12 +959,14 @@
                             <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                 <!--begin:Author-->
                                 <div class="flex-grow-1 me-2">
-                                    <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Marketing</a>
+                                    <a href="pages/user-profile/overview.html"
+                                       class="text-gray-800 text-hover-primary fs-6 fw-bold">Marketing</a>
                                     <span class="text-muted fw-semibold d-block fs-7">50+ Courses.</span>
                                 </div>
                                 <!--end:Author-->
                                 <!--begin::Actions-->
-                                <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <a href="#"
+                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                     <i class="ki-duotone ki-arrow-right fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -918,12 +991,14 @@
                             <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                 <!--begin:Author-->
                                 <div class="flex-grow-1 me-2">
-                                    <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Philosophy</a>
+                                    <a href="pages/user-profile/overview.html"
+                                       class="text-gray-800 text-hover-primary fs-6 fw-bold">Philosophy</a>
                                     <span class="text-muted fw-semibold d-block fs-7">24+ Courses</span>
                                 </div>
                                 <!--end:Author-->
                                 <!--begin::Actions-->
-                                <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <a href="#"
+                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                     <i class="ki-duotone ki-arrow-right fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -948,12 +1023,14 @@
                             <div class="d-flex align-items-center flex-row-fluid flex-wrap">
                                 <!--begin:Author-->
                                 <div class="flex-grow-1 me-2">
-                                    <a href="pages/user-profile/overview.html" class="text-gray-800 text-hover-primary fs-6 fw-bold">Mathematics</a>
+                                    <a href="pages/user-profile/overview.html"
+                                       class="text-gray-800 text-hover-primary fs-6 fw-bold">Mathematics</a>
                                     <span class="text-muted fw-semibold d-block fs-7">24+ Courses</span>
                                 </div>
                                 <!--end:Author-->
                                 <!--begin::Actions-->
-                                <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <a href="#"
+                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
                                     <i class="ki-duotone ki-arrow-right fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -987,13 +1064,19 @@
                             <!--begin::Tabs-->
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1 active" data-kt-timeline-widget-1="tab" data-bs-toggle="tab" href="#kt_timeline_widget_1_tab_day">Day</a>
+                                    <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1 active"
+                                       data-kt-timeline-widget-1="tab" data-bs-toggle="tab"
+                                       href="#kt_timeline_widget_1_tab_day">Day</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1" data-kt-timeline-widget-1="tab" data-bs-toggle="tab" href="#kt_timeline_widget_1_tab_week">Week</a>
+                                    <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1"
+                                       data-kt-timeline-widget-1="tab" data-bs-toggle="tab"
+                                       href="#kt_timeline_widget_1_tab_week">Week</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1" data-kt-timeline-widget-1="tab" data-bs-toggle="tab" href="#kt_timeline_widget_1_tab_month">Month</a>
+                                    <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1"
+                                       data-kt-timeline-widget-1="tab" data-bs-toggle="tab"
+                                       href="#kt_timeline_widget_1_tab_month">Month</a>
                                 </li>
                             </ul>
                             <!--end::Tabs-->
@@ -1006,28 +1089,34 @@
                         <!--begin::Tab content-->
                         <div class="tab-content">
                             <!--begin::Tab pane-->
-                            <div class="tab-pane active" id="kt_timeline_widget_1_tab_day" role="tabpanel" aria-labelledby="day-tab" data-kt-timeline-widget-1-blockui="true">
+                            <div class="tab-pane active" id="kt_timeline_widget_1_tab_day" role="tabpanel"
+                                 aria-labelledby="day-tab" data-kt-timeline-widget-1-blockui="true">
                                 <div class="table-responsive pb-10">
                                     <!--begin::Timeline-->
-                                    <div id="kt_timeline_widget_1_1" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-1-image-root="assets/media/"></div>
+                                    <div id="kt_timeline_widget_1_1" class="vis-timeline-custom h-350px min-w-700px"
+                                         data-kt-timeline-widget-1-image-root="assets/media/"></div>
                                     <!--end::Timeline-->
                                 </div>
                             </div>
                             <!--end::Tab pane-->
                             <!--begin::Tab pane-->
-                            <div class="tab-pane" id="kt_timeline_widget_1_tab_week" role="tabpanel" aria-labelledby="week-tab" data-kt-timeline-widget-1-blockui="true">
+                            <div class="tab-pane" id="kt_timeline_widget_1_tab_week" role="tabpanel"
+                                 aria-labelledby="week-tab" data-kt-timeline-widget-1-blockui="true">
                                 <div class="table-responsive pb-10">
                                     <!--begin::Timeline-->
-                                    <div id="kt_timeline_widget_1_2" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-1-image-root="assets/media/"></div>
+                                    <div id="kt_timeline_widget_1_2" class="vis-timeline-custom h-350px min-w-700px"
+                                         data-kt-timeline-widget-1-image-root="assets/media/"></div>
                                     <!--end::Timeline-->
                                 </div>
                             </div>
                             <!--end::Tab pane-->
                             <!--begin::Tab pane-->
-                            <div class="tab-pane" id="kt_timeline_widget_1_tab_month" role="tabpanel" aria-labelledby="month-tab" data-kt-timeline-widget-1-blockui="true">
+                            <div class="tab-pane" id="kt_timeline_widget_1_tab_month" role="tabpanel"
+                                 aria-labelledby="month-tab" data-kt-timeline-widget-1-blockui="true">
                                 <div class="table-responsive pb-10">
                                     <!--begin::Timeline-->
-                                    <div id="kt_timeline_widget_1_3" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-1-image-root="assets/media/"></div>
+                                    <div id="kt_timeline_widget_1_3" class="vis-timeline-custom h-350px min-w-700px"
+                                         data-kt-timeline-widget-1-image-root="assets/media/"></div>
                                     <!--end::Timeline-->
                                 </div>
                             </div>
@@ -1068,7 +1157,8 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/laravel-2.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/laravel-2.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
@@ -1086,7 +1176,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-success">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%"
+                                         aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -1104,7 +1195,7 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/vue-9.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/vue-9.svg') }}" class="me-4 w-30px" alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
@@ -1122,7 +1213,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-warning">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 87%"
+                                         aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -1140,12 +1232,14 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/bootstrap5.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/bootstrap5.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
                                     <!--begin::Text-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Bootstrap 5</a>
+                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Bootstrap
+                                        5</a>
                                     <!--end::Text-->
                                     <!--begin::Description-->
                                     <span class="text-gray-500 fw-semibold d-block fs-6">CSS Framework</span>
@@ -1158,7 +1252,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-primary">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 44%" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 44%"
+                                         aria-valuenow="44" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -1176,12 +1271,14 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/angular-icon.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/angular-icon.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
                                     <!--begin::Text-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Angular 16</a>
+                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Angular
+                                        16</a>
                                     <!--end::Text-->
                                     <!--begin::Description-->
                                     <span class="text-gray-500 fw-semibold d-block fs-6">JS Framework</span>
@@ -1194,7 +1291,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-info">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 70%"
+                                         aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -1212,7 +1310,8 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/spring-3.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/spring-3.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
@@ -1230,7 +1329,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-danger">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 56%" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 56%"
+                                         aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -1248,12 +1348,14 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/typescript-1.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/typescript-1.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
                                     <!--begin::Text-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">TypeScript</a>
+                                    <a href="#"
+                                       class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">TypeScript</a>
                                     <!--end::Text-->
                                     <!--begin::Description-->
                                     <span class="text-gray-500 fw-semibold d-block fs-6">Better Tooling</span>
@@ -1266,7 +1368,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-success">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 82%"
+                                         aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -1296,8 +1399,9 @@
                         <!--end::Title-->
                         <!--begin::Toolbar-->
                         <div class="card-toolbar">
-                            <!--begin::Daterangepicker(defined in src/js/layout/app.js)-->
-                            <div data-kt-daterangepicker="true" data-kt-daterangepicker-opens="left" class="btn btn-sm btn-light d-flex align-items-center px-4">
+                            <!--begin::Daterangepicker(defined in src/js/dashboard/app.js)-->
+                            <div data-kt-daterangepicker="true" data-kt-daterangepicker-opens="left"
+                                 class="btn btn-sm btn-light d-flex align-items-center px-4">
                                 <!--begin::Display range-->
                                 <div class="text-gray-600 fw-bold">Loading date range...</div>
                                 <!--end::Display range-->
@@ -1330,7 +1434,8 @@
         <!--end::Row-->
     </div>
     <!--end::Post-->
-    </div> <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+    </div>
+    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
         <!--begin::Post-->
         <div class="content flex-row-fluid" id="kt_content">
             <!--begin::Row-->
@@ -1340,16 +1445,21 @@
                     <!--begin::Lists Widget 19-->
                     <div class="card card-flush h-xl-100">
                         <!--begin::Heading-->
-                        <div class="card-header rounded bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start h-250px" style="background-image:url("{{ asset('/media/svg/shapes/top-green.png') }}" data-bs-theme="light">
+                        <div
+                            class="card-header rounded bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start h-250px"
+                            style="background-image:url("{{ asset('/media/svg/shapes/top-green.png') }}"
+                        data-bs-theme="light">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column text-white pt-15">
                             <span class="fw-bold fs-2x mb-3">My Tasks</span>
                             <div class="fs-4 text-white">
                                 <span class="opacity-75">You have</span>
                                 <span class="position-relative d-inline-block">
-														<a href="pages/user-profile/projects.html" class="link-white opacity-75-hover fw-bold d-block mb-1">4 tasks</a>
+														<a href="pages/user-profile/projects.html"
+                                                           class="link-white opacity-75-hover fw-bold d-block mb-1">4 tasks</a>
                                     <!--begin::Separator-->
-														<span class="position-absolute opacity-50 bottom-0 start-0 border-2 border-body border-bottom w-100"></span>
+														<span
+                                                            class="position-absolute opacity-50 bottom-0 start-0 border-2 border-body border-bottom w-100"></span>
                                     <!--end::Separator-->
 													</span>
                                 <span class="opacity-75">to comlete</span>
@@ -1359,7 +1469,10 @@
                         <!--begin::Toolbar-->
                         <div class="card-toolbar pt-5">
                             <!--begin::Menu-->
-                            <button class="btn btn-sm btn-icon btn-active-color-primary btn-color-white bg-white bg-opacity-25 bg-hover-opacity-100 bg-hover-white bg-active-opacity-25 w-20px h-20px" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
+                            <button
+                                class="btn btn-sm btn-icon btn-active-color-primary btn-color-white bg-white bg-opacity-25 bg-hover-opacity-100 bg-hover-white bg-active-opacity-25 w-20px h-20px"
+                                data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
+                                data-kt-menu-overflow="true">
                                 <i class="ki-duotone ki-dots-square fs-4">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
@@ -1368,7 +1481,9 @@
                                 </i>
                             </button>
                             <!--begin::Menu 2-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px" data-kt-menu="true">
+                            <div
+                                class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+                                data-kt-menu="true">
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <div class="menu-content fs-6 text-gray-900 fw-bold px-3 py-4">Quick Actions</div>
@@ -1388,7 +1503,8 @@
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
-                                <div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
+                                <div class="menu-item px-3" data-kt-menu-trigger="hover"
+                                     data-kt-menu-placement="right-start">
                                     <!--begin::Menu item-->
                                     <a href="#" class="menu-link px-3">
                                         <span class="menu-title">New Group</span>
@@ -1461,7 +1577,8 @@
                                         <!--begin::Stats-->
                                         <div class="m-0">
                                             <!--begin::Number-->
-                                            <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                                            <span
+                                                class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
                                             <!--end::Number-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-500 fw-semibold fs-6">Courses</span>
@@ -1489,7 +1606,8 @@
                                         <!--begin::Stats-->
                                         <div class="m-0">
                                             <!--begin::Number-->
-                                            <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">6</span>
+                                            <span
+                                                class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">6</span>
                                             <!--end::Number-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-500 fw-semibold fs-6">Certificates</span>
@@ -1518,7 +1636,8 @@
                                         <!--begin::Stats-->
                                         <div class="m-0">
                                             <!--begin::Number-->
-                                            <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">4,7</span>
+                                            <span
+                                                class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">4,7</span>
                                             <!--end::Number-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-500 fw-semibold fs-6">Avg. Score</span>
@@ -1547,7 +1666,8 @@
                                         <!--begin::Stats-->
                                         <div class="m-0">
                                             <!--begin::Number-->
-                                            <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">822</span>
+                                            <span
+                                                class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">822</span>
                                             <!--end::Number-->
                                             <!--begin::Desc-->
                                             <span class="text-gray-500 fw-semibold fs-6">Hours Learned</span>
@@ -1575,7 +1695,9 @@
                     <!--begin::Col-->
                     <div class="col-xl-6 mb-xl-10">
                         <!--begin::Slider Widget 1-->
-                        <div id="kt_sliders_widget_1_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div id="kt_sliders_widget_1_slider"
+                             class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100"
+                             data-bs-ride="carousel" data-bs-interval="5000">
                             <!--begin::Header-->
                             <div class="card-header pt-5">
                                 <!--begin::Title-->
@@ -1588,9 +1710,12 @@
                                 <div class="card-toolbar">
                                     <!--begin::Carousel Indicators-->
                                     <ol class="p-0 m-0 carousel-indicators carousel-indicators-bullet carousel-indicators-active-primary">
-                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="0" class="active ms-1"></li>
-                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="1" class="ms-1"></li>
-                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="2" class="ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="0"
+                                            class="active ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="1"
+                                            class="ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="2"
+                                            class="ms-1"></li>
                                     </ol>
                                     <!--end::Carousel Indicators-->
                                 </div>
@@ -1607,7 +1732,8 @@
                                         <div class="d-flex align-items-center mb-5">
                                             <!--begin::Chart-->
                                             <div class="w-80px flex-shrink-0 me-2">
-                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_1" style="height: 100px"></div>
+                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_1"
+                                                     style="height: 100px"></div>
                                             </div>
                                             <!--end::Chart-->
                                             <!--begin::Info-->
@@ -1620,14 +1746,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>3 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1638,14 +1766,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1662,7 +1792,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Skip This</a>
-                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Continue</a>
+                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_app">Continue</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -1673,7 +1804,8 @@
                                         <div class="d-flex align-items-center mb-5">
                                             <!--begin::Chart-->
                                             <div class="w-80px flex-shrink-0 me-2">
-                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_2" style="height: 100px"></div>
+                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_2"
+                                                     style="height: 100px"></div>
                                             </div>
                                             <!--end::Chart-->
                                             <!--begin::Info-->
@@ -1686,14 +1818,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>3 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1704,14 +1838,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1728,7 +1864,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Skip This</a>
-                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Continue</a>
+                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_app">Continue</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -1739,7 +1876,8 @@
                                         <div class="d-flex align-items-center mb-5">
                                             <!--begin::Chart-->
                                             <div class="w-80px flex-shrink-0 me-2">
-                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_3" style="height: 100px"></div>
+                                                <div class="min-h-auto ms-n3" id="kt_slider_widget_1_chart_3"
+                                                     style="height: 100px"></div>
                                             </div>
                                             <!--end::Chart-->
                                             <!--begin::Info-->
@@ -1752,14 +1890,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>3 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1770,14 +1910,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1794,7 +1936,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Skip This</a>
-                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Continue</a>
+                                            <a href="#" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_app">Continue</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -1810,7 +1953,9 @@
                     <!--begin::Col-->
                     <div class="col-xl-6 mb-5 mb-xl-10">
                         <!--begin::Slider Widget 2-->
-                        <div id="kt_sliders_widget_2_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100" data-bs-ride="carousel" data-bs-interval="5500">
+                        <div id="kt_sliders_widget_2_slider"
+                             class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100"
+                             data-bs-ride="carousel" data-bs-interval="5500">
                             <!--begin::Header-->
                             <div class="card-header pt-5">
                                 <!--begin::Title-->
@@ -1823,9 +1968,12 @@
                                 <div class="card-toolbar">
                                     <!--begin::Carousel Indicators-->
                                     <ol class="p-0 m-0 carousel-indicators carousel-indicators-bullet carousel-indicators-active-success">
-                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="0" class="active ms-1"></li>
-                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="1" class="ms-1"></li>
-                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="2" class="ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="0"
+                                            class="active ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="1"
+                                            class="ms-1"></li>
+                                        <li data-bs-target="#kt_sliders_widget_2_slider" data-bs-slide-to="2"
+                                            class="ms-1"></li>
                                     </ol>
                                     <!--end::Carousel Indicators-->
                                 </div>
@@ -1860,14 +2008,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>5 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1878,14 +2028,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>60 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1902,7 +2054,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Details</a>
-                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join Event</a>
+                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_campaign">Join Event</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -1931,14 +2084,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>12 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1949,14 +2104,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -1973,7 +2130,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Details</a>
-                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join Event</a>
+                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_campaign">Join Event</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -2002,14 +2160,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0 me-4">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>3 Topics</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -2020,14 +2180,16 @@
                                                     <!--begin::Item-->
                                                     <div class="d-flex flex-column flex-shrink-0">
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
+                                                        <span
+                                                            class="d-flex align-items-center fs-7 fw-bold text-gray-500 mb-2">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
 																			</i>50 Min</span>
                                                         <!--end::Section-->
                                                         <!--begin::Section-->
-                                                        <span class="d-flex align-items-center text-gray-500 fw-bold fs-7">
+                                                        <span
+                                                            class="d-flex align-items-center text-gray-500 fw-bold fs-7">
 																			<i class="ki-duotone ki-right-square fs-6 text-gray-600 me-2">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -2044,7 +2206,8 @@
                                         <!--begin::Action-->
                                         <div class="m-0">
                                             <a href="#" class="btn btn-sm btn-light me-2 mb-2">Details</a>
-                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join Event</a>
+                                            <a href="#" class="btn btn-sm btn-success mb-2" data-bs-toggle="modal"
+                                               data-bs-target="#kt_modal_create_campaign">Join Event</a>
                                         </div>
                                         <!--end::Action-->
                                     </div>
@@ -2069,23 +2232,30 @@
                             <div class="position-relative fs-2x z-index-2 fw-bold text-white mb-7">
 												<span class="me-2">You have got
 												<span class="position-relative d-inline-block text-danger">
-													<a href="pages/user-profile/overview.html" class="text-danger opacity-75-hover">2300 bonus</a>
+													<a href="pages/user-profile/overview.html"
+                                                       class="text-danger opacity-75-hover">2300 bonus</a>
                                                     <!--begin::Separator-->
-													<span class="position-absolute opacity-50 bottom-0 start-0 border-4 border-danger border-bottom w-100"></span>
+													<span
+                                                        class="position-absolute opacity-50 bottom-0 start-0 border-4 border-danger border-bottom w-100"></span>
                                                     <!--end::Separator-->
 												</span></span>points.
-                                <br />Feel free to use them in your lessons</div>
+                                <br/>Feel free to use them in your lessons
+                            </div>
                             <!--end::Title-->
                             <!--begin::Action-->
                             <div class="mb-3">
-                                <a href='#' class="btn btn-danger fw-semibold me-2" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Get Reward</a>
-                                <a href="apps/support-center/overview.html" class="btn btn-color-white bg-white bg-opacity-15 bg-hover-opacity-25 fw-semibold">How to</a>
+                                <a href='#' class="btn btn-danger fw-semibold me-2" data-bs-toggle="modal"
+                                   data-bs-target="#kt_modal_upgrade_plan">Get Reward</a>
+                                <a href="apps/support-center/overview.html"
+                                   class="btn btn-color-white bg-white bg-opacity-15 bg-hover-opacity-25 fw-semibold">How
+                                    to</a>
                             </div>
                             <!--begin::Action-->
                         </div>
                         <!--begin::Wrapper-->
                         <!--begin::Illustration-->
-                        <img src="{{ asset('/media/illustrations/sigma-1/17-dark.png') }}" class="position-absolute me-3 bottom-0 end-0 h-200px" alt="" />
+                        <img src="{{ asset('/media/illustrations/sigma-1/17-dark.png') }}"
+                             class="position-absolute me-3 bottom-0 end-0 h-200px" alt=""/>
                         <!--end::Illustration-->
                     </div>
                     <!--end::Body-->
@@ -2121,7 +2291,8 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/laravel-2.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/laravel-2.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
@@ -2139,7 +2310,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-success">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%"
+                                         aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -2157,7 +2329,7 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/vue-9.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/vue-9.svg') }}" class="me-4 w-30px" alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
@@ -2175,7 +2347,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-warning">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 87%"
+                                         aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -2193,12 +2366,14 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/bootstrap5.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/bootstrap5.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
                                     <!--begin::Text-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Bootstrap 5</a>
+                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Bootstrap
+                                        5</a>
                                     <!--end::Text-->
                                     <!--begin::Description-->
                                     <span class="text-gray-500 fw-semibold d-block fs-6">CSS Framework</span>
@@ -2211,7 +2386,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-primary">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 44%" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 44%"
+                                         aria-valuenow="44" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -2229,12 +2405,14 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/angular-icon.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/angular-icon.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
                                     <!--begin::Text-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Angular 16</a>
+                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Angular
+                                        16</a>
                                     <!--end::Text-->
                                     <!--begin::Description-->
                                     <span class="text-gray-500 fw-semibold d-block fs-6">JS Framework</span>
@@ -2247,7 +2425,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-info">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 70%"
+                                         aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -2265,7 +2444,8 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/spring-3.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/spring-3.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
@@ -2283,7 +2463,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-danger">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 56%" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 56%"
+                                         aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -2301,12 +2482,14 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex align-items-center me-3">
                                 <!--begin::Logo-->
-                                <img src="{{ asset('/media/svg/brand-logos/typescript-1.svg') }}" class="me-4 w-30px" alt="" />
+                                <img src="{{ asset('/media/svg/brand-logos/typescript-1.svg') }}" class="me-4 w-30px"
+                                     alt=""/>
                                 <!--end::Logo-->
                                 <!--begin::Section-->
                                 <div class="flex-grow-1">
                                     <!--begin::Text-->
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">TypeScript</a>
+                                    <a href="#"
+                                       class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">TypeScript</a>
                                     <!--end::Text-->
                                     <!--begin::Description-->
                                     <span class="text-gray-500 fw-semibold d-block fs-6">Better Tooling</span>
@@ -2319,7 +2502,8 @@
                             <div class="d-flex align-items-center w-100 mw-125px">
                                 <!--begin::Progress-->
                                 <div class="progress h-6px w-100 me-2 bg-light-success">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 82%"
+                                         aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <!--end::Progress-->
                                 <!--begin::Value-->
@@ -2350,8 +2534,9 @@
                         <!--end::Title-->
                         <!--begin::Toolbar-->
                         <div class="card-toolbar">
-                            <!--begin::Daterangepicker(defined in src/js/layout/app.js)-->
-                            <div data-kt-daterangepicker="true" data-kt-daterangepicker-opens="left" class="btn btn-sm btn-light d-flex align-items-center px-4">
+                            <!--begin::Daterangepicker(defined in src/js/dashboard/app.js)-->
+                            <div data-kt-daterangepicker="true" data-kt-daterangepicker-opens="left"
+                                 class="btn btn-sm btn-light d-flex align-items-center px-4">
                                 <!--begin::Display range-->
                                 <div class="text-gray-600 fw-bold">Loading date range...</div>
                                 <!--end::Display range-->

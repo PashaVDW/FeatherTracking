@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--
 Author: Keenthemes
@@ -14,12 +13,28 @@ License: For each use you must have a valid license purchased only from above li
 -->
 <html lang="en">
 <!--begin::Head-->
-@include("./layout.partials.head")
+@include("./dashboard.partials.head")
 <!--end::Head-->
 <!--begin::Body-->
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
 <!--begin::Theme mode setup on page load-->
-<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
+<script>var defaultThemeMode = "light";
+    var themeMode;
+    if (document.documentElement) {
+        if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+            themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
+        } else {
+            if (localStorage.getItem("data-bs-theme") !== null) {
+                themeMode = localStorage.getItem("data-bs-theme");
+            } else {
+                themeMode = defaultThemeMode;
+            }
+        }
+        if (themeMode === "system") {
+            themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-bs-theme", themeMode);
+    }</script>
 <!--end::Theme mode setup on page load-->
 <!--begin::Main-->
 <!--begin::Root-->
@@ -29,13 +44,15 @@ License: For each use you must have a valid license purchased only from above li
         <!--begin::Wrapper-->
         <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
             <!--begin::Header-->
-            <div id="kt_header" class="header" data-kt-sticky="true" data-kt-sticky-name="header" data-kt-sticky-offset="{default: '200px', lg: '300px'}">
+            <div id="kt_header" class="header" data-kt-sticky="true" data-kt-sticky-name="header"
+                 data-kt-sticky-offset="{default: '200px', lg: '300px'}">
                 <!--begin::Container-->
                 <div class="container-xxl d-flex flex-grow-1 flex-stack">
                     <!--begin::Header Logo-->
                     <div class="d-flex align-items-center me-5">
                         <!--begin::Heaeder menu toggle-->
-                        <div class="d-lg-none btn btn-icon btn-active-color-primary w-30px h-30px ms-n2 me-3" id="kt_header_menu_toggle">
+                        <div class="d-lg-none btn btn-icon btn-active-color-primary w-30px h-30px ms-n2 me-3"
+                             id="kt_header_menu_toggle">
                             <i class="ki-duotone ki-abstract-14 fs-1">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
@@ -44,7 +61,8 @@ License: For each use you must have a valid license purchased only from above li
                         <!--end::Heaeder menu toggle-->
                         <!--begin::Logo-->
                         <a href="index.html">
-                            <img alt="Logo" src="{{ asset('/media/logos/demo16.svg') }}" class="h-25px h-lg-30px me-2 me-lg-9" />
+                            <img alt="Logo" src="{{ asset('/media/logos/demo16.svg') }}"
+                                 class="h-25px h-lg-30px me-2 me-lg-9"/>
                         </a>
                         <!--end::Logo-->
                         <!--begin::Project-->
@@ -55,12 +73,18 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Project-->
                             <div class="d-flex px-2 px-lg-4">
                                 <!--begin::Toggle-->
-                                <button type="button" data-kt-element="selected" class="btn btn-outline btn-nav btn-flex px-3 px-lg-4 w-60px w-lg-225px h-45px" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, -1px">
+                                <button type="button" data-kt-element="selected"
+                                        class="btn btn-outline btn-nav btn-flex px-3 px-lg-4 w-60px w-lg-225px h-45px"
+                                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start"
+                                        data-kt-menu-offset="0px, -1px">
                                     <!--begin::Logo-->
-                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/plurk.svg') }}" data-kt-element="logo" class="h-20px h-lg-25px" />
+                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/plurk.svg') }}"
+                                         data-kt-element="logo" class="h-20px h-lg-25px"/>
                                     <!--end::Logo-->
                                     <!--begin::Info-->
-                                    <span class="ms-1 ms-lg-2 d-none d-lg-inline fs-5 fw-bold text-white flex-grow-1 text-start" data-kt-element="title">PintaTravel</span>
+                                    <span
+                                        class="ms-1 ms-lg-2 d-none d-lg-inline fs-5 fw-bold text-white flex-grow-1 text-start"
+                                        data-kt-element="title">PintaTravel</span>
                                     <!--end::Info-->
                                     <!--begin::Arrows-->
                                     <span class="d-flex flex-column ms-2 ms-lg-10 me-n1">
@@ -71,7 +95,9 @@ License: For each use you must have a valid license purchased only from above li
                                 </button>
                                 <!--end::Toggle-->
                                 <!--begin::Menu-->
-                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-800 menu-state-bg w-225px ps-3 fs-6 fw-bold" data-kt-menu="true">
+                                <div
+                                    class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-800 menu-state-bg w-225px ps-3 fs-6 fw-bold"
+                                    data-kt-menu="true">
                                     <!--begin::Menu wrapper-->
                                     <div class="hover-scroll-y h-250px my-3 pe-5 me-n1">
                                         <!--begin::Menu item-->
@@ -80,7 +106,9 @@ License: For each use you must have a valid license purchased only from above li
                                             <a href="" class="menu-link px-3 py-3 active">
                                                 <!--begin::Logo-->
                                                 <span class="d-flex flex-center flex-shrink-0 w-30px me-2">
-															<img alt="Logo" src="{{ asset('/media/svg/brand-logos/plurk.svg') }}" data-kt-element="logo" class="h-20px" />
+															<img alt="Logo"
+                                                                 src="{{ asset('/media/svg/brand-logos/plurk.svg') }}"
+                                                                 data-kt-element="logo" class="h-20px"/>
 														</span>
                                                 <!--end::Logo-->
                                                 <!--begin::Info-->
@@ -96,7 +124,9 @@ License: For each use you must have a valid license purchased only from above li
                                             <a href="" class="menu-link px-3 py-3">
                                                 <!--begin::Logo-->
                                                 <span class="d-flex flex-center flex-shrink-0 w-30px me-2">
-															<img alt="Logo" src="{{ asset('/media/svg/brand-logos/slack-icon.svg') }}" data-kt-element="logo" class="h-20px" />
+															<img alt="Logo"
+                                                                 src="{{ asset('/media/svg/brand-logos/slack-icon.svg') }}"
+                                                                 data-kt-element="logo" class="h-20px"/>
 														</span>
                                                 <!--end::Logo-->
                                                 <!--begin::Info-->
@@ -112,7 +142,9 @@ License: For each use you must have a valid license purchased only from above li
                                             <a href="" class="menu-link px-3 py-3">
                                                 <!--begin::Logo-->
                                                 <span class="d-flex flex-center flex-shrink-0 w-30px me-2">
-															<img alt="Logo" src="{{ asset('/media/svg/brand-logos/dribbble-icon-1.svg') }}" data-kt-element="logo" class="h-20px" />
+															<img alt="Logo"
+                                                                 src="{{ asset('/media/svg/brand-logos/dribbble-icon-1.svg') }}"
+                                                                 data-kt-element="logo" class="h-20px"/>
 														</span>
                                                 <!--end::Logo-->
                                                 <!--begin::Info-->
@@ -128,7 +160,9 @@ License: For each use you must have a valid license purchased only from above li
                                             <a href="" class="menu-link px-3 py-3">
                                                 <!--begin::Logo-->
                                                 <span class="d-flex flex-center flex-shrink-0 w-30px me-2">
-															<img alt="Logo" src="{{ asset('/media/svg/brand-logos/bootstrap5.svg') }}" data-kt-element="logo" class="h-20px" />
+															<img alt="Logo"
+                                                                 src="{{ asset('/media/svg/brand-logos/bootstrap5.svg') }}"
+                                                                 data-kt-element="logo" class="h-20px"/>
 														</span>
                                                 <!--end::Logo-->
                                                 <!--begin::Info-->
@@ -144,7 +178,9 @@ License: For each use you must have a valid license purchased only from above li
                                             <a href="" class="menu-link px-3 py-3">
                                                 <!--begin::Logo-->
                                                 <span class="d-flex flex-center flex-shrink-0 w-30px me-2">
-															<img alt="Logo" src="{{ asset('/media/svg/brand-logos/spotify-2.svg') }}" data-kt-element="logo" class="h-20px" />
+															<img alt="Logo"
+                                                                 src="{{ asset('/media/svg/brand-logos/spotify-2.svg') }}"
+                                                                 data-kt-element="logo" class="h-20px"/>
 														</span>
                                                 <!--end::Logo-->
                                                 <!--begin::Info-->
@@ -160,7 +196,9 @@ License: For each use you must have a valid license purchased only from above li
                                             <a href="" class="menu-link px-3 py-3">
                                                 <!--begin::Logo-->
                                                 <span class="d-flex flex-center flex-shrink-0 w-30px me-2">
-															<img alt="Logo" src="{{ asset('/media/svg/brand-logos/beats-electronics.svg') }}" data-kt-element="logo" class="h-20px" />
+															<img alt="Logo"
+                                                                 src="{{ asset('/media/svg/brand-logos/beats-electronics.svg') }}"
+                                                                 data-kt-element="logo" class="h-20px"/>
 														</span>
                                                 <!--end::Logo-->
                                                 <!--begin::Info-->
@@ -190,7 +228,8 @@ License: For each use you must have a valid license purchased only from above li
                         <!--begin::Activities-->
                         <div class="d-flex align-items-center ms-2 ms-lg-4">
                             <!--begin::Drawer toggle-->
-                            <div class="btn btn-icon btn-custom w-30px h-30px w-lg-40px h-lg-40px btn-color-warning" id="kt_activities_toggle">
+                            <div class="btn btn-icon btn-custom w-30px h-30px w-lg-40px h-lg-40px btn-color-warning"
+                                 id="kt_activities_toggle">
                                 <i class="ki-duotone ki-chart-line fs-1">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
@@ -202,13 +241,16 @@ License: For each use you must have a valid license purchased only from above li
                         <!--begin::Chat-->
                         <div class="d-flex align-items-center ms-2 ms-lg-4">
                             <!--begin::Menu wrapper-->
-                            <div class="btn btn-icon btn-custom w-30px h-30px w-lg-40px h-lg-40px btn-color-success position-relative" id="kt_drawer_chat_toggle">
+                            <div
+                                class="btn btn-icon btn-custom w-30px h-30px w-lg-40px h-lg-40px btn-color-success position-relative"
+                                id="kt_drawer_chat_toggle">
                                 <i class="ki-duotone ki-message-text fs-1">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
                                     <span class="path3"></span>
                                 </i>
-                                <span class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle ms-7 mb-3 animation-blink"></span>
+                                <span
+                                    class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle ms-7 mb-3 animation-blink"></span>
                             </div>
                             <!--end::Menu wrapper-->
                         </div>
@@ -216,7 +258,9 @@ License: For each use you must have a valid license purchased only from above li
                         <!--begin::Quick links-->
                         <div class="d-flex align-items-center ms-2 ms-lg-4">
                             <!--begin::Menu wrapper-->
-                            <div class="btn btn-icon btn-custom w-30px h-30px w-lg-40px h-lg-40px btn-color-primary" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+                            <div class="btn btn-icon btn-custom w-30px h-30px w-lg-40px h-lg-40px btn-color-primary"
+                                 data-kt-menu-trigger="click" data-kt-menu-attach="parent"
+                                 data-kt-menu-placement="bottom-end">
                                 <i class="ki-duotone ki-category fs-1">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
@@ -225,7 +269,9 @@ License: For each use you must have a valid license purchased only from above li
                                 </i>
                             </div>
                             <!--begin::Menu 2-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px" data-kt-menu="true">
+                            <div
+                                class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+                                data-kt-menu="true">
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <div class="menu-content fs-6 text-gray-900 fw-bold px-3 py-4">Quick Actions</div>
@@ -245,7 +291,8 @@ License: For each use you must have a valid license purchased only from above li
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
-                                <div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
+                                <div class="menu-item px-3" data-kt-menu-trigger="hover"
+                                     data-kt-menu-placement="right-start">
                                     <!--begin::Menu item-->
                                     <a href="#" class="menu-link px-3">
                                         <span class="menu-title">New Group</span>
@@ -296,23 +343,30 @@ License: For each use you must have a valid license purchased only from above li
                         <!--begin::User menu-->
                         <div class="d-flex align-items-center ms-2 ms-lg-4" id="kt_header_user_menu_toggle">
                             <!--begin::Menu wrapper-->
-                            <div class="cursor-pointer symbol symbol-30px symbol-lg-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-                                <img class="symbol symbol-30px symbol-lg-40px" src="{{ asset('/media/avatars/300-3.jpg') }}" alt="user" />
+                            <div class="cursor-pointer symbol symbol-30px symbol-lg-40px"
+                                 data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
+                                 data-kt-menu-placement="bottom-end">
+                                <img class="symbol symbol-30px symbol-lg-40px"
+                                     src="{{ asset('/media/avatars/300-3.jpg') }}" alt="user"/>
                             </div>
                             <!--begin::User account menu-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
+                            <div
+                                class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px"
+                                data-kt-menu="true">
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <div class="menu-content d-flex align-items-center px-3">
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-50px me-5">
-                                            <img alt="Logo" src="{{ asset('/media/avatars/300-3.jpg') }}" />
+                                            <img alt="Logo" src="{{ asset('/media/avatars/300-3.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Username-->
                                         <div class="d-flex flex-column">
                                             <div class="fw-bold d-flex align-items-center fs-5">Max Smith
-                                                <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span></div>
+                                                <span
+                                                    class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
+                                            </div>
                                             <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
                                         </div>
                                         <!--end::Username-->
@@ -332,13 +386,15 @@ License: For each use you must have a valid license purchased only from above li
                                     <a href="apps/projects/list.html" class="menu-link px-5">
                                         <span class="menu-text">My Projects</span>
                                         <span class="menu-badge">
-													<span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
+													<span
+                                                        class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
 												</span>
                                     </a>
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
-                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
+                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                     data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
                                     <a href="#" class="menu-link px-5">
                                         <span class="menu-title">My Subscription</span>
                                         <span class="menu-arrow"></span>
@@ -363,7 +419,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
                                             <a href="account/statements.html" class="menu-link d-flex flex-stack px-5">Statements
-                                                <span class="ms-2 lh-0" data-bs-toggle="tooltip" title="View your statements">
+                                                <span class="ms-2 lh-0" data-bs-toggle="tooltip"
+                                                      title="View your statements">
 														<i class="ki-duotone ki-information-5 fs-5">
 															<span class="path1"></span>
 															<span class="path2"></span>
@@ -378,8 +435,10 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
                                             <div class="menu-content px-3">
-                                                <label class="form-check form-switch form-check-custom form-check-solid">
-                                                    <input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
+                                                <label
+                                                    class="form-check form-switch form-check-custom form-check-solid">
+                                                    <input class="form-check-input w-30px h-20px" type="checkbox"
+                                                           value="1" checked="checked" name="notifications"/>
                                                     <span class="form-check-label text-muted fs-7">Notifications</span>
                                                 </label>
                                             </div>
@@ -398,7 +457,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="separator my-2"></div>
                                 <!--end::Menu separator-->
                                 <!--begin::Menu item-->
-                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
+                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                     data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
                                     <a href="#" class="menu-link px-5">
 												<span class="menu-title position-relative">Mode
 												<span class="ms-5 position-absolute translate-middle-y top-50 end-0">
@@ -421,10 +481,13 @@ License: For each use you must have a valid license purchased only from above li
 												</span></span>
                                     </a>
                                     <!--begin::Menu-->
-                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-gray-500 menu-active-bg menu-state-color fw-semibold py-4 fs-base w-150px" data-kt-menu="true" data-kt-element="theme-mode-menu">
+                                    <div
+                                        class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-gray-500 menu-active-bg menu-state-color fw-semibold py-4 fs-base w-150px"
+                                        data-kt-menu="true" data-kt-element="theme-mode-menu">
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3 my-0">
-                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="light">
+                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode"
+                                               data-kt-value="light">
 														<span class="menu-icon" data-kt-element="icon">
 															<i class="ki-duotone ki-night-day fs-2">
 																<span class="path1"></span>
@@ -445,7 +508,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Menu item-->
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3 my-0">
-                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="dark">
+                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode"
+                                               data-kt-value="dark">
 														<span class="menu-icon" data-kt-element="icon">
 															<i class="ki-duotone ki-moon fs-2">
 																<span class="path1"></span>
@@ -458,7 +522,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Menu item-->
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3 my-0">
-                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="system">
+                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode"
+                                               data-kt-value="system">
 														<span class="menu-icon" data-kt-element="icon">
 															<i class="ki-duotone ki-screen fs-2">
 																<span class="path1"></span>
@@ -476,11 +541,14 @@ License: For each use you must have a valid license purchased only from above li
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
-                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
+                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                     data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
                                     <a href="#" class="menu-link px-5">
 												<span class="menu-title position-relative">Language
-												<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-												<img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('/media/flags/united-states.svg') }}" alt="" /></span></span>
+												<span
+                                                    class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
+												<img class="w-15px h-15px rounded-1 ms-2"
+                                                     src="{{ asset('/media/flags/united-states.svg') }}" alt=""/></span></span>
                                     </a>
                                     <!--begin::Menu sub-->
                                     <div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -488,7 +556,9 @@ License: For each use you must have a valid license purchased only from above li
                                         <div class="menu-item px-3">
                                             <a href="account/settings.html" class="menu-link d-flex px-5 active">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('/media/flags/united-states.svg') }}" alt="" />
+														<img class="rounded-1"
+                                                             src="{{ asset('/media/flags/united-states.svg') }}"
+                                                             alt=""/>
 													</span>English</a>
                                         </div>
                                         <!--end::Menu item-->
@@ -496,7 +566,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <div class="menu-item px-3">
                                             <a href="account/settings.html" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('/media/flags/spain.svg') }}" alt="" />
+														<img class="rounded-1"
+                                                             src="{{ asset('/media/flags/spain.svg') }}" alt=""/>
 													</span>Spanish</a>
                                         </div>
                                         <!--end::Menu item-->
@@ -504,7 +575,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <div class="menu-item px-3">
                                             <a href="account/settings.html" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('/media/flags/germany.svg') }}" alt="" />
+														<img class="rounded-1"
+                                                             src="{{ asset('/media/flags/germany.svg') }}" alt=""/>
 													</span>German</a>
                                         </div>
                                         <!--end::Menu item-->
@@ -512,7 +584,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <div class="menu-item px-3">
                                             <a href="account/settings.html" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('/media/flags/japan.svg') }}" alt="" />
+														<img class="rounded-1"
+                                                             src="{{ asset('/media/flags/japan.svg') }}" alt=""/>
 													</span>Japanese</a>
                                         </div>
                                         <!--end::Menu item-->
@@ -520,7 +593,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <div class="menu-item px-3">
                                             <a href="account/settings.html" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('/media/flags/france.svg') }}" alt="" />
+														<img class="rounded-1"
+                                                             src="{{ asset('/media/flags/france.svg') }}" alt=""/>
 													</span>French</a>
                                         </div>
                                         <!--end::Menu item-->
@@ -535,7 +609,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-5">
-                                    <a href="authentication/layouts/corporate/sign-in.html" class="menu-link px-5">Sign Out</a>
+                                    <a href="authentication/layouts/corporate/sign-in.html" class="menu-link px-5">Sign
+                                        Out</a>
                                 </div>
                                 <!--end::Menu item-->
                             </div>
@@ -545,7 +620,9 @@ License: For each use you must have a valid license purchased only from above li
                         <!--end::User menu-->
                         <!--begin::Invite-->
                         <div class="d-flex align-items-center ms-2 ms-lg-4">
-                            <a href="#" class="btn btn-flex flex-center btn-primary align-self-center px-0 px-md-3 h-30px w-30px w-md-auto h-lg-40px ms-2 ms-lg-4" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">
+                            <a href="#"
+                               class="btn btn-flex flex-center btn-primary align-self-center px-0 px-md-3 h-30px w-30px w-md-auto h-lg-40px ms-2 ms-lg-4"
+                               data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">
                                 <i class="ki-duotone ki-plus-square fs-2 p-0 m-0">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
@@ -562,13 +639,24 @@ License: For each use you must have a valid license purchased only from above li
                 </div>
                 <!--end::Container-->
                 <!--begin::Container-->
-                <div class="header-menu-container d-flex align-items-stretch flex-stack h-lg-75px w-100" id="kt_header_nav">
+                <div class="header-menu-container d-flex align-items-stretch flex-stack h-lg-75px w-100"
+                     id="kt_header_nav">
                     <!--begin::Menu wrapper-->
-                    <div class="header-menu container-xxl flex-column align-items-stretch flex-lg-row" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_header_menu_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+                    <div class="header-menu container-xxl flex-column align-items-stretch flex-lg-row"
+                         data-kt-drawer="true" data-kt-drawer-name="header-menu"
+                         data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true"
+                         data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start"
+                         data-kt-drawer-toggle="#kt_header_menu_toggle" data-kt-swapper="true"
+                         data-kt-swapper-mode="prepend"
+                         data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
                         <!--begin::Menu-->
-                        <div class="menu menu-rounded menu-column menu-lg-row menu-active-bg menu-title-gray-700 menu-state-primary menu-arrow-gray-500 fw-semibold my-5 my-lg-0 align-items-stretch flex-grow-1 px-2 px-lg-0" id="#kt_header_menu" data-kt-menu="true">
+                        <div
+                            class="menu menu-rounded menu-column menu-lg-row menu-active-bg menu-title-gray-700 menu-state-primary menu-arrow-gray-500 fw-semibold my-5 my-lg-0 align-items-stretch flex-grow-1 px-2 px-lg-0"
+                            id="#kt_header_menu" data-kt-menu="true">
                             <!--begin:Menu item-->
-                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                 data-kt-menu-placement="bottom-start"
+                                 class="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
                                 <!--begin:Menu link-->
                                 <span class="menu-link py-3">
 											<span class="menu-title">Home</span>
@@ -576,9 +664,11 @@ License: For each use you must have a valid license purchased only from above li
 										</span>
                                 <!--end:Menu link-->
                                 <!--begin:Menu sub-->
-                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-100 w-lg-850px">
+                                <div
+                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-100 w-lg-850px">
                                     <!--begin:Dashboards menu-->
-                                    <div class="menu-state-bg menu-extended overflow-hidden overflow-lg-visible" data-kt-menu-dismiss="true">
+                                    <div class="menu-state-bg menu-extended overflow-hidden overflow-lg-visible"
+                                         data-kt-menu-dismiss="true">
                                         <!--begin:Row-->
                                         <div class="row">
                                             <!--begin:Col-->
@@ -591,7 +681,8 @@ License: For each use you must have a valid license purchased only from above li
                                                         <div class="menu-item p-0 m-0">
                                                             <!--begin:Menu link-->
                                                             <a href="index.html" class="menu-link">
-																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
+																		<span
+                                                                            class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<i class="ki-duotone ki-element-11 text-primary fs-1">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -615,7 +706,8 @@ License: For each use you must have a valid license purchased only from above li
                                                         <div class="menu-item p-0 m-0">
                                                             <!--begin:Menu link-->
                                                             <a href="dashboards/ecommerce.html" class="menu-link">
-																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
+																		<span
+                                                                            class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<i class="ki-duotone ki-basket text-danger fs-1">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -639,7 +731,8 @@ License: For each use you must have a valid license purchased only from above li
                                                         <div class="menu-item p-0 m-0">
                                                             <!--begin:Menu link-->
                                                             <a href="dashboards/projects.html" class="menu-link">
-																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
+																		<span
+                                                                            class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<i class="ki-duotone ki-abstract-44 text-info fs-1">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -660,8 +753,10 @@ License: For each use you must have a valid license purchased only from above li
                                                         <!--begin:Menu item-->
                                                         <div class="menu-item p-0 m-0">
                                                             <!--begin:Menu link-->
-                                                            <a href="dashboards/online-courses.html" class="menu-link active">
-																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
+                                                            <a href="dashboards/online-courses.html"
+                                                               class="menu-link active">
+																		<span
+                                                                            class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<i class="ki-duotone ki-color-swatch text-success fs-1">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -702,7 +797,8 @@ License: For each use you must have a valid license purchased only from above li
                                                         <div class="menu-item p-0 m-0">
                                                             <!--begin:Menu link-->
                                                             <a href="dashboards/marketing.html" class="menu-link">
-																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
+																		<span
+                                                                            class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<i class="ki-duotone ki-chart-simple text-gray-900 fs-1">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -726,7 +822,8 @@ License: For each use you must have a valid license purchased only from above li
                                                         <div class="menu-item p-0 m-0">
                                                             <!--begin:Menu link-->
                                                             <a href="dashboards/bidding.html" class="menu-link">
-																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
+																		<span
+                                                                            class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<i class="ki-duotone ki-switch text-warning fs-1">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -748,7 +845,8 @@ License: For each use you must have a valid license purchased only from above li
                                                         <div class="menu-item p-0 m-0">
                                                             <!--begin:Menu link-->
                                                             <a href="dashboards/pos.html" class="menu-link">
-																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
+																		<span
+                                                                            class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<i class="ki-duotone ki-abstract-42 text-danger fs-1">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -770,7 +868,8 @@ License: For each use you must have a valid license purchased only from above li
                                                         <div class="menu-item p-0 m-0">
                                                             <!--begin:Menu link-->
                                                             <a href="dashboards/call-center.html" class="menu-link">
-																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
+																		<span
+                                                                            class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<i class="ki-duotone ki-call text-primary fs-1">
 																				<span class="path1"></span>
 																				<span class="path2"></span>
@@ -798,8 +897,11 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--begin:Landing-->
                                                 <div class="d-flex flex-stack flex-wrap flex-lg-nowrap gap-2 mx-5">
                                                     <div class="d-flex flex-column me-5">
-                                                        <div class="fs-6 fw-bold text-gray-800">Landing Page Template</div>
-                                                        <div class="fs-7 fw-semibold text-muted">Onpe page landing template with pricing & others</div>
+                                                        <div class="fs-6 fw-bold text-gray-800">Landing Page Template
+                                                        </div>
+                                                        <div class="fs-7 fw-semibold text-muted">Onpe page landing
+                                                            template with pricing & others
+                                                        </div>
                                                     </div>
                                                     <a href="landing.html" class="btn btn-sm btn-primary fw-bold">Explore</a>
                                                 </div>
@@ -807,9 +909,11 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end:Col-->
                                             <!--begin:Col-->
-                                            <div class="menu-more bg-light col-lg-4 py-3 px-3 py-lg-6 px-lg-6 rounded-end">
+                                            <div
+                                                class="menu-more bg-light col-lg-4 py-3 px-3 py-lg-6 px-lg-6 rounded-end">
                                                 <!--begin:Heading-->
-                                                <h4 class="fs-6 fs-lg-4 text-gray-800 fw-bold mt-3 mb-3 ms-4">More Dashboards</h4>
+                                                <h4 class="fs-6 fs-lg-4 text-gray-800 fw-bold mt-3 mb-3 ms-4">More
+                                                    Dashboards</h4>
                                                 <!--end:Heading-->
                                                 <!--begin:Menu item-->
                                                 <div class="menu-item p-0 m-0">
@@ -832,7 +936,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--begin:Menu item-->
                                                 <div class="menu-item p-0 m-0">
                                                     <!--begin:Menu link-->
-                                                    <a href="dashboards/finance-performance.html" class="menu-link py-2">
+                                                    <a href="dashboards/finance-performance.html"
+                                                       class="menu-link py-2">
                                                         <span class="menu-title">Finance Performance</span>
                                                     </a>
                                                     <!--end:Menu link-->
@@ -903,7 +1008,9 @@ License: For each use you must have a valid license purchased only from above li
                             </div>
                             <!--end:Menu item-->
                             <!--begin:Menu item-->
-                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                 data-kt-menu-placement="bottom-start"
+                                 class="menu-item menu-lg-down-accordion me-0 me-lg-2">
                                 <!--begin:Menu link-->
                                 <span class="menu-link py-3">
 											<span class="menu-title">Pages</span>
@@ -919,27 +1026,37 @@ License: For each use you must have a valid license purchased only from above li
                                             <ul class="nav nav-stretch nav-line-tabs fw-bold fs-6 p-0 p-lg-10 flex-nowrap flex-grow-1">
                                                 <!--begin:Nav item-->
                                                 <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6 active text-active-primary" href="#" data-bs-toggle="tab" data-bs-target="#kt_app_header_menu_pages_pages">General</a>
+                                                    <a class="nav-link py-3 py-lg-6 active text-active-primary" href="#"
+                                                       data-bs-toggle="tab"
+                                                       data-bs-target="#kt_app_header_menu_pages_pages">General</a>
                                                 </li>
                                                 <!--end:Nav item-->
                                                 <!--begin:Nav item-->
                                                 <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6 text-active-primary" href="#" data-bs-toggle="tab" data-bs-target="#kt_app_header_menu_pages_account">Account</a>
+                                                    <a class="nav-link py-3 py-lg-6 text-active-primary" href="#"
+                                                       data-bs-toggle="tab"
+                                                       data-bs-target="#kt_app_header_menu_pages_account">Account</a>
                                                 </li>
                                                 <!--end:Nav item-->
                                                 <!--begin:Nav item-->
                                                 <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6 text-active-primary" href="#" data-bs-toggle="tab" data-bs-target="#kt_app_header_menu_pages_authentication">Authentication</a>
+                                                    <a class="nav-link py-3 py-lg-6 text-active-primary" href="#"
+                                                       data-bs-toggle="tab"
+                                                       data-bs-target="#kt_app_header_menu_pages_authentication">Authentication</a>
                                                 </li>
                                                 <!--end:Nav item-->
                                                 <!--begin:Nav item-->
                                                 <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6 text-active-primary" href="#" data-bs-toggle="tab" data-bs-target="#kt_app_header_menu_pages_utilities">Utilities</a>
+                                                    <a class="nav-link py-3 py-lg-6 text-active-primary" href="#"
+                                                       data-bs-toggle="tab"
+                                                       data-bs-target="#kt_app_header_menu_pages_utilities">Utilities</a>
                                                 </li>
                                                 <!--end:Nav item-->
                                                 <!--begin:Nav item-->
                                                 <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6 text-active-primary" href="#" data-bs-toggle="tab" data-bs-target="#kt_app_header_menu_pages_widgets">Widgets</a>
+                                                    <a class="nav-link py-3 py-lg-6 text-active-primary" href="#"
+                                                       data-bs-toggle="tab"
+                                                       data-bs-target="#kt_app_header_menu_pages_widgets">Widgets</a>
                                                 </li>
                                                 <!--end:Nav item-->
                                             </ul>
@@ -948,7 +1065,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin:Tab content-->
                                         <div class="tab-content py-4 py-lg-8 px-lg-7">
                                             <!--begin:Tab pane-->
-                                            <div class="tab-pane active w-lg-1000px" id="kt_app_header_menu_pages_pages">
+                                            <div class="tab-pane active w-lg-1000px"
+                                                 id="kt_app_header_menu_pages_pages">
                                                 <!--begin:Row-->
                                                 <div class="row">
                                                     <!--begin:Col-->
@@ -958,12 +1076,14 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Col-->
                                                             <div class="col-lg-3 mb-6 mb-lg-0">
                                                                 <!--begin:Menu heading-->
-                                                                <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">User Profile</h4>
+                                                                <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">User
+                                                                    Profile</h4>
                                                                 <!--end:Menu heading-->
                                                                 <!--begin:Menu item-->
                                                                 <div class="menu-item p-0 m-0">
                                                                     <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/overview.html" class="menu-link">
+                                                                    <a href="pages/user-profile/overview.html"
+                                                                       class="menu-link">
                                                                         <span class="menu-title">Overview</span>
                                                                     </a>
                                                                     <!--end:Menu link-->
@@ -972,7 +1092,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu item-->
                                                                 <div class="menu-item p-0 m-0">
                                                                     <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/projects.html" class="menu-link">
+                                                                    <a href="pages/user-profile/projects.html"
+                                                                       class="menu-link">
                                                                         <span class="menu-title">Projects</span>
                                                                     </a>
                                                                     <!--end:Menu link-->
@@ -981,7 +1102,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu item-->
                                                                 <div class="menu-item p-0 m-0">
                                                                     <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/campaigns.html" class="menu-link">
+                                                                    <a href="pages/user-profile/campaigns.html"
+                                                                       class="menu-link">
                                                                         <span class="menu-title">Campaigns</span>
                                                                     </a>
                                                                     <!--end:Menu link-->
@@ -990,7 +1112,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu item-->
                                                                 <div class="menu-item p-0 m-0">
                                                                     <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/documents.html" class="menu-link">
+                                                                    <a href="pages/user-profile/documents.html"
+                                                                       class="menu-link">
                                                                         <span class="menu-title">Documents</span>
                                                                     </a>
                                                                     <!--end:Menu link-->
@@ -999,7 +1122,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu item-->
                                                                 <div class="menu-item p-0 m-0">
                                                                     <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/followers.html" class="menu-link">
+                                                                    <a href="pages/user-profile/followers.html"
+                                                                       class="menu-link">
                                                                         <span class="menu-title">Followers</span>
                                                                     </a>
                                                                     <!--end:Menu link-->
@@ -1008,7 +1132,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu item-->
                                                                 <div class="menu-item p-0 m-0">
                                                                     <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/activity.html" class="menu-link">
+                                                                    <a href="pages/user-profile/activity.html"
+                                                                       class="menu-link">
                                                                         <span class="menu-title">Activity</span>
                                                                     </a>
                                                                     <!--end:Menu link-->
@@ -1021,7 +1146,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu section-->
                                                                 <div class="mb-6">
                                                                     <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Corporate</h4>
+                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">
+                                                                        Corporate</h4>
                                                                     <!--end:Menu heading-->
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
@@ -1073,12 +1199,14 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu section-->
                                                                 <div class="mb-0">
                                                                     <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Careers</h4>
+                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">
+                                                                        Careers</h4>
                                                                     <!--end:Menu heading-->
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/careers/list.html" class="menu-link">
+                                                                        <a href="pages/careers/list.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Careers List</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1087,8 +1215,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/careers/apply.html" class="menu-link">
-                                                                            <span class="menu-title">Careers Apply</span>
+                                                                        <a href="pages/careers/apply.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Careers Apply</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1107,7 +1237,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/faq/classic.html" class="menu-link">
+                                                                        <a href="pages/faq/classic.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">FAQ Classic</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1116,7 +1247,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/faq/extended.html" class="menu-link">
+                                                                        <a href="pages/faq/extended.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">FAQ Extended</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1132,7 +1264,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/blog/home.html" class="menu-link">
+                                                                        <a href="pages/blog/home.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Blog Home</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1141,7 +1274,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/blog/post.html" class="menu-link">
+                                                                        <a href="pages/blog/post.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Blog Post</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1152,13 +1286,15 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu section-->
                                                                 <div class="mb-0">
                                                                     <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Pricing</h4>
+                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">
+                                                                        Pricing</h4>
                                                                     <!--end:Menu heading-->
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
                                                                         <a href="pages/pricing.html" class="menu-link">
-                                                                            <span class="menu-title">Column Pricing</span>
+                                                                            <span
+                                                                                class="menu-title">Column Pricing</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1166,8 +1302,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/pricing/table.html" class="menu-link">
-                                                                            <span class="menu-title">Table Pricing</span>
+                                                                        <a href="pages/pricing/table.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Table Pricing</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1181,12 +1319,14 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu section-->
                                                                 <div class="mb-0">
                                                                     <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Social</h4>
+                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">
+                                                                        Social</h4>
                                                                     <!--end:Menu heading-->
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/social/feeds.html" class="menu-link">
+                                                                        <a href="pages/social/feeds.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Feeds</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1195,7 +1335,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/social/activity.html" class="menu-link">
+                                                                        <a href="pages/social/activity.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Activty</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1204,7 +1345,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/social/followers.html" class="menu-link">
+                                                                        <a href="pages/social/followers.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Followers</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1213,7 +1355,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="pages/social/settings.html" class="menu-link">
+                                                                        <a href="pages/social/settings.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Settings</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1229,7 +1372,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end:Col-->
                                                     <!--begin:Col-->
                                                     <div class="col-lg-4">
-                                                        <img src="{{ asset('/media/stock/600x600/img-82.jpg') }}" class="rounded mw-100" alt="" />
+                                                        <img src="{{ asset('/media/stock/600x600/img-82.jpg') }}"
+                                                             class="rounded mw-100" alt=""/>
                                                     </div>
                                                     <!--end:Col-->
                                                 </div>
@@ -1339,7 +1483,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end:Col-->
                                                     <!--begin:Col-->
                                                     <div class="col-lg-7">
-                                                        <img src="{{ asset('/media/stock/900x600/46.jpg') }}" class="rounded mw-100" alt="" />
+                                                        <img src="{{ asset('/media/stock/900x600/46.jpg') }}"
+                                                             class="rounded mw-100" alt=""/>
                                                     </div>
                                                     <!--end:Col-->
                                                 </div>
@@ -1347,7 +1492,8 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end:Tab pane-->
                                             <!--begin:Tab pane-->
-                                            <div class="tab-pane w-lg-1000px" id="kt_app_header_menu_pages_authentication">
+                                            <div class="tab-pane w-lg-1000px"
+                                                 id="kt_app_header_menu_pages_authentication">
                                                 <!--begin:Row-->
                                                 <div class="row">
                                                     <!--begin:Col-->
@@ -1355,12 +1501,14 @@ License: For each use you must have a valid license purchased only from above li
                                                         <!--begin:Menu section-->
                                                         <div class="mb-6">
                                                             <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Corporate Layout</h4>
+                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Corporate
+                                                                Layout</h4>
                                                             <!--end:Menu heading-->
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/sign-in.html" class="menu-link">
+                                                                <a href="authentication/layouts/corporate/sign-in.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Sign-In</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1369,7 +1517,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/sign-up.html" class="menu-link">
+                                                                <a href="authentication/layouts/corporate/sign-up.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Sign-Up</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1378,7 +1527,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/two-factor.html" class="menu-link">
+                                                                <a href="authentication/layouts/corporate/two-factor.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Two-Factor</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1387,7 +1537,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/reset-password.html" class="menu-link">
+                                                                <a href="authentication/layouts/corporate/reset-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Reset Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1396,7 +1547,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/new-password.html" class="menu-link">
+                                                                <a href="authentication/layouts/corporate/new-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">New Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1407,12 +1559,14 @@ License: For each use you must have a valid license purchased only from above li
                                                         <!--begin:Menu section-->
                                                         <div class="mb-0">
                                                             <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Overlay Layout</h4>
+                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Overlay
+                                                                Layout</h4>
                                                             <!--end:Menu heading-->
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/sign-in.html" class="menu-link">
+                                                                <a href="authentication/layouts/overlay/sign-in.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Sign-In</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1421,7 +1575,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/sign-up.html" class="menu-link">
+                                                                <a href="authentication/layouts/overlay/sign-up.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Sign-Up</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1430,7 +1585,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/two-factor.html" class="menu-link">
+                                                                <a href="authentication/layouts/overlay/two-factor.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Two-Factor</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1439,7 +1595,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/reset-password.html" class="menu-link">
+                                                                <a href="authentication/layouts/overlay/reset-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Reset Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1448,7 +1605,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/new-password.html" class="menu-link">
+                                                                <a href="authentication/layouts/overlay/new-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">New Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1463,12 +1621,14 @@ License: For each use you must have a valid license purchased only from above li
                                                         <!--begin:Menu section-->
                                                         <div class="mb-6">
                                                             <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Creative Layout</h4>
+                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Creative
+                                                                Layout</h4>
                                                             <!--end:Menu heading-->
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/sign-in.html" class="menu-link">
+                                                                <a href="authentication/layouts/creative/sign-in.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Sign-in</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1477,7 +1637,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/sign-up.html" class="menu-link">
+                                                                <a href="authentication/layouts/creative/sign-up.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Sign-up</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1486,7 +1647,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/two-factor.html" class="menu-link">
+                                                                <a href="authentication/layouts/creative/two-factor.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Two-Factor</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1495,7 +1657,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/reset-password.html" class="menu-link">
+                                                                <a href="authentication/layouts/creative/reset-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Reset Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1504,7 +1667,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/new-password.html" class="menu-link">
+                                                                <a href="authentication/layouts/creative/new-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">New Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1520,7 +1684,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/sign-in.html" class="menu-link">
+                                                                <a href="authentication/layouts/fancy/sign-in.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Sign-In</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1529,7 +1694,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/sign-up.html" class="menu-link">
+                                                                <a href="authentication/layouts/fancy/sign-up.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Sign-Up</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1538,7 +1704,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/two-factor.html" class="menu-link">
+                                                                <a href="authentication/layouts/fancy/two-factor.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Two-Factor</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1547,7 +1714,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/reset-password.html" class="menu-link">
+                                                                <a href="authentication/layouts/fancy/reset-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Reset Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1556,7 +1724,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/new-password.html" class="menu-link">
+                                                                <a href="authentication/layouts/fancy/new-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">New Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1576,7 +1745,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/extended/multi-steps-sign-up.html" class="menu-link">
+                                                                <a href="authentication/extended/multi-steps-sign-up.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Multi-Steps Sign-Up</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1585,7 +1755,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/general/welcome.html" class="menu-link">
+                                                                <a href="authentication/general/welcome.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Welcome Message</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1594,7 +1765,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/general/verify-email.html" class="menu-link">
+                                                                <a href="authentication/general/verify-email.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Verify Email</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1603,7 +1775,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/general/coming-soon.html" class="menu-link">
+                                                                <a href="authentication/general/coming-soon.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Coming Soon</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1612,8 +1785,10 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/general/password-confirmation.html" class="menu-link">
-                                                                    <span class="menu-title">Password Confirmation</span>
+                                                                <a href="authentication/general/password-confirmation.html"
+                                                                   class="menu-link">
+                                                                    <span
+                                                                        class="menu-title">Password Confirmation</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
                                                             </div>
@@ -1621,7 +1796,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/general/account-deactivated.html" class="menu-link">
+                                                                <a href="authentication/general/account-deactivated.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Account Deactivation</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1630,7 +1806,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/general/error-404.html" class="menu-link">
+                                                                <a href="authentication/general/error-404.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Error 404</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1639,7 +1816,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/general/error-500.html" class="menu-link">
+                                                                <a href="authentication/general/error-500.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Error 500</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1654,12 +1832,14 @@ License: For each use you must have a valid license purchased only from above li
                                                         <!--begin:Menu section-->
                                                         <div class="mb-0">
                                                             <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Email Templates</h4>
+                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Email
+                                                                Templates</h4>
                                                             <!--end:Menu heading-->
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/email/welcome-message.html" class="menu-link">
+                                                                <a href="authentication/email/welcome-message.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Welcome Message</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1668,7 +1848,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/email/reset-password.html" class="menu-link">
+                                                                <a href="authentication/email/reset-password.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Reset Password</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1677,8 +1858,10 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/email/subscription-confirmed.html" class="menu-link">
-                                                                    <span class="menu-title">Subscription Confirmed</span>
+                                                                <a href="authentication/email/subscription-confirmed.html"
+                                                                   class="menu-link">
+                                                                    <span
+                                                                        class="menu-title">Subscription Confirmed</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
                                                             </div>
@@ -1686,7 +1869,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/email/card-declined.html" class="menu-link">
+                                                                <a href="authentication/email/card-declined.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Credit Card Declined</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1695,7 +1879,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/email/promo-1.html" class="menu-link">
+                                                                <a href="authentication/email/promo-1.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Promo 1</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1704,7 +1889,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/email/promo-2.html" class="menu-link">
+                                                                <a href="authentication/email/promo-2.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Promo 2</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1713,7 +1899,8 @@ License: For each use you must have a valid license purchased only from above li
                                                             <!--begin:Menu item-->
                                                             <div class="menu-item p-0 m-0">
                                                                 <!--begin:Menu link-->
-                                                                <a href="authentication/email/promo-3.html" class="menu-link">
+                                                                <a href="authentication/email/promo-3.html"
+                                                                   class="menu-link">
                                                                     <span class="menu-title">Promo 3</span>
                                                                 </a>
                                                                 <!--end:Menu link-->
@@ -1740,13 +1927,16 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu section-->
                                                                 <div class="mb-0">
                                                                     <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">General Modals</h4>
+                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">General
+                                                                        Modals</h4>
                                                                     <!--end:Menu heading-->
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/invite-friends.html" class="menu-link">
-                                                                            <span class="menu-title">Invite Friends</span>
+                                                                        <a href="utilities/modals/general/invite-friends.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Invite Friends</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1754,7 +1944,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/view-users.html" class="menu-link">
+                                                                        <a href="utilities/modals/general/view-users.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">View Users</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1763,7 +1954,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/select-users.html" class="menu-link">
+                                                                        <a href="utilities/modals/general/select-users.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Select Users</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1772,7 +1964,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/upgrade-plan.html" class="menu-link">
+                                                                        <a href="utilities/modals/general/upgrade-plan.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Upgrade Plan</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1781,7 +1974,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/share-earn.html" class="menu-link">
+                                                                        <a href="utilities/modals/general/share-earn.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Share & Earn</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1790,7 +1984,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/new-target.html" class="menu-link">
+                                                                        <a href="utilities/modals/forms/new-target.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">New Target</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1799,7 +1994,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/new-card.html" class="menu-link">
+                                                                        <a href="utilities/modals/forms/new-card.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">New Card</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1808,7 +2004,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/new-address.html" class="menu-link">
+                                                                        <a href="utilities/modals/forms/new-address.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">New Address</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1817,8 +2014,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/create-api-key.html" class="menu-link">
-                                                                            <span class="menu-title">Create API Key</span>
+                                                                        <a href="utilities/modals/forms/create-api-key.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Create API Key</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1826,7 +2025,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/bidding.html" class="menu-link">
+                                                                        <a href="utilities/modals/forms/bidding.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Bidding</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1841,12 +2041,14 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu section-->
                                                                 <div class="mb-6">
                                                                     <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Advanced Modals</h4>
+                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Advanced
+                                                                        Modals</h4>
                                                                     <!--end:Menu heading-->
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/create-app.html" class="menu-link">
+                                                                        <a href="utilities/modals/wizards/create-app.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Create App</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1855,8 +2057,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/create-campaign.html" class="menu-link">
-                                                                            <span class="menu-title">Create Campaign</span>
+                                                                        <a href="utilities/modals/wizards/create-campaign.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Create Campaign</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1864,8 +2068,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/create-account.html" class="menu-link">
-                                                                            <span class="menu-title">Create Business Acc</span>
+                                                                        <a href="utilities/modals/wizards/create-account.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Create Business Acc</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1873,8 +2079,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/create-project.html" class="menu-link">
-                                                                            <span class="menu-title">Create Project</span>
+                                                                        <a href="utilities/modals/wizards/create-project.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Create Project</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1882,8 +2090,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/top-up-wallet.html" class="menu-link">
-                                                                            <span class="menu-title">Top Up Wallet</span>
+                                                                        <a href="utilities/modals/wizards/top-up-wallet.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Top Up Wallet</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1891,7 +2101,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/offer-a-deal.html" class="menu-link">
+                                                                        <a href="utilities/modals/wizards/offer-a-deal.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Offer a Deal</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1900,8 +2111,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/two-factor-authentication.html" class="menu-link">
-                                                                            <span class="menu-title">Two Factor Auth</span>
+                                                                        <a href="utilities/modals/wizards/two-factor-authentication.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Two Factor Auth</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1911,12 +2124,14 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu section-->
                                                                 <div class="mb-0">
                                                                     <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Search</h4>
+                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">
+                                                                        Search</h4>
                                                                     <!--end:Menu heading-->
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/search/horizontal.html" class="menu-link">
+                                                                        <a href="utilities/search/horizontal.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Horizontal</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1925,7 +2140,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/search/vertical.html" class="menu-link">
+                                                                        <a href="utilities/search/vertical.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Vertical</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1934,7 +2150,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/search/users.html" class="menu-link">
+                                                                        <a href="utilities/modals/search/users.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Users</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1943,8 +2160,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/search/select-location.html" class="menu-link">
-                                                                            <span class="menu-title">Select Location</span>
+                                                                        <a href="utilities/modals/search/select-location.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Select Location</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1958,12 +2177,14 @@ License: For each use you must have a valid license purchased only from above li
                                                                 <!--begin:Menu section-->
                                                                 <div class="mb-0">
                                                                     <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Wizards</h4>
+                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">
+                                                                        Wizards</h4>
                                                                     <!--end:Menu heading-->
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/horizontal.html" class="menu-link">
+                                                                        <a href="utilities/wizards/horizontal.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Horizontal</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1972,7 +2193,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/vertical.html" class="menu-link">
+                                                                        <a href="utilities/wizards/vertical.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Vertical</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1981,8 +2203,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/two-factor-authentication.html" class="menu-link">
-                                                                            <span class="menu-title">Two Factor Auth</span>
+                                                                        <a href="utilities/wizards/two-factor-authentication.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Two Factor Auth</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -1990,7 +2214,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/create-app.html" class="menu-link">
+                                                                        <a href="utilities/wizards/create-app.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Create App</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -1999,8 +2224,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/create-campaign.html" class="menu-link">
-                                                                            <span class="menu-title">Create Campaign</span>
+                                                                        <a href="utilities/wizards/create-campaign.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Create Campaign</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -2008,8 +2235,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/create-account.html" class="menu-link">
-                                                                            <span class="menu-title">Create Account</span>
+                                                                        <a href="utilities/wizards/create-account.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Create Account</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -2017,8 +2246,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/create-project.html" class="menu-link">
-                                                                            <span class="menu-title">Create Project</span>
+                                                                        <a href="utilities/wizards/create-project.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Create Project</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -2026,8 +2257,10 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/top-up-wallet.html" class="menu-link">
-                                                                            <span class="menu-title">Top Up Wallet</span>
+                                                                        <a href="utilities/modals/wizards/top-up-wallet.html"
+                                                                           class="menu-link">
+                                                                            <span
+                                                                                class="menu-title">Top Up Wallet</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
                                                                     </div>
@@ -2035,7 +2268,8 @@ License: For each use you must have a valid license purchased only from above li
                                                                     <!--begin:Menu item-->
                                                                     <div class="menu-item p-0 m-0">
                                                                         <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/offer-a-deal.html" class="menu-link">
+                                                                        <a href="utilities/wizards/offer-a-deal.html"
+                                                                           class="menu-link">
                                                                             <span class="menu-title">Offer a Deal</span>
                                                                         </a>
                                                                         <!--end:Menu link-->
@@ -2051,7 +2285,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end:Col-->
                                                     <!--begin:Col-->
                                                     <div class="col-lg-5 pe-lg-5">
-                                                        <img src="{{ asset('/media/stock/600x600/img-84.jpg') }}" class="rounded mw-100" alt="" />
+                                                        <img src="{{ asset('/media/stock/600x600/img-84.jpg') }}"
+                                                             class="rounded mw-100" alt=""/>
                                                     </div>
                                                     <!--end:Col-->
                                                 </div>
@@ -2122,7 +2357,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end:Col-->
                                                     <!--begin:Col-->
                                                     <div class="col-lg-8">
-                                                        <img src="{{ asset('/media/stock/900x600/44.jpg') }}" class="rounded mw-100" alt="" />
+                                                        <img src="{{ asset('/media/stock/900x600/44.jpg') }}"
+                                                             class="rounded mw-100" alt=""/>
                                                     </div>
                                                     <!--end:Col-->
                                                 </div>
@@ -2138,7 +2374,9 @@ License: For each use you must have a valid license purchased only from above li
                             </div>
                             <!--end:Menu item-->
                             <!--begin:Menu item-->
-                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                 data-kt-menu-placement="bottom-start"
+                                 class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
                                 <!--begin:Menu link-->
                                 <span class="menu-link py-3">
 											<span class="menu-title">Apps</span>
@@ -2146,9 +2384,11 @@ License: For each use you must have a valid license purchased only from above li
 										</span>
                                 <!--end:Menu link-->
                                 <!--begin:Menu sub-->
-                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-250px">
+                                <div
+                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-250px">
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -2162,7 +2402,8 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
                                             <div class="menu-item">
                                                 <!--begin:Menu link-->
@@ -2264,7 +2505,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -2275,9 +2517,12 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                                 data-kt-menu-placement="right-start"
+                                                 class="menu-item menu-lg-down-accordion">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -2288,11 +2533,13 @@ License: For each use you must have a valid license purchased only from above li
 														</span>
                                                 <!--end:Menu link-->
                                                 <!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                                <div
+                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/catalog/products.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/catalog/products.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2304,7 +2551,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/catalog/categories.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/catalog/categories.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2316,7 +2564,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/catalog/add-product.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/catalog/add-product.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2328,7 +2577,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/catalog/edit-product.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/catalog/edit-product.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2340,7 +2590,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/catalog/add-category.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/catalog/add-category.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2352,7 +2603,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/catalog/edit-category.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/catalog/edit-category.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2366,7 +2618,8 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end:Menu item-->
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion menu-sub-indention">
+                                            <div data-kt-menu-trigger="click"
+                                                 class="menu-item menu-accordion menu-sub-indention">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -2381,7 +2634,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/sales/listing.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/sales/listing.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2393,7 +2647,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/sales/details.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/sales/details.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2405,7 +2660,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/sales/add-order.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/sales/add-order.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2417,7 +2673,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/sales/edit-order.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/sales/edit-order.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2431,7 +2688,8 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end:Menu item-->
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion menu-sub-indention">
+                                            <div data-kt-menu-trigger="click"
+                                                 class="menu-item menu-accordion menu-sub-indention">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -2446,7 +2704,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/customers/listing.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/customers/listing.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2458,7 +2717,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/customers/details.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/customers/details.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2472,7 +2732,8 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end:Menu item-->
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion menu-sub-indention">
+                                            <div data-kt-menu-trigger="click"
+                                                 class="menu-item menu-accordion menu-sub-indention">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -2487,7 +2748,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/reports/view.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/reports/view.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2499,7 +2761,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/reports/sales.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/reports/sales.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2511,7 +2774,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/reports/returns.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/reports/returns.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2523,7 +2787,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/reports/customer-orders.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/reports/customer-orders.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2535,7 +2800,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/ecommerce/reports/shipping.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/ecommerce/reports/shipping.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2565,7 +2831,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -2579,7 +2846,8 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
                                             <div class="menu-item">
                                                 <!--begin:Menu link-->
@@ -2593,7 +2861,9 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end:Menu item-->
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                                 data-kt-menu-placement="right-start"
+                                                 class="menu-item menu-lg-down-accordion">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -2604,11 +2874,13 @@ License: For each use you must have a valid license purchased only from above li
 														</span>
                                                 <!--end:Menu link-->
                                                 <!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                                <div
+                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/support-center/tickets/list.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/support-center/tickets/list.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2620,7 +2892,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/support-center/tickets/view.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/support-center/tickets/view.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2634,7 +2907,9 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end:Menu item-->
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                                 data-kt-menu-placement="right-start"
+                                                 class="menu-item menu-lg-down-accordion">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -2645,11 +2920,13 @@ License: For each use you must have a valid license purchased only from above li
 														</span>
                                                 <!--end:Menu link-->
                                                 <!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                                <div
+                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/support-center/tutorials/list.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/support-center/tutorials/list.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2661,7 +2938,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/support-center/tutorials/post.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/support-center/tutorials/post.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2715,7 +2993,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -2729,9 +3008,12 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                                 data-kt-menu-placement="right-start"
+                                                 class="menu-item menu-lg-down-accordion">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -2742,11 +3024,13 @@ License: For each use you must have a valid license purchased only from above li
 														</span>
                                                 <!--end:Menu link-->
                                                 <!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                                <div
+                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/user-management/users/list.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/user-management/users/list.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2758,7 +3042,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/user-management/users/view.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/user-management/users/view.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2772,7 +3057,9 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end:Menu item-->
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                                 data-kt-menu-placement="right-start"
+                                                 class="menu-item menu-lg-down-accordion">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -2783,11 +3070,13 @@ License: For each use you must have a valid license purchased only from above li
 														</span>
                                                 <!--end:Menu link-->
                                                 <!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                                <div
+                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/user-management/roles/list.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/user-management/roles/list.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2799,7 +3088,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/user-management/roles/view.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/user-management/roles/view.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2829,7 +3119,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -2843,7 +3134,8 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
                                             <div class="menu-item">
                                                 <!--begin:Menu link-->
@@ -2897,7 +3189,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -2913,11 +3206,13 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
                                             <div class="menu-item">
                                                 <!--begin:Menu link-->
-                                                <a class="menu-link py-3" href="apps/subscriptions/getting-started.html">
+                                                <a class="menu-link py-3"
+                                                   href="apps/subscriptions/getting-started.html">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2967,7 +3262,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -2981,7 +3277,8 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
                                             <div class="menu-item">
                                                 <!--begin:Menu link-->
@@ -3023,7 +3320,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -3037,9 +3335,12 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                                 data-kt-menu-placement="right-start"
+                                                 class="menu-item menu-lg-down-accordion">
                                                 <!--begin:Menu link-->
                                                 <span class="menu-link py-3">
 															<span class="menu-bullet">
@@ -3050,11 +3351,13 @@ License: For each use you must have a valid license purchased only from above li
 														</span>
                                                 <!--end:Menu link-->
                                                 <!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                                <div
+                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/invoices/view/invoice-1.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/invoices/view/invoice-1.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -3066,7 +3369,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/invoices/view/invoice-2.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/invoices/view/invoice-2.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -3078,7 +3382,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--begin:Menu item-->
                                                     <div class="menu-item">
                                                         <!--begin:Menu link-->
-                                                        <a class="menu-link py-3" href="apps/invoices/view/invoice-3.html">
+                                                        <a class="menu-link py-3"
+                                                           href="apps/invoices/view/invoice-3.html">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -3108,7 +3413,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -3122,7 +3428,8 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
                                             <div class="menu-item">
                                                 <!--begin:Menu link-->
@@ -3176,7 +3483,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -3190,7 +3498,8 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
                                             <div class="menu-item">
                                                 <!--begin:Menu link-->
@@ -3235,7 +3544,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+                                         data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
                                         <!--begin:Menu link-->
                                         <span class="menu-link py-3">
 													<span class="menu-icon">
@@ -3250,7 +3560,8 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end:Menu link-->
                                         <!--begin:Menu sub-->
-                                        <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+                                        <div
+                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
                                             <!--begin:Menu item-->
                                             <div class="menu-item">
                                                 <!--begin:Menu link-->
@@ -3315,7 +3626,9 @@ License: For each use you must have a valid license purchased only from above li
                             </div>
                             <!--end:Menu item-->
                             <!--begin:Menu item-->
-                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                 data-kt-menu-placement="bottom-start"
+                                 class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
                                 <!--begin:Menu link-->
                                 <span class="menu-link py-3">
 											<span class="menu-title">Help</span>
@@ -3323,11 +3636,17 @@ License: For each use you must have a valid license purchased only from above li
 										</span>
                                 <!--end:Menu link-->
                                 <!--begin:Menu sub-->
-                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
+                                <div
+                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link py-3" href="https://preview.keenthemes.com/html/metronic/docs/base/utilities" target="_blank" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                                        <a class="menu-link py-3"
+                                           href="https://preview.keenthemes.com/html/metronic/docs/base/utilities"
+                                           target="_blank"
+                                           title="Check out over 200 in-house components, plugins and ready for use solutions"
+                                           data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                                           data-bs-placement="right">
 													<span class="menu-icon">
 														<i class="ki-duotone ki-rocket fs-2">
 															<span class="path1"></span>
@@ -3342,7 +3661,10 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link py-3" href="https://preview.keenthemes.com/html/metronic/docs" target="_blank" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                                        <a class="menu-link py-3"
+                                           href="https://preview.keenthemes.com/html/metronic/docs" target="_blank"
+                                           title="Check out the complete documentation" data-bs-toggle="tooltip"
+                                           data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 													<span class="menu-icon">
 														<i class="ki-duotone ki-abstract-26 fs-2">
 															<span class="path1"></span>
@@ -3357,7 +3679,11 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link py-3" href="https://preview.keenthemes.com/metronic8/demo16/layout-builder.html" title="Build your layout and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                                        <a class="menu-link py-3"
+                                           href="https://preview.keenthemes.com/metronic8/demo16/layout-builder.html"
+                                           title="Build your layout and export HTML for server side integration"
+                                           data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
+                                           data-bs-placement="right">
 													<span class="menu-icon">
 														<i class="ki-duotone ki-switch fs-2">
 															<span class="path1"></span>
@@ -3372,7 +3698,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link py-3" href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog" target="_blank">
+                                        <a class="menu-link py-3"
+                                           href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog"
+                                           target="_blank">
 													<span class="menu-icon">
 														<i class="ki-duotone ki-code fs-2">
 															<span class="path1"></span>
@@ -3395,9 +3723,17 @@ License: For each use you must have a valid license purchased only from above li
                         <!--begin::Actions-->
                         <div class="d-flex align-items-stretch flex-shrink-0 p-4 p-lg-0" id="kt_header_search_wrapper">
                             <!--begin::Search-->
-                            <div id="kt_header_search" class="header-search d-flex align-items-center header-search w-lg-225px" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="menu" data-kt-search-responsive="lg" data-kt-menu-trigger="auto" data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_topbar',lg: '#kt_header_search_wrapper'}">
+                            <div id="kt_header_search"
+                                 class="header-search d-flex align-items-center header-search w-lg-225px"
+                                 data-kt-search-keypress="true" data-kt-search-min-length="2"
+                                 data-kt-search-enter="enter" data-kt-search-layout="menu"
+                                 data-kt-search-responsive="lg" data-kt-menu-trigger="auto"
+                                 data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end"
+                                 data-kt-swapper="true" data-kt-swapper-mode="prepend"
+                                 data-kt-swapper-parent="{default: '#kt_topbar',lg: '#kt_header_search_wrapper'}">
                                 <!--begin::Tablet and mobile search toggle-->
-                                <div data-kt-search-element="toggle" class="search-toggle-mobile d-flex d-lg-none align-items-center">
+                                <div data-kt-search-element="toggle"
+                                     class="search-toggle-mobile d-flex d-lg-none align-items-center">
                                     <div class="d-flex btn btn-icon btn-color-white w-30px h-30px">
                                         <i class="ki-duotone ki-magnifier fs-1">
                                             <span class="path1"></span>
@@ -3407,9 +3743,11 @@ License: For each use you must have a valid license purchased only from above li
                                 </div>
                                 <!--end::Tablet and mobile search toggle-->
                                 <!--begin::Form(use d-none d-lg-block classes for responsive search)-->
-                                <form data-kt-search-element="form" class="d-none d-lg-block align-items-center d-lg-flex w-100 mb-5 mb-lg-0 position-relative" autocomplete="off">
+                                <form data-kt-search-element="form"
+                                      class="d-none d-lg-block align-items-center d-lg-flex w-100 mb-5 mb-lg-0 position-relative"
+                                      autocomplete="off">
                                     <!--begin::Hidden input(Added to disable form autocomplete)-->
-                                    <input type="hidden" />
+                                    <input type="hidden"/>
                                     <!--end::Hidden input-->
                                     <!--begin::Icon-->
                                     <i class="ki-duotone ki-magnifier fs-2 text-gray-600 position-absolute top-50 translate-middle-y ms-4">
@@ -3418,15 +3756,20 @@ License: For each use you must have a valid license purchased only from above li
                                     </i>
                                     <!--end::Icon-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control bg-transparent ps-13 fs-7 h-40px" name="search" value="" placeholder="Search" data-kt-search-element="input" />
+                                    <input type="text" class="form-control bg-transparent ps-13 fs-7 h-40px"
+                                           name="search" value="" placeholder="Search" data-kt-search-element="input"/>
                                     <!--end::Input-->
                                     <!--begin::Spinner-->
-                                    <span class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-5" data-kt-search-element="spinner">
-												<span class="spinner-border h-15px w-15px align-middle text-gray-500"></span>
+                                    <span class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-5"
+                                          data-kt-search-element="spinner">
+												<span
+                                                    class="spinner-border h-15px w-15px align-middle text-gray-500"></span>
 											</span>
                                     <!--end::Spinner-->
                                     <!--begin::Reset-->
-                                    <span class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-4" data-kt-search-element="clear">
+                                    <span
+                                        class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-4"
+                                        data-kt-search-element="clear">
 												<i class="ki-duotone ki-cross fs-2 fs-lg-1 me-0">
 													<span class="path1"></span>
 													<span class="path2"></span>
@@ -3436,7 +3779,8 @@ License: For each use you must have a valid license purchased only from above li
                                 </form>
                                 <!--end::Form-->
                                 <!--begin::Menu-->
-                                <div data-kt-search-element="content" class="menu menu-sub menu-sub-dropdown py-7 px-7 overflow-hidden w-300px w-md-350px">
+                                <div data-kt-search-element="content"
+                                     class="menu menu-sub menu-sub-dropdown py-7 px-7 overflow-hidden w-300px w-md-350px">
                                     <!--begin::Wrapper-->
                                     <div data-kt-search-element="wrapper">
                                         <!--begin::Recently viewed-->
@@ -3444,43 +3788,49 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Items-->
                                             <div class="scroll-y mh-200px mh-lg-350px">
                                                 <!--begin::Category title-->
-                                                <h3 class="fs-5 text-muted m-0 pb-5" data-kt-search-element="category-title">Users</h3>
+                                                <h3 class="fs-5 text-muted m-0 pb-5"
+                                                    data-kt-search-element="category-title">Users</h3>
                                                 <!--end::Category title-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
-                                                        <img src="{{ asset('/media/avatars/300-6.jpg') }}" alt="" />
+                                                        <img src="{{ asset('/media/avatars/300-6.jpg') }}" alt=""/>
                                                     </div>
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column justify-content-start fw-semibold">
                                                         <span class="fs-6 fw-semibold">Karina Clark</span>
-                                                        <span class="fs-7 fw-semibold text-muted">Marketing Manager</span>
+                                                        <span
+                                                            class="fs-7 fw-semibold text-muted">Marketing Manager</span>
                                                     </div>
                                                     <!--end::Title-->
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
-                                                        <img src="{{ asset('/media/avatars/300-2.jpg') }}" alt="" />
+                                                        <img src="{{ asset('/media/avatars/300-2.jpg') }}" alt=""/>
                                                     </div>
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column justify-content-start fw-semibold">
                                                         <span class="fs-6 fw-semibold">Olivia Bold</span>
-                                                        <span class="fs-7 fw-semibold text-muted">Software Engineer</span>
+                                                        <span
+                                                            class="fs-7 fw-semibold text-muted">Software Engineer</span>
                                                     </div>
                                                     <!--end::Title-->
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
-                                                        <img src="{{ asset('/media/avatars/300-9.jpg') }}" alt="" />
+                                                        <img src="{{ asset('/media/avatars/300-9.jpg') }}" alt=""/>
                                                     </div>
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
@@ -3492,10 +3842,11 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
-                                                        <img src="{{ asset('/media/avatars/300-14.jpg') }}" alt="" />
+                                                        <img src="{{ asset('/media/avatars/300-14.jpg') }}" alt=""/>
                                                     </div>
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
@@ -3507,29 +3858,35 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
-                                                        <img src="{{ asset('/media/avatars/300-11.jpg') }}" alt="" />
+                                                        <img src="{{ asset('/media/avatars/300-11.jpg') }}" alt=""/>
                                                     </div>
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column justify-content-start fw-semibold">
                                                         <span class="fs-6 fw-semibold">Edward Kulnic</span>
-                                                        <span class="fs-7 fw-semibold text-muted">System Administrator</span>
+                                                        <span
+                                                            class="fs-7 fw-semibold text-muted">System Administrator</span>
                                                     </div>
                                                     <!--end::Title-->
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Category title-->
-                                                <h3 class="fs-5 text-muted m-0 pt-5 pb-5" data-kt-search-element="category-title">Customers</h3>
+                                                <h3 class="fs-5 text-muted m-0 pt-5 pb-5"
+                                                    data-kt-search-element="category-title">Customers</h3>
                                                 <!--end::Category title-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
-																	<img class="w-20px h-20px" src="{{ asset('/media/svg/brand-logos/volicity-9.svg') }}" alt="" />
+																	<img class="w-20px h-20px"
+                                                                         src="{{ asset('/media/svg/brand-logos/volicity-9.svg') }}"
+                                                                         alt=""/>
 																</span>
                                                     </div>
                                                     <!--end::Symbol-->
@@ -3542,11 +3899,14 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
-																	<img class="w-20px h-20px" src="{{ asset('/media/svg/brand-logos/tvit.svg') }}" alt="" />
+																	<img class="w-20px h-20px"
+                                                                         src="{{ asset('/media/svg/brand-logos/tvit.svg') }}"
+                                                                         alt=""/>
 																</span>
                                                     </div>
                                                     <!--end::Symbol-->
@@ -3559,11 +3919,14 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
-																	<img class="w-20px h-20px" src="{{ asset('/media/svg/misc/infography.svg') }}" alt="" />
+																	<img class="w-20px h-20px"
+                                                                         src="{{ asset('/media/svg/misc/infography.svg') }}"
+                                                                         alt=""/>
 																</span>
                                                     </div>
                                                     <!--end::Symbol-->
@@ -3576,11 +3939,14 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
-																	<img class="w-20px h-20px" src="{{ asset('/media/svg/brand-logos/leaf.svg') }}" alt="" />
+																	<img class="w-20px h-20px"
+                                                                         src="{{ asset('/media/svg/brand-logos/leaf.svg') }}"
+                                                                         alt=""/>
 																</span>
                                                     </div>
                                                     <!--end::Symbol-->
@@ -3593,11 +3959,14 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
-																	<img class="w-20px h-20px" src="{{ asset('/media/svg/brand-logos/tower.svg') }}" alt="" />
+																	<img class="w-20px h-20px"
+                                                                         src="{{ asset('/media/svg/brand-logos/tower.svg') }}"
+                                                                         alt=""/>
 																</span>
                                                     </div>
                                                     <!--end::Symbol-->
@@ -3610,10 +3979,12 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Category title-->
-                                                <h3 class="fs-5 text-muted m-0 pt-5 pb-5" data-kt-search-element="category-title">Projects</h3>
+                                                <h3 class="fs-5 text-muted m-0 pt-5 pb-5"
+                                                    data-kt-search-element="category-title">Projects</h3>
                                                 <!--end::Category title-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
@@ -3636,7 +4007,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
@@ -3658,7 +4030,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
@@ -3679,7 +4052,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 </a>
                                                 <!--end::Item-->
                                                 <!--begin::Item-->
-                                                <a href="#" class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
+                                                <a href="#"
+                                                   class="d-flex text-gray-900 text-hover-primary align-items-center mb-5">
                                                     <!--begin::Symbol-->
                                                     <div class="symbol symbol-40px me-4">
 																<span class="symbol-label bg-light">
@@ -3713,7 +4087,9 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--begin::Toolbar-->
                                                 <div class="d-flex" data-kt-search-element="toolbar">
                                                     <!--begin::Preferences toggle-->
-                                                    <div data-kt-search-element="preferences-show" class="btn btn-icon w-20px btn-sm btn-active-color-primary me-2 data-bs-toggle=" title="Show search preferences">
+                                                    <div data-kt-search-element="preferences-show"
+                                                         class="btn btn-icon w-20px btn-sm btn-active-color-primary me-2 data-bs-toggle="
+                                                         title="Show search preferences">
                                                         <i class="ki-duotone ki-setting-2 fs-2">
                                                             <span class="path1"></span>
                                                             <span class="path2"></span>
@@ -3721,7 +4097,9 @@ License: For each use you must have a valid license purchased only from above li
                                                     </div>
                                                     <!--end::Preferences toggle-->
                                                     <!--begin::Advanced search toggle-->
-                                                    <div data-kt-search-element="advanced-options-form-show" class="btn btn-icon w-20px btn-sm btn-active-color-primary me-n1" data-bs-toggle="tooltip" title="Show more search options">
+                                                    <div data-kt-search-element="advanced-options-form-show"
+                                                         class="btn btn-icon w-20px btn-sm btn-active-color-primary me-n1"
+                                                         data-bs-toggle="tooltip" title="Show more search options">
                                                         <i class="ki-duotone ki-down fs-2"></i>
                                                     </div>
                                                     <!--end::Advanced search toggle-->
@@ -3745,7 +4123,9 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column">
-                                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp by Keenthemes</a>
+                                                        <a href="#"
+                                                           class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp
+                                                            by Keenthemes</a>
                                                         <span class="fs-7 text-muted fw-semibold">#45789</span>
                                                     </div>
                                                     <!--end::Title-->
@@ -3767,7 +4147,9 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column">
-                                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Kept API Project Meeting</a>
+                                                        <a href="#"
+                                                           class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Kept
+                                                            API Project Meeting</a>
                                                         <span class="fs-7 text-muted fw-semibold">#84050</span>
                                                     </div>
                                                     <!--end::Title-->
@@ -3787,7 +4169,9 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column">
-                                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"KPI Monitoring App Launch</a>
+                                                        <a href="#"
+                                                           class="fs-6 text-gray-800 text-hover-primary fw-semibold">"KPI
+                                                            Monitoring App Launch</a>
                                                         <span class="fs-7 text-muted fw-semibold">#84250</span>
                                                     </div>
                                                     <!--end::Title-->
@@ -3807,7 +4191,9 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column">
-                                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Project Reference FAQ</a>
+                                                        <a href="#"
+                                                           class="fs-6 text-gray-800 text-hover-primary fw-semibold">Project
+                                                            Reference FAQ</a>
                                                         <span class="fs-7 text-muted fw-semibold">#67945</span>
                                                     </div>
                                                     <!--end::Title-->
@@ -3827,7 +4213,9 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column">
-                                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"FitPro App Development</a>
+                                                        <a href="#"
+                                                           class="fs-6 text-gray-800 text-hover-primary fw-semibold">"FitPro
+                                                            App Development</a>
                                                         <span class="fs-7 text-muted fw-semibold">#84250</span>
                                                     </div>
                                                     <!--end::Title-->
@@ -3847,7 +4235,9 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column">
-                                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Shopix Mobile App</a>
+                                                        <a href="#"
+                                                           class="fs-6 text-gray-800 text-hover-primary fw-semibold">Shopix
+                                                            Mobile App</a>
                                                         <span class="fs-7 text-muted fw-semibold">#45690</span>
                                                     </div>
                                                     <!--end::Title-->
@@ -3867,7 +4257,9 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end::Symbol-->
                                                     <!--begin::Title-->
                                                     <div class="d-flex flex-column">
-                                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Landing UI Design" Launch</a>
+                                                        <a href="#"
+                                                           class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Landing
+                                                            UI Design" Launch</a>
                                                         <span class="fs-7 text-muted fw-semibold">#24005</span>
                                                     </div>
                                                     <!--end::Title-->
@@ -3891,7 +4283,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Message-->
                                             <div class="pb-15 fw-semibold">
                                                 <h3 class="text-gray-600 fs-5 mb-2">No result found</h3>
-                                                <div class="text-muted fs-7">Please try again with a different query</div>
+                                                <div class="text-muted fs-7">Please try again with a different query
+                                                </div>
                                             </div>
                                             <!--end::Message-->
                                         </div>
@@ -3905,7 +4298,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Heading-->
                                         <!--begin::Input group-->
                                         <div class="mb-5">
-                                            <input type="text" class="form-control form-control-sm form-control-solid" placeholder="Contains the word" name="query" />
+                                            <input type="text" class="form-control form-control-sm form-control-solid"
+                                                   placeholder="Contains the word" name="query"/>
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
@@ -3914,26 +4308,31 @@ License: For each use you must have a valid license purchased only from above li
                                             <div class="nav-group nav-group-fluid">
                                                 <!--begin::Option-->
                                                 <label>
-                                                    <input type="radio" class="btn-check" name="type" value="has" checked="checked" />
-                                                    <span class="btn btn-sm btn-color-muted btn-active btn-active-primary">All</span>
+                                                    <input type="radio" class="btn-check" name="type" value="has"
+                                                           checked="checked"/>
+                                                    <span
+                                                        class="btn btn-sm btn-color-muted btn-active btn-active-primary">All</span>
                                                 </label>
                                                 <!--end::Option-->
                                                 <!--begin::Option-->
                                                 <label>
-                                                    <input type="radio" class="btn-check" name="type" value="users" />
-                                                    <span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Users</span>
+                                                    <input type="radio" class="btn-check" name="type" value="users"/>
+                                                    <span
+                                                        class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Users</span>
                                                 </label>
                                                 <!--end::Option-->
                                                 <!--begin::Option-->
                                                 <label>
-                                                    <input type="radio" class="btn-check" name="type" value="orders" />
-                                                    <span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Orders</span>
+                                                    <input type="radio" class="btn-check" name="type" value="orders"/>
+                                                    <span
+                                                        class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Orders</span>
                                                 </label>
                                                 <!--end::Option-->
                                                 <!--begin::Option-->
                                                 <label>
-                                                    <input type="radio" class="btn-check" name="type" value="projects" />
-                                                    <span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Projects</span>
+                                                    <input type="radio" class="btn-check" name="type" value="projects"/>
+                                                    <span
+                                                        class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Projects</span>
                                                 </label>
                                                 <!--end::Option-->
                                             </div>
@@ -3942,12 +4341,16 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
                                         <div class="mb-5">
-                                            <input type="text" name="assignedto" class="form-control form-control-sm form-control-solid" placeholder="Assigned to" value="" />
+                                            <input type="text" name="assignedto"
+                                                   class="form-control form-control-sm form-control-solid"
+                                                   placeholder="Assigned to" value=""/>
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
                                         <div class="mb-5">
-                                            <input type="text" name="collaborators" class="form-control form-control-sm form-control-solid" placeholder="Collaborators" value="" />
+                                            <input type="text" name="collaborators"
+                                                   class="form-control form-control-sm form-control-solid"
+                                                   placeholder="Collaborators" value=""/>
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
@@ -3956,14 +4359,18 @@ License: For each use you must have a valid license purchased only from above li
                                             <div class="nav-group nav-group-fluid">
                                                 <!--begin::Option-->
                                                 <label>
-                                                    <input type="radio" class="btn-check" name="attachment" value="has" checked="checked" />
-                                                    <span class="btn btn-sm btn-color-muted btn-active btn-active-primary">Has attachment</span>
+                                                    <input type="radio" class="btn-check" name="attachment" value="has"
+                                                           checked="checked"/>
+                                                    <span
+                                                        class="btn btn-sm btn-color-muted btn-active btn-active-primary">Has attachment</span>
                                                 </label>
                                                 <!--end::Option-->
                                                 <!--begin::Option-->
                                                 <label>
-                                                    <input type="radio" class="btn-check" name="attachment" value="any" />
-                                                    <span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Any</span>
+                                                    <input type="radio" class="btn-check" name="attachment"
+                                                           value="any"/>
+                                                    <span
+                                                        class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Any</span>
                                                 </label>
                                                 <!--end::Option-->
                                             </div>
@@ -3972,7 +4379,10 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
                                         <div class="mb-5">
-                                            <select name="timezone" aria-label="Select a Timezone" data-control="select2" data-dropdown-parent="#kt_header_search" data-placeholder="date_period" class="form-select form-select-sm form-select-solid">
+                                            <select name="timezone" aria-label="Select a Timezone"
+                                                    data-control="select2" data-dropdown-parent="#kt_header_search"
+                                                    data-placeholder="date_period"
+                                                    class="form-select form-select-sm form-select-solid">
                                                 <option value="next">Within the next</option>
                                                 <option value="last">Within the last</option>
                                                 <option value="between">Between</option>
@@ -3984,12 +4394,17 @@ License: For each use you must have a valid license purchased only from above li
                                         <div class="row mb-8">
                                             <!--begin::Col-->
                                             <div class="col-6">
-                                                <input type="number" name="date_number" class="form-control form-control-sm form-control-solid" placeholder="Lenght" value="" />
+                                                <input type="number" name="date_number"
+                                                       class="form-control form-control-sm form-control-solid"
+                                                       placeholder="Lenght" value=""/>
                                             </div>
                                             <!--end::Col-->
                                             <!--begin::Col-->
                                             <div class="col-6">
-                                                <select name="date_typer" aria-label="Select a Timezone" data-control="select2" data-dropdown-parent="#kt_header_search" data-placeholder="Period" class="form-select form-select-sm form-select-solid">
+                                                <select name="date_typer" aria-label="Select a Timezone"
+                                                        data-control="select2" data-dropdown-parent="#kt_header_search"
+                                                        data-placeholder="Period"
+                                                        class="form-select form-select-sm form-select-solid">
                                                     <option value="days">Days</option>
                                                     <option value="weeks">Weeks</option>
                                                     <option value="months">Months</option>
@@ -4001,8 +4416,13 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Input group-->
                                         <!--begin::Actions-->
                                         <div class="d-flex justify-content-end">
-                                            <button type="reset" class="btn btn-sm btn-light fw-bold btn-active-light-primary me-2" data-kt-search-element="advanced-options-form-cancel">Cancel</button>
-                                            <a href="utilities/search/horizontal.html" class="btn btn-sm fw-bold btn-primary" data-kt-search-element="advanced-options-form-search">Search</a>
+                                            <button type="reset"
+                                                    class="btn btn-sm btn-light fw-bold btn-active-light-primary me-2"
+                                                    data-kt-search-element="advanced-options-form-cancel">Cancel
+                                            </button>
+                                            <a href="utilities/search/horizontal.html"
+                                               class="btn btn-sm fw-bold btn-primary"
+                                               data-kt-search-element="advanced-options-form-search">Search</a>
                                         </div>
                                         <!--end::Actions-->
                                     </form>
@@ -4014,48 +4434,60 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Heading-->
                                         <!--begin::Input group-->
                                         <div class="pb-4 border-bottom">
-                                            <label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
+                                            <label
+                                                class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
                                                 <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Projects</span>
-                                                <input class="form-check-input" type="checkbox" value="1" checked="checked" />
+                                                <input class="form-check-input" type="checkbox" value="1"
+                                                       checked="checked"/>
                                             </label>
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
                                         <div class="py-4 border-bottom">
-                                            <label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
+                                            <label
+                                                class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
                                                 <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Targets</span>
-                                                <input class="form-check-input" type="checkbox" value="1" checked="checked" />
+                                                <input class="form-check-input" type="checkbox" value="1"
+                                                       checked="checked"/>
                                             </label>
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
                                         <div class="py-4 border-bottom">
-                                            <label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
+                                            <label
+                                                class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
                                                 <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Affiliate Programs</span>
-                                                <input class="form-check-input" type="checkbox" value="1" />
+                                                <input class="form-check-input" type="checkbox" value="1"/>
                                             </label>
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
                                         <div class="py-4 border-bottom">
-                                            <label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
+                                            <label
+                                                class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
                                                 <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Referrals</span>
-                                                <input class="form-check-input" type="checkbox" value="1" checked="checked" />
+                                                <input class="form-check-input" type="checkbox" value="1"
+                                                       checked="checked"/>
                                             </label>
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Input group-->
                                         <div class="py-4 border-bottom">
-                                            <label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
+                                            <label
+                                                class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
                                                 <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Users</span>
-                                                <input class="form-check-input" type="checkbox" value="1" />
+                                                <input class="form-check-input" type="checkbox" value="1"/>
                                             </label>
                                         </div>
                                         <!--end::Input group-->
                                         <!--begin::Actions-->
                                         <div class="d-flex justify-content-end pt-7">
-                                            <button type="reset" class="btn btn-sm btn-light fw-bold btn-active-light-primary me-2" data-kt-search-element="preferences-dismiss">Cancel</button>
-                                            <button type="submit" class="btn btn-sm fw-bold btn-primary">Save Changes</button>
+                                            <button type="reset"
+                                                    class="btn btn-sm btn-light fw-bold btn-active-light-primary me-2"
+                                                    data-kt-search-element="preferences-dismiss">Cancel
+                                            </button>
+                                            <button type="submit" class="btn btn-sm fw-bold btn-primary">Save Changes
+                                            </button>
                                         </div>
                                         <!--end::Actions-->
                                     </form>
@@ -4079,7 +4511,8 @@ License: For each use you must have a valid license purchased only from above li
                     <!--begin::Page title-->
                     <div class="page-title d-flex flex-column">
                         <!--begin::Title-->
-                        <h1 class="page-heading d-flex flex-column justify-content-center text-gray-900 fw-bolder fs-3 m-0">Online Courses
+                        <h1 class="page-heading d-flex flex-column justify-content-center text-gray-900 fw-bolder fs-3 m-0">
+                            Online Courses
                             <!--begin::Description-->
                             <span class="page-desc text-muted fs-7 fw-semibold pt-1"></span>
                             <!--end::Description--></h1>
@@ -4087,7 +4520,8 @@ License: For each use you must have a valid license purchased only from above li
                     </div>
                     <!--end::Page title-->
                     <!--begin::Action-->
-                    <a href="#" class="btn bg-body d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Create
+                    <a href="#" class="btn bg-body d-flex flex-center h-35px h-lg-40px" data-bs-toggle="modal"
+                       data-bs-target="#kt_modal_create_campaign">Create
                         <span class="d-none d-sm-inline ps-2">New</span></a>
                     <!--end::Action-->
                 </div>
@@ -4095,51 +4529,56 @@ License: For each use you must have a valid license purchased only from above li
             </div>
             <!--end::Toolbar-->
             <!--begin::Container-->
-                @yield("content")
+            @yield("content")
         </div>
-            <!--end::Container-->
-            <!--begin::Footer-->
-            <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
-                <!--begin::Container-->
-                <div class="container-xxl d-flex flex-column flex-md-row align-items-center justify-content-between">
-                    <!--begin::Copyright-->
-                    <div class="text-gray-900 order-2 order-md-1">
-                        <span class="text-muted fw-semibold me-1">2024&copy;</span>
-                        <a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
-                    </div>
-                    <!--end::Copyright-->
-                    <!--begin::Menu-->
-                    <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
-                        <li class="menu-item">
-                            <a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
-                        </li>
-                    </ul>
-                    <!--end::Menu-->
+        <!--end::Container-->
+        <!--begin::Footer-->
+        <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+            <!--begin::Container-->
+            <div class="container-xxl d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <!--begin::Copyright-->
+                <div class="text-gray-900 order-2 order-md-1">
+                    <span class="text-muted fw-semibold me-1">2024&copy;</span>
+                    <a href="https://keenthemes.com" target="_blank"
+                       class="text-gray-800 text-hover-primary">Keenthemes</a>
                 </div>
-                <!--end::Container-->
+                <!--end::Copyright-->
+                <!--begin::Menu-->
+                <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
+                    <li class="menu-item">
+                        <a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
+                    </li>
+                </ul>
+                <!--end::Menu-->
             </div>
-            <!--end::Footer-->
+            <!--end::Container-->
         </div>
-        <!--end::Wrapper-->
+        <!--end::Footer-->
     </div>
-    <!--end::Page-->
+    <!--end::Wrapper-->
+</div>
+<!--end::Page-->
 </div>
 <!--end::Root-->
 <!--begin::Drawers-->
 <!--begin::Activities drawer-->
-<div id="kt_activities" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="activities" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'lg': '900px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_activities_toggle" data-kt-drawer-close="#kt_activities_close">
+<div id="kt_activities" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="activities"
+     data-kt-drawer-activate="true" data-kt-drawer-overlay="true"
+     data-kt-drawer-width="{default:'300px', 'lg': '900px'}" data-kt-drawer-direction="end"
+     data-kt-drawer-toggle="#kt_activities_toggle" data-kt-drawer-close="#kt_activities_close">
     <div class="card shadow-none border-0 rounded-0">
         <!--begin::Header-->
         <div class="card-header" id="kt_activities_header">
             <h3 class="card-title fw-bold text-gray-900">Activity Logs</h3>
             <div class="card-toolbar">
-                <button type="button" class="btn btn-sm btn-icon btn-active-light-primary me-n5" id="kt_activities_close">
+                <button type="button" class="btn btn-sm btn-icon btn-active-light-primary me-n5"
+                        id="kt_activities_close">
                     <i class="ki-duotone ki-cross fs-1">
                         <span class="path1"></span>
                         <span class="path2"></span>
@@ -4151,7 +4590,9 @@ License: For each use you must have a valid license purchased only from above li
         <!--begin::Body-->
         <div class="card-body position-relative" id="kt_activities_body">
             <!--begin::Content-->
-            <div id="kt_activities_scroll" class="position-relative scroll-y me-n5 pe-5" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-wrappers="#kt_activities_body" data-kt-scroll-dependencies="#kt_activities_header, #kt_activities_footer" data-kt-scroll-offset="5px">
+            <div id="kt_activities_scroll" class="position-relative scroll-y me-n5 pe-5" data-kt-scroll="true"
+                 data-kt-scroll-height="auto" data-kt-scroll-wrappers="#kt_activities_body"
+                 data-kt-scroll-dependencies="#kt_activities_header, #kt_activities_footer" data-kt-scroll-offset="5px">
                 <!--begin::Timeline items-->
                 <div class="timeline timeline-border-dashed">
                     <!--begin::Timeline item-->
@@ -4173,7 +4614,9 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Timeline heading-->
                             <div class="pe-3 mb-5">
                                 <!--begin::Title-->
-                                <div class="fs-5 fw-semibold mb-2">There are 2 new tasks for you in “AirPlus Mobile App” project:</div>
+                                <div class="fs-5 fw-semibold mb-2">There are 2 new tasks for you in “AirPlus Mobile App”
+                                    project:
+                                </div>
                                 <!--end::Title-->
                                 <!--begin::Description-->
                                 <div class="d-flex align-items-center mt-1 fs-6">
@@ -4181,8 +4624,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="text-muted me-2 fs-7">Added at 4:23 PM by</div>
                                     <!--end::Info-->
                                     <!--begin::User-->
-                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-                                        <img src="{{ asset('/media/avatars/300-14.jpg') }}" alt="img" />
+                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
+                                         data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
+                                        <img src="{{ asset('/media/avatars/300-14.jpg') }}" alt="img"/>
                                     </div>
                                     <!--end::User-->
                                 </div>
@@ -4192,9 +4636,12 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Timeline details-->
                             <div class="overflow-auto pb-5">
                                 <!--begin::Record-->
-                                <div class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-5">
+                                <div
+                                    class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-5">
                                     <!--begin::Title-->
-                                    <a href="apps/projects/project.html" class="fs-5 text-gray-900 text-hover-primary fw-semibold w-375px min-w-200px">Meeting with customer</a>
+                                    <a href="apps/projects/project.html"
+                                       class="fs-5 text-gray-900 text-hover-primary fw-semibold w-375px min-w-200px">Meeting
+                                        with customer</a>
                                     <!--end::Title-->
                                     <!--begin::Label-->
                                     <div class="min-w-175px pe-2">
@@ -4205,17 +4652,19 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px pe-2">
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px">
-                                            <img src="{{ asset('/media/avatars/300-2.jpg') }}" alt="img" />
+                                            <img src="{{ asset('/media/avatars/300-2.jpg') }}" alt="img"/>
                                         </div>
                                         <!--end::User-->
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px">
-                                            <img src="{{ asset('/media/avatars/300-14.jpg') }}" alt="img" />
+                                            <img src="{{ asset('/media/avatars/300-14.jpg') }}" alt="img"/>
                                         </div>
                                         <!--end::User-->
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px">
-                                            <div class="symbol-label fs-8 fw-semibold bg-primary text-inverse-primary">A</div>
+                                            <div class="symbol-label fs-8 fw-semibold bg-primary text-inverse-primary">
+                                                A
+                                            </div>
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -4226,14 +4675,18 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end::Progress-->
                                     <!--begin::Action-->
-                                    <a href="apps/projects/project.html" class="btn btn-sm btn-light btn-active-light-primary">View</a>
+                                    <a href="apps/projects/project.html"
+                                       class="btn btn-sm btn-light btn-active-light-primary">View</a>
                                     <!--end::Action-->
                                 </div>
                                 <!--end::Record-->
                                 <!--begin::Record-->
-                                <div class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-0">
+                                <div
+                                    class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-0">
                                     <!--begin::Title-->
-                                    <a href="apps/projects/project.html" class="fs-5 text-gray-900 text-hover-primary fw-semibold w-375px min-w-200px">Project Delivery Preparation</a>
+                                    <a href="apps/projects/project.html"
+                                       class="fs-5 text-gray-900 text-hover-primary fw-semibold w-375px min-w-200px">Project
+                                        Delivery Preparation</a>
                                     <!--end::Title-->
                                     <!--begin::Label-->
                                     <div class="min-w-175px">
@@ -4244,12 +4697,14 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px">
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px">
-                                            <img src="{{ asset('/media/avatars/300-20.jpg') }}" alt="img" />
+                                            <img src="{{ asset('/media/avatars/300-20.jpg') }}" alt="img"/>
                                         </div>
                                         <!--end::User-->
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px">
-                                            <div class="symbol-label fs-8 fw-semibold bg-success text-inverse-primary">B</div>
+                                            <div class="symbol-label fs-8 fw-semibold bg-success text-inverse-primary">
+                                                B
+                                            </div>
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -4260,7 +4715,8 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end::Progress-->
                                     <!--begin::Action-->
-                                    <a href="apps/projects/project.html" class="btn btn-sm btn-light btn-active-light-primary">View</a>
+                                    <a href="apps/projects/project.html"
+                                       class="btn btn-sm btn-light btn-active-light-primary">View</a>
                                     <!--end::Action-->
                                 </div>
                                 <!--end::Record-->
@@ -4288,7 +4744,9 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Timeline heading-->
                             <div class="overflow-auto pe-3">
                                 <!--begin::Title-->
-                                <div class="fs-5 fw-semibold mb-2">Invitation for crafting engaging designs that speak human workshop</div>
+                                <div class="fs-5 fw-semibold mb-2">Invitation for crafting engaging designs that speak
+                                    human workshop
+                                </div>
                                 <!--end::Title-->
                                 <!--begin::Description-->
                                 <div class="d-flex align-items-center mt-1 fs-6">
@@ -4296,8 +4754,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="text-muted me-2 fs-7">Sent at 4:23 PM by</div>
                                     <!--end::Info-->
                                     <!--begin::User-->
-                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Alan Nilson">
-                                        <img src="{{ asset('/media/avatars/300-1.jpg') }}" alt="img" />
+                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
+                                         data-bs-boundary="window" data-bs-placement="top" title="Alan Nilson">
+                                        <img src="{{ asset('/media/avatars/300-1.jpg') }}" alt="img"/>
                                     </div>
                                     <!--end::User-->
                                 </div>
@@ -4329,7 +4788,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Timeline heading-->
                             <div class="mb-5 pe-3">
                                 <!--begin::Title-->
-                                <a href="#" class="fs-5 fw-semibold text-gray-800 text-hover-primary mb-2">3 New Incoming Project Files:</a>
+                                <a href="#" class="fs-5 fw-semibold text-gray-800 text-hover-primary mb-2">3 New
+                                    Incoming Project Files:</a>
                                 <!--end::Title-->
                                 <!--begin::Description-->
                                 <div class="d-flex align-items-center mt-1 fs-6">
@@ -4337,8 +4797,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="text-muted me-2 fs-7">Sent at 10:30 PM by</div>
                                     <!--end::Info-->
                                     <!--begin::User-->
-                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Jan Hummer">
-                                        <img src="{{ asset('/media/avatars/300-23.jpg') }}" alt="img" />
+                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
+                                         data-bs-boundary="window" data-bs-placement="top" title="Jan Hummer">
+                                        <img src="{{ asset('/media/avatars/300-23.jpg') }}" alt="img"/>
                                     </div>
                                     <!--end::User-->
                                 </div>
@@ -4347,16 +4808,18 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Timeline heading-->
                             <!--begin::Timeline details-->
                             <div class="overflow-auto pb-5">
-                                <div class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-700px p-5">
+                                <div
+                                    class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-700px p-5">
                                     <!--begin::Item-->
                                     <div class="d-flex flex-aligns-center pe-10 pe-lg-20">
                                         <!--begin::Icon-->
-                                        <img alt="" class="w-30px me-3" src="{{ asset('/media/svg/files/pdf.svg') }}" />
+                                        <img alt="" class="w-30px me-3" src="{{ asset('/media/svg/files/pdf.svg') }}"/>
                                         <!--end::Icon-->
                                         <!--begin::Info-->
                                         <div class="ms-1 fw-semibold">
                                             <!--begin::Desc-->
-                                            <a href="apps/projects/project.html" class="fs-6 text-hover-primary fw-bold">Finance KPI App Guidelines</a>
+                                            <a href="apps/projects/project.html"
+                                               class="fs-6 text-hover-primary fw-bold">Finance KPI App Guidelines</a>
                                             <!--end::Desc-->
                                             <!--begin::Number-->
                                             <div class="text-gray-500">1.9mb</div>
@@ -4368,12 +4831,14 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Item-->
                                     <div class="d-flex flex-aligns-center pe-10 pe-lg-20">
                                         <!--begin::Icon-->
-                                        <img alt="apps/projects/project.html" class="w-30px me-3" src="{{ asset('/media/svg/files/doc.svg') }}" />
+                                        <img alt="apps/projects/project.html" class="w-30px me-3"
+                                             src="{{ asset('/media/svg/files/doc.svg') }}"/>
                                         <!--end::Icon-->
                                         <!--begin::Info-->
                                         <div class="ms-1 fw-semibold">
                                             <!--begin::Desc-->
-                                            <a href="#" class="fs-6 text-hover-primary fw-bold">Client UAT Testing Results</a>
+                                            <a href="#" class="fs-6 text-hover-primary fw-bold">Client UAT Testing
+                                                Results</a>
                                             <!--end::Desc-->
                                             <!--begin::Number-->
                                             <div class="text-gray-500">18kb</div>
@@ -4385,7 +4850,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Item-->
                                     <div class="d-flex flex-aligns-center">
                                         <!--begin::Icon-->
-                                        <img alt="apps/projects/project.html" class="w-30px me-3" src="{{ asset('/media/svg/files/css.svg') }}" />
+                                        <img alt="apps/projects/project.html" class="w-30px me-3"
+                                             src="{{ asset('/media/svg/files/css.svg') }}"/>
                                         <!--end::Icon-->
                                         <!--begin::Info-->
                                         <div class="ms-1 fw-semibold">
@@ -4426,7 +4892,9 @@ License: For each use you must have a valid license purchased only from above li
                                 <!--begin::Title-->
                                 <div class="fs-5 fw-semibold mb-2">Task
                                     <a href="#" class="text-primary fw-bold me-1">#45890</a>merged with
-                                    <a href="#" class="text-primary fw-bold me-1">#45890</a>in “Ads Pro Admin Dashboard project:</div>
+                                    <a href="#" class="text-primary fw-bold me-1">#45890</a>in “Ads Pro Admin Dashboard
+                                    project:
+                                </div>
                                 <!--end::Title-->
                                 <!--begin::Description-->
                                 <div class="d-flex align-items-center mt-1 fs-6">
@@ -4434,8 +4902,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="text-muted me-2 fs-7">Initiated at 4:23 PM by</div>
                                     <!--end::Info-->
                                     <!--begin::User-->
-                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-                                        <img src="{{ asset('/media/avatars/300-14.jpg') }}" alt="img" />
+                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
+                                         data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
+                                        <img src="{{ asset('/media/avatars/300-14.jpg') }}" alt="img"/>
                                     </div>
                                     <!--end::User-->
                                 </div>
@@ -4472,8 +4941,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="text-muted me-2 fs-7">Created at 4:23 PM by</div>
                                     <!--end::Info-->
                                     <!--begin::User-->
-                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Marcus Dotson">
-                                        <img src="{{ asset('/media/avatars/300-2.jpg') }}" alt="img" />
+                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
+                                         data-bs-boundary="window" data-bs-placement="top" title="Marcus Dotson">
+                                        <img src="{{ asset('/media/avatars/300-2.jpg') }}" alt="img"/>
                                     </div>
                                     <!--end::User-->
                                 </div>
@@ -4482,12 +4952,14 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Timeline heading-->
                             <!--begin::Timeline details-->
                             <div class="overflow-auto pb-5">
-                                <div class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-700px p-7">
+                                <div
+                                    class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-700px p-7">
                                     <!--begin::Item-->
                                     <div class="overlay me-10">
                                         <!--begin::Image-->
                                         <div class="overlay-wrapper">
-                                            <img alt="img" class="rounded w-150px" src="{{ asset('/media/stock/600x400/img-29.jpg') }}" />
+                                            <img alt="img" class="rounded w-150px"
+                                                 src="{{ asset('/media/stock/600x400/img-29.jpg') }}"/>
                                         </div>
                                         <!--end::Image-->
                                         <!--begin::Link-->
@@ -4501,7 +4973,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="overlay me-10">
                                         <!--begin::Image-->
                                         <div class="overlay-wrapper">
-                                            <img alt="img" class="rounded w-150px" src="{{ asset('/media/stock/600x400/img-31.jpg') }}" />
+                                            <img alt="img" class="rounded w-150px"
+                                                 src="{{ asset('/media/stock/600x400/img-31.jpg') }}"/>
                                         </div>
                                         <!--end::Image-->
                                         <!--begin::Link-->
@@ -4515,7 +4988,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="overlay">
                                         <!--begin::Image-->
                                         <div class="overlay-wrapper">
-                                            <img alt="img" class="rounded w-150px" src="{{ asset('/media/stock/600x400/img-40.jpg') }}" />
+                                            <img alt="img" class="rounded w-150px"
+                                                 src="{{ asset('/media/stock/600x400/img-40.jpg') }}"/>
                                         </div>
                                         <!--end::Image-->
                                         <!--begin::Link-->
@@ -4551,7 +5025,9 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="pe-3 mb-5">
                                 <!--begin::Title-->
                                 <div class="fs-5 fw-semibold mb-2">New case
-                                    <a href="#" class="text-primary fw-bold me-1">#67890</a>is assigned to you in Multi-platform Database Design project</div>
+                                    <a href="#" class="text-primary fw-bold me-1">#67890</a>is assigned to you in
+                                    Multi-platform Database Design project
+                                </div>
                                 <!--end::Title-->
                                 <!--begin::Description-->
                                 <div class="overflow-auto pb-5">
@@ -4599,8 +5075,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="text-muted me-2 fs-7">Placed at 5:05 AM by</div>
                                     <!--end::Info-->
                                     <!--begin::User-->
-                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Robert Rich">
-                                        <img src="{{ asset('/media/avatars/300-4.jpg') }}" alt="img" />
+                                    <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
+                                         data-bs-boundary="window" data-bs-placement="top" title="Robert Rich">
+                                        <img src="{{ asset('/media/avatars/300-4.jpg') }}" alt="img"/>
                                     </div>
                                     <!--end::User-->
                                 </div>
@@ -4610,7 +5087,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Timeline details-->
                             <div class="overflow-auto pb-5">
                                 <!--begin::Notice-->
-                                <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed min-w-lg-600px flex-shrink-0 p-6">
+                                <div
+                                    class="notice d-flex bg-light-primary rounded border-primary border border-dashed min-w-lg-600px flex-shrink-0 p-6">
                                     <!--begin::Icon-->
                                     <i class="ki-duotone ki-devices-2 fs-2tx text-primary me-4">
                                         <span class="path1"></span>
@@ -4623,11 +5101,14 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Content-->
                                         <div class="mb-3 mb-md-0 fw-semibold">
                                             <h4 class="text-gray-900 fw-bold">Database Backup Process Completed!</h4>
-                                            <div class="fs-6 text-gray-700 pe-7">Login into Admin Dashboard to make sure the data integrity is OK</div>
+                                            <div class="fs-6 text-gray-700 pe-7">Login into Admin Dashboard to make sure
+                                                the data integrity is OK
+                                            </div>
                                         </div>
                                         <!--end::Content-->
                                         <!--begin::Action-->
-                                        <a href="#" class="btn btn-primary px-6 align-self-center text-nowrap">Proceed</a>
+                                        <a href="#"
+                                           class="btn btn-primary px-6 align-self-center text-nowrap">Proceed</a>
                                         <!--end::Action-->
                                     </div>
                                     <!--end::Wrapper-->
@@ -4660,7 +5141,9 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="pe-3 mb-5">
                                 <!--begin::Title-->
                                 <div class="fs-5 fw-semibold mb-2">New order
-                                    <a href="#" class="text-primary fw-bold me-1">#67890</a>is placed for Workshow Planning & Budget Estimation</div>
+                                    <a href="#" class="text-primary fw-bold me-1">#67890</a>is placed for Workshow
+                                    Planning & Budget Estimation
+                                </div>
                                 <!--end::Title-->
                                 <!--begin::Description-->
                                 <div class="d-flex align-items-center mt-1 fs-6">
@@ -4697,7 +5180,10 @@ License: For each use you must have a valid license purchased only from above li
 </div>
 <!--end::Activities drawer-->
 <!--begin::Chat drawer-->
-<div id="kt_drawer_chat" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle" data-kt-drawer-close="#kt_drawer_chat_close">
+<div id="kt_drawer_chat" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true"
+     data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}"
+     data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle"
+     data-kt-drawer-close="#kt_drawer_chat_close">
     <!--begin::Messenger-->
     <div class="card w-100 border-0 rounded-0" id="kt_drawer_chat_messenger">
         <!--begin::Card header-->
@@ -4721,7 +5207,8 @@ License: For each use you must have a valid license purchased only from above li
             <div class="card-toolbar">
                 <!--begin::Menu-->
                 <div class="me-0">
-                    <button class="btn btn-sm btn-icon btn-active-color-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                    <button class="btn btn-sm btn-icon btn-active-color-primary" data-kt-menu-trigger="click"
+                            data-kt-menu-placement="bottom-end">
                         <i class="ki-duotone ki-dots-square fs-2">
                             <span class="path1"></span>
                             <span class="path2"></span>
@@ -4730,7 +5217,9 @@ License: For each use you must have a valid license purchased only from above li
                         </i>
                     </button>
                     <!--begin::Menu 3-->
-                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3" data-kt-menu="true">
+                    <div
+                        class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3"
+                        data-kt-menu="true">
                         <!--begin::Heading-->
                         <div class="menu-item px-3">
                             <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Contacts</div>
@@ -4738,13 +5227,16 @@ License: For each use you must have a valid license purchased only from above li
                         <!--end::Heading-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-3">
-                            <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_users_search">Add Contact</a>
+                            <a href="#" class="menu-link px-3" data-bs-toggle="modal"
+                               data-bs-target="#kt_modal_users_search">Add Contact</a>
                         </div>
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-3">
-                            <a href="#" class="menu-link flex-stack px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">Invite Contacts
-                                <span class="ms-2" data-bs-toggle="tooltip" title="Specify a contact email to send an invitation">
+                            <a href="#" class="menu-link flex-stack px-3" data-bs-toggle="modal"
+                               data-bs-target="#kt_modal_invite_friends">Invite Contacts
+                                <span class="ms-2" data-bs-toggle="tooltip"
+                                      title="Specify a contact email to send an invitation">
 										<i class="ki-duotone ki-information fs-7">
 											<span class="path1"></span>
 											<span class="path2"></span>
@@ -4763,12 +5255,14 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
-                                    <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Create Group</a>
+                                    <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Create
+                                        Group</a>
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
-                                    <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Invite Members</a>
+                                    <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Invite
+                                        Members</a>
                                 </div>
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
@@ -4804,7 +5298,10 @@ License: For each use you must have a valid license purchased only from above li
         <!--begin::Card body-->
         <div class="card-body" id="kt_drawer_chat_messenger_body">
             <!--begin::Messages-->
-            <div class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer" data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">
+            <div class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true"
+                 data-kt-scroll-activate="true" data-kt-scroll-height="auto"
+                 data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer"
+                 data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">
                 <!--begin::Message(in)-->
                 <div class="d-flex justify-content-start mb-10">
                     <!--begin::Wrapper-->
@@ -4813,7 +5310,7 @@ License: For each use you must have a valid license purchased only from above li
                         <div class="d-flex align-items-center mb-2">
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Details-->
@@ -4825,7 +5322,10 @@ License: For each use you must have a valid license purchased only from above li
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start" data-kt-element="message-text">How likely are you to recommend our company to your friends and family ?</div>
+                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start"
+                             data-kt-element="message-text">How likely are you to recommend our company to your friends
+                            and family ?
+                        </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Wrapper-->
@@ -4845,13 +5345,16 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-primary text-gray-900 fw-semibold mw-lg-400px text-end" data-kt-element="message-text">Hey there, we’re just writing to let you know that you’ve been subscribed to a repository on GitHub.</div>
+                        <div class="p-5 rounded bg-light-primary text-gray-900 fw-semibold mw-lg-400px text-end"
+                             data-kt-element="message-text">Hey there, we’re just writing to let you know that you’ve
+                            been subscribed to a repository on GitHub.
+                        </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Wrapper-->
@@ -4865,7 +5368,7 @@ License: For each use you must have a valid license purchased only from above li
                         <div class="d-flex align-items-center mb-2">
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Details-->
@@ -4877,7 +5380,9 @@ License: For each use you must have a valid license purchased only from above li
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start" data-kt-element="message-text">Ok, Understood!</div>
+                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start"
+                             data-kt-element="message-text">Ok, Understood!
+                        </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Wrapper-->
@@ -4897,13 +5402,15 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-primary text-gray-900 fw-semibold mw-lg-400px text-end" data-kt-element="message-text">You’ll receive notifications for all issues, pull requests!</div>
+                        <div class="p-5 rounded bg-light-primary text-gray-900 fw-semibold mw-lg-400px text-end"
+                             data-kt-element="message-text">You’ll receive notifications for all issues, pull requests!
+                        </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Wrapper-->
@@ -4917,7 +5424,7 @@ License: For each use you must have a valid license purchased only from above li
                         <div class="d-flex align-items-center mb-2">
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Details-->
@@ -4929,7 +5436,9 @@ License: For each use you must have a valid license purchased only from above li
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start" data-kt-element="message-text">You can unwatch this repository immediately by clicking here:
+                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start"
+                             data-kt-element="message-text">You can unwatch this repository immediately by clicking
+                            here:
                             <a href="https://keenthemes.com">Keenthemes.com</a></div>
                         <!--end::Text-->
                     </div>
@@ -4950,13 +5459,15 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-primary text-gray-900 fw-semibold mw-lg-400px text-end" data-kt-element="message-text">Most purchased Business courses during this sale!</div>
+                        <div class="p-5 rounded bg-light-primary text-gray-900 fw-semibold mw-lg-400px text-end"
+                             data-kt-element="message-text">Most purchased Business courses during this sale!
+                        </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Wrapper-->
@@ -4970,7 +5481,7 @@ License: For each use you must have a valid license purchased only from above li
                         <div class="d-flex align-items-center mb-2">
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Details-->
@@ -4982,7 +5493,10 @@ License: For each use you must have a valid license purchased only from above li
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start" data-kt-element="message-text">Company BBQ to celebrate the last quater achievements and goals. Food and drinks provided</div>
+                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start"
+                             data-kt-element="message-text">Company BBQ to celebrate the last quater achievements and
+                            goals. Food and drinks provided
+                        </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Wrapper-->
@@ -5002,13 +5516,14 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-primary text-gray-900 fw-semibold mw-lg-400px text-end" data-kt-element="message-text"></div>
+                        <div class="p-5 rounded bg-light-primary text-gray-900 fw-semibold mw-lg-400px text-end"
+                             data-kt-element="message-text"></div>
                         <!--end::Text-->
                     </div>
                     <!--end::Wrapper-->
@@ -5022,7 +5537,7 @@ License: For each use you must have a valid license purchased only from above li
                         <div class="d-flex align-items-center mb-2">
                             <!--begin::Avatar-->
                             <div class="symbol symbol-35px symbol-circle">
-                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Details-->
@@ -5034,7 +5549,10 @@ License: For each use you must have a valid license purchased only from above li
                         </div>
                         <!--end::User-->
                         <!--begin::Text-->
-                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start" data-kt-element="message-text">Right before vacation season we have the next Big Deal for you.</div>
+                        <div class="p-5 rounded bg-light-info text-gray-900 fw-semibold mw-lg-400px text-start"
+                             data-kt-element="message-text">Right before vacation season we have the next Big Deal for
+                            you.
+                        </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Wrapper-->
@@ -5047,16 +5565,19 @@ License: For each use you must have a valid license purchased only from above li
         <!--begin::Card footer-->
         <div class="card-footer pt-4" id="kt_drawer_chat_messenger_footer">
             <!--begin::Input-->
-            <textarea class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="Type a message"></textarea>
+            <textarea class="form-control form-control-flush mb-3" rows="1" data-kt-element="input"
+                      placeholder="Type a message"></textarea>
             <!--end::Input-->
             <!--begin:Toolbar-->
             <div class="d-flex flex-stack">
                 <!--begin::Actions-->
                 <div class="d-flex align-items-center me-2">
-                    <button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Coming soon">
+                    <button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button"
+                            data-bs-toggle="tooltip" title="Coming soon">
                         <i class="ki-duotone ki-paper-clip fs-3"></i>
                     </button>
-                    <button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Coming soon">
+                    <button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button"
+                            data-bs-toggle="tooltip" title="Coming soon">
                         <i class="ki-duotone ki-cloud-add fs-3">
                             <span class="path1"></span>
                             <span class="path2"></span>
@@ -5076,7 +5597,10 @@ License: For each use you must have a valid license purchased only from above li
 </div>
 <!--end::Chat drawer-->
 <!--begin::Chat drawer-->
-<div id="kt_shopping_cart" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="cart" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_shopping_cart_toggle" data-kt-drawer-close="#kt_drawer_shopping_cart_close">
+<div id="kt_shopping_cart" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="cart"
+     data-kt-drawer-activate="true" data-kt-drawer-overlay="true"
+     data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end"
+     data-kt-drawer-toggle="#kt_drawer_shopping_cart_toggle" data-kt-drawer-close="#kt_drawer_shopping_cart_close">
     <!--begin::Messenger-->
     <div class="card card-flush w-100 rounded-0">
         <!--begin::Card header-->
@@ -5106,7 +5630,8 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="d-flex flex-column me-3">
                     <!--begin::Section-->
                     <div class="mb-3">
-                        <a href="apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">Iblender</a>
+                        <a href="apps/ecommerce/sales/details.html"
+                           class="text-gray-800 text-hover-primary fs-4 fw-bold">Iblender</a>
                         <span class="text-gray-500 fw-semibold d-block">The best kitchen gadget in 2022</span>
                     </div>
                     <!--end::Section-->
@@ -5127,7 +5652,7 @@ License: For each use you must have a valid license purchased only from above li
                 <!--end::Wrapper-->
                 <!--begin::Pic-->
                 <div class="symbol symbol-70px symbol-2by3 flex-shrink-0">
-                    <img src="{{ asset('/media/stock/600x400/img-1.jpg') }}" alt="" />
+                    <img src="{{ asset('/media/stock/600x400/img-1.jpg') }}" alt=""/>
                 </div>
                 <!--end::Pic-->
             </div>
@@ -5141,7 +5666,8 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="d-flex flex-column me-3">
                     <!--begin::Section-->
                     <div class="mb-3">
-                        <a href="apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">SmartCleaner</a>
+                        <a href="apps/ecommerce/sales/details.html"
+                           class="text-gray-800 text-hover-primary fs-4 fw-bold">SmartCleaner</a>
                         <span class="text-gray-500 fw-semibold d-block">Smart tool for cooking</span>
                     </div>
                     <!--end::Section-->
@@ -5162,7 +5688,7 @@ License: For each use you must have a valid license purchased only from above li
                 <!--end::Wrapper-->
                 <!--begin::Pic-->
                 <div class="symbol symbol-70px symbol-2by3 flex-shrink-0">
-                    <img src="{{ asset('/media/stock/600x400/img-3.jpg') }}" alt="" />
+                    <img src="{{ asset('/media/stock/600x400/img-3.jpg') }}" alt=""/>
                 </div>
                 <!--end::Pic-->
             </div>
@@ -5176,7 +5702,8 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="d-flex flex-column me-3">
                     <!--begin::Section-->
                     <div class="mb-3">
-                        <a href="apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">CameraMaxr</a>
+                        <a href="apps/ecommerce/sales/details.html"
+                           class="text-gray-800 text-hover-primary fs-4 fw-bold">CameraMaxr</a>
                         <span class="text-gray-500 fw-semibold d-block">Professional camera for edge</span>
                     </div>
                     <!--end::Section-->
@@ -5197,7 +5724,7 @@ License: For each use you must have a valid license purchased only from above li
                 <!--end::Wrapper-->
                 <!--begin::Pic-->
                 <div class="symbol symbol-70px symbol-2by3 flex-shrink-0">
-                    <img src="{{ asset('/media/stock/600x400/img-8.jpg') }}" alt="" />
+                    <img src="{{ asset('/media/stock/600x400/img-8.jpg') }}" alt=""/>
                 </div>
                 <!--end::Pic-->
             </div>
@@ -5211,7 +5738,8 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="d-flex flex-column me-3">
                     <!--begin::Section-->
                     <div class="mb-3">
-                        <a href="apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">$D Printer</a>
+                        <a href="apps/ecommerce/sales/details.html"
+                           class="text-gray-800 text-hover-primary fs-4 fw-bold">$D Printer</a>
                         <span class="text-gray-500 fw-semibold d-block">Manfactoring unique objekts</span>
                     </div>
                     <!--end::Section-->
@@ -5232,7 +5760,7 @@ License: For each use you must have a valid license purchased only from above li
                 <!--end::Wrapper-->
                 <!--begin::Pic-->
                 <div class="symbol symbol-70px symbol-2by3 flex-shrink-0">
-                    <img src="{{ asset('/media/stock/600x400/img-26.jpg') }}" alt="" />
+                    <img src="{{ asset('/media/stock/600x400/img-26.jpg') }}" alt=""/>
                 </div>
                 <!--end::Pic-->
             </div>
@@ -5246,7 +5774,8 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="d-flex flex-column me-3">
                     <!--begin::Section-->
                     <div class="mb-3">
-                        <a href="apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">MotionWire</a>
+                        <a href="apps/ecommerce/sales/details.html"
+                           class="text-gray-800 text-hover-primary fs-4 fw-bold">MotionWire</a>
                         <span class="text-gray-500 fw-semibold d-block">Perfect animation tool</span>
                     </div>
                     <!--end::Section-->
@@ -5267,7 +5796,7 @@ License: For each use you must have a valid license purchased only from above li
                 <!--end::Wrapper-->
                 <!--begin::Pic-->
                 <div class="symbol symbol-70px symbol-2by3 flex-shrink-0">
-                    <img src="{{ asset('/media/stock/600x400/img-21.jpg') }}" alt="" />
+                    <img src="{{ asset('/media/stock/600x400/img-21.jpg') }}" alt=""/>
                 </div>
                 <!--end::Pic-->
             </div>
@@ -5281,7 +5810,8 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="d-flex flex-column me-3">
                     <!--begin::Section-->
                     <div class="mb-3">
-                        <a href="apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">Samsung</a>
+                        <a href="apps/ecommerce/sales/details.html"
+                           class="text-gray-800 text-hover-primary fs-4 fw-bold">Samsung</a>
                         <span class="text-gray-500 fw-semibold d-block">Profile info,Timeline etc</span>
                     </div>
                     <!--end::Section-->
@@ -5302,7 +5832,7 @@ License: For each use you must have a valid license purchased only from above li
                 <!--end::Wrapper-->
                 <!--begin::Pic-->
                 <div class="symbol symbol-70px symbol-2by3 flex-shrink-0">
-                    <img src="{{ asset('/media/stock/600x400/img-34.jpg') }}" alt="" />
+                    <img src="{{ asset('/media/stock/600x400/img-34.jpg') }}" alt=""/>
                 </div>
                 <!--end::Pic-->
             </div>
@@ -5316,7 +5846,8 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="d-flex flex-column me-3">
                     <!--begin::Section-->
                     <div class="mb-3">
-                        <a href="apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">$D Printer</a>
+                        <a href="apps/ecommerce/sales/details.html"
+                           class="text-gray-800 text-hover-primary fs-4 fw-bold">$D Printer</a>
                         <span class="text-gray-500 fw-semibold d-block">Manfactoring unique objekts</span>
                     </div>
                     <!--end::Section-->
@@ -5337,7 +5868,7 @@ License: For each use you must have a valid license purchased only from above li
                 <!--end::Wrapper-->
                 <!--begin::Pic-->
                 <div class="symbol symbol-70px symbol-2by3 flex-shrink-0">
-                    <img src="{{ asset('/media/stock/600x400/img-27.jpg') }}" alt="" />
+                    <img src="{{ asset('/media/stock/600x400/img-27.jpg') }}" alt=""/>
                 </div>
                 <!--end::Pic-->
             </div>
@@ -5407,13 +5938,16 @@ License: For each use you must have a valid license purchased only from above li
                     <!--end::Title-->
                     <!--begin::Description-->
                     <div class="text-muted fw-semibold fs-5">If you need more info, please check out
-                        <a href="#" class="link-primary fw-bold">FAQ Page</a>.</div>
+                        <a href="#" class="link-primary fw-bold">FAQ Page</a>.
+                    </div>
                     <!--end::Description-->
                 </div>
                 <!--end::Heading-->
                 <!--begin::Google Contacts Invite-->
                 <div class="btn btn-light-primary fw-bold w-100 mb-8">
-                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/google-icon.svg') }}" class="h-20px me-3" />Invite Gmail Contacts</div>
+                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/google-icon.svg') }}" class="h-20px me-3"/>Invite
+                    Gmail Contacts
+                </div>
                 <!--end::Google Contacts Invite-->
                 <!--begin::Separator-->
                 <div class="separator d-flex flex-center mb-8">
@@ -5421,7 +5955,8 @@ License: For each use you must have a valid license purchased only from above li
                 </div>
                 <!--end::Separator-->
                 <!--begin::Textarea-->
-                <textarea class="form-control form-control-solid mb-8" rows="3" placeholder="Type or paste emails here"></textarea>
+                <textarea class="form-control form-control-solid mb-8" rows="3"
+                          placeholder="Type or paste emails here"></textarea>
                 <!--end::Textarea-->
                 <!--begin::Users-->
                 <div class="mb-10">
@@ -5436,12 +5971,13 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-6.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-6.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Smith</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma
+                                        Smith</a>
                                     <div class="fw-semibold text-muted">smith@kpmg.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5449,7 +5985,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2" selected="selected">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5469,7 +6006,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody
+                                        Macy</a>
                                     <div class="fw-semibold text-muted">melody@altbox.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5477,7 +6015,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1" selected="selected">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5492,7 +6031,7 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -5505,7 +6044,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3" selected="selected">Can Edit</option>
@@ -5520,7 +6060,7 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-5.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-5.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -5533,7 +6073,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2" selected="selected">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5548,7 +6089,7 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -5561,7 +6102,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3" selected="selected">Can Edit</option>
@@ -5581,7 +6123,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela Collins</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela
+                                        Collins</a>
                                     <div class="fw-semibold text-muted">mik@pex.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5589,7 +6132,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2" selected="selected">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5604,12 +6148,13 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-9.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-9.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis
+                                        Mitcham</a>
                                     <div class="fw-semibold text-muted">f.mit@kpmg.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5617,7 +6162,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3" selected="selected">Can Edit</option>
@@ -5637,7 +6183,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia Wild</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia
+                                        Wild</a>
                                     <div class="fw-semibold text-muted">olivia@corpmail.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5645,7 +6192,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2" selected="selected">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5673,7 +6221,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1" selected="selected">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5688,12 +6237,13 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-23.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-23.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan Wilson</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan
+                                        Wilson</a>
                                     <div class="fw-semibold text-muted">dam@consilting.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5701,7 +6251,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3" selected="selected">Can Edit</option>
@@ -5729,7 +6280,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2" selected="selected">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5744,7 +6296,7 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-12.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-12.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -5757,7 +6309,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1" selected="selected">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5777,7 +6330,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert Doe</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert
+                                        Doe</a>
                                     <div class="fw-semibold text-muted">robert@benko.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5785,7 +6339,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3" selected="selected">Can Edit</option>
@@ -5800,12 +6355,13 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-13.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-13.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John
+                                        Miller</a>
                                     <div class="fw-semibold text-muted">miller@mapple.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5813,7 +6369,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3" selected="selected">Can Edit</option>
@@ -5833,7 +6390,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy Kunic</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy
+                                        Kunic</a>
                                     <div class="fw-semibold text-muted">lucy.m@fentech.com</div>
                                 </div>
                                 <!--end::Details-->
@@ -5841,7 +6399,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2" selected="selected">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5856,12 +6415,13 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-21.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-21.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
                                 <div class="ms-5">
-                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan Wilder</a>
+                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan
+                                        Wilder</a>
                                     <div class="fw-semibold text-muted">ethan@loop.com.au</div>
                                 </div>
                                 <!--end::Details-->
@@ -5869,7 +6429,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1" selected="selected">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3">Can Edit</option>
@@ -5884,7 +6445,7 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex align-items-center">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                    <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -5897,7 +6458,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Details-->
                             <!--begin::Access menu-->
                             <div class="ms-2 w-100px">
-                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
+                                <select class="form-select form-select-solid form-select-sm" data-control="select2"
+                                        data-dropdown-parent="#kt_modal_invite_friends" data-hide-search="true">
                                     <option value="1">Guest</option>
                                     <option value="2">Owner</option>
                                     <option value="3" selected="selected">Can Edit</option>
@@ -5920,7 +6482,7 @@ License: For each use you must have a valid license purchased only from above li
                     <!--end::Label-->
                     <!--begin::Switch-->
                     <label class="form-check form-switch form-check-custom form-check-solid">
-                        <input class="form-check-input" type="checkbox" value="1" checked="checked" />
+                        <input class="form-check-input" type="checkbox" value="1" checked="checked"/>
                         <span class="form-check-label fw-semibold text-muted">Allowed</span>
                     </label>
                     <!--end::Switch-->
@@ -5989,7 +6551,8 @@ License: For each use you must have a valid license purchased only from above li
                     </div>
                     <!--end::Nav-->
                     <!--begin::Form-->
-                    <form class="mx-auto w-100 mw-600px pt-15 pb-10" novalidate="novalidate" id="kt_modal_create_campaign_stepper_form">
+                    <form class="mx-auto w-100 mw-600px pt-15 pb-10" novalidate="novalidate"
+                          id="kt_modal_create_campaign_stepper_form">
                         <!--begin::Step 1-->
                         <div class="current" data-kt-stepper-element="content">
                             <!--begin::Wrapper-->
@@ -5998,7 +6561,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="pb-10 pb-lg-15">
                                     <!--begin::Title-->
                                     <h2 class="fw-bold d-flex align-items-center text-gray-900">Setup Campaign Details
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Campaign name will be used as reference within your campaign reports">
+                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                              title="Campaign name will be used as reference within your campaign reports">
 												<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 													<span class="path1"></span>
 													<span class="path2"></span>
@@ -6008,7 +6572,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Title-->
                                     <!--begin::Notice-->
                                     <div class="text-muted fw-semibold fs-6">If you need more info, please check out
-                                        <a href="#" class="link-primary fw-bold">Help Page</a>.</div>
+                                        <a href="#" class="link-primary fw-bold">Help Page</a>.
+                                    </div>
                                     <!--end::Notice-->
                                 </div>
                                 <!--end::Heading-->
@@ -6018,7 +6583,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <label class="required form-label mb-3">Campaign Name</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-lg form-control-solid" name="campaign_name" placeholder="" value="" />
+                                    <input type="text" class="form-control form-control-lg form-control-solid"
+                                           name="campaign_name" placeholder="" value=""/>
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
@@ -6027,7 +6593,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Label-->
                                     <label class="d-block fw-semibold fs-6 mb-5">
                                         <span class="required">Company Logo</span>
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="E.g. Select a logo to represent the company that's running the campaign.">
+                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                              title="E.g. Select a logo to represent the company that's running the campaign.">
 													<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 														<span class="path1"></span>
 														<span class="path2"></span>
@@ -6037,27 +6604,41 @@ License: For each use you must have a valid license purchased only from above li
                                     </label>
                                     <!--end::Label-->
                                     <!--begin::Image input placeholder-->
-                                    <style>.image-input-placeholder { background-image: url('{{ asset("/media/svg/files/blank-image.svg") }}'); } [data-bs-theme="dark"] .image-input-placeholder { background-image: url('{{ asset('/media/svg/files/blank-image-dark.svg') }}'); }</style>
+                                    <style>.image-input-placeholder {
+                                            background-image: url('{{ asset("/media/svg/files/blank-image.svg") }}');
+                                        }
+
+                                        [data-bs-theme="dark"] .image-input-placeholder {
+                                            background-image: url('{{ asset('/media/svg/files/blank-image-dark.svg') }}');
+                                        }</style>
                                     <!--end::Image input placeholder-->
                                     <!--begin::Image input-->
-                                    <div class="image-input image-input-empty image-input-outline image-input-placeholder" data-kt-image-input="true">
+                                    <div
+                                        class="image-input image-input-empty image-input-outline image-input-placeholder"
+                                        data-kt-image-input="true">
                                         <!--begin::Preview existing avatar-->
                                         <div class="image-input-wrapper w-125px h-125px"></div>
                                         <!--end::Preview existing avatar-->
                                         <!--begin::Label-->
-                                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                        <label
+                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                            data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                            title="Change avatar">
                                             <i class="ki-duotone ki-pencil fs-7">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
                                             </i>
                                             <!--begin::Inputs-->
-                                            <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                                            <input type="hidden" name="avatar_remove" />
+                                            <input type="file" name="avatar" accept=".png, .jpg, .jpeg"/>
+                                            <input type="hidden" name="avatar_remove"/>
                                             <!--end::Inputs-->
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Cancel-->
-                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                        <span
+                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                            data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                            title="Cancel avatar">
 													<i class="ki-duotone ki-cross fs-2">
 														<span class="path1"></span>
 														<span class="path2"></span>
@@ -6065,7 +6646,10 @@ License: For each use you must have a valid license purchased only from above li
 												</span>
                                         <!--end::Cancel-->
                                         <!--begin::Remove-->
-                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                        <span
+                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                            data-kt-image-input-action="remove" data-bs-toggle="tooltip"
+                                            title="Remove avatar">
 													<i class="ki-duotone ki-cross fs-2">
 														<span class="path1"></span>
 														<span class="path2"></span>
@@ -6090,12 +6674,15 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Radio-->
                                         <div class="form-check form-check-custom form-check-solid">
                                             <!--begin::Input-->
-                                            <input class="form-check-input me-3" name="user_role" type="radio" value="0" id="kt_modal_update_role_option_0" checked='checked' />
+                                            <input class="form-check-input me-3" name="user_role" type="radio" value="0"
+                                                   id="kt_modal_update_role_option_0" checked='checked'/>
                                             <!--end::Input-->
                                             <!--begin::Label-->
                                             <label class="form-check-label" for="kt_modal_update_role_option_0">
                                                 <div class="fw-bold text-gray-800">Get more visitors</div>
-                                                <div class="text-gray-600">Increase impression traffic onto the platform</div>
+                                                <div class="text-gray-600">Increase impression traffic onto the
+                                                    platform
+                                                </div>
                                             </label>
                                             <!--end::Label-->
                                         </div>
@@ -6108,12 +6695,15 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Radio-->
                                         <div class="form-check form-check-custom form-check-solid">
                                             <!--begin::Input-->
-                                            <input class="form-check-input me-3" name="user_role" type="radio" value="1" id="kt_modal_update_role_option_1" />
+                                            <input class="form-check-input me-3" name="user_role" type="radio" value="1"
+                                                   id="kt_modal_update_role_option_1"/>
                                             <!--end::Input-->
                                             <!--begin::Label-->
                                             <label class="form-check-label" for="kt_modal_update_role_option_1">
                                                 <div class="fw-bold text-gray-800">Get more messages on chat</div>
-                                                <div class="text-gray-600">Increase community interaction and communication</div>
+                                                <div class="text-gray-600">Increase community interaction and
+                                                    communication
+                                                </div>
                                             </label>
                                             <!--end::Label-->
                                         </div>
@@ -6126,12 +6716,15 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Radio-->
                                         <div class="form-check form-check-custom form-check-solid">
                                             <!--begin::Input-->
-                                            <input class="form-check-input me-3" name="user_role" type="radio" value="2" id="kt_modal_update_role_option_2" />
+                                            <input class="form-check-input me-3" name="user_role" type="radio" value="2"
+                                                   id="kt_modal_update_role_option_2"/>
                                             <!--end::Input-->
                                             <!--begin::Label-->
                                             <label class="form-check-label" for="kt_modal_update_role_option_2">
                                                 <div class="fw-bold text-gray-800">Get more calls</div>
-                                                <div class="text-gray-600">Boost telecommunication feedback to provide precise and accurate information</div>
+                                                <div class="text-gray-600">Boost telecommunication feedback to provide
+                                                    precise and accurate information
+                                                </div>
                                             </label>
                                             <!--end::Label-->
                                         </div>
@@ -6144,12 +6737,15 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Radio-->
                                         <div class="form-check form-check-custom form-check-solid">
                                             <!--begin::Input-->
-                                            <input class="form-check-input me-3" name="user_role" type="radio" value="3" id="kt_modal_update_role_option_3" />
+                                            <input class="form-check-input me-3" name="user_role" type="radio" value="3"
+                                                   id="kt_modal_update_role_option_3"/>
                                             <!--end::Input-->
                                             <!--begin::Label-->
                                             <label class="form-check-label" for="kt_modal_update_role_option_3">
                                                 <div class="fw-bold text-gray-800">Get more likes</div>
-                                                <div class="text-gray-600">Increase positive interactivity on social media platforms</div>
+                                                <div class="text-gray-600">Increase positive interactivity on social
+                                                    media platforms
+                                                </div>
                                             </label>
                                             <!--end::Label-->
                                         </div>
@@ -6162,12 +6758,15 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Radio-->
                                         <div class="form-check form-check-custom form-check-solid">
                                             <!--begin::Input-->
-                                            <input class="form-check-input me-3" name="user_role" type="radio" value="4" id="kt_modal_update_role_option_4" />
+                                            <input class="form-check-input me-3" name="user_role" type="radio" value="4"
+                                                   id="kt_modal_update_role_option_4"/>
                                             <!--end::Input-->
                                             <!--begin::Label-->
                                             <label class="form-check-label" for="kt_modal_update_role_option_4">
                                                 <div class="fw-bold text-gray-800">Lead generation</div>
-                                                <div class="text-gray-600">Collect contact information for potential customers</div>
+                                                <div class="text-gray-600">Collect contact information for potential
+                                                    customers
+                                                </div>
                                             </label>
                                             <!--end::Label-->
                                         </div>
@@ -6210,7 +6809,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--end::Icon-->
                                             <!--begin::Info-->
                                             <div class="ms-4">
-                                                <h3 class="dfs-3 fw-bold text-gray-900 mb-1">Drop campaign files here or click to upload.</h3>
+                                                <h3 class="dfs-3 fw-bold text-gray-900 mb-1">Drop campaign files here or
+                                                    click to upload.</h3>
                                                 <span class="fw-semibold fs-4 text-muted">Upload up to 10 files</span>
                                             </div>
                                             <!--end::Info-->
@@ -6227,23 +6827,28 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Files-->
                                     <div class="mh-300px scroll-y me-n7 pe-7">
                                         <!--begin::File-->
-                                        <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                        <div
+                                            class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Avatar-->
                                                 <div class="symbol symbol-35px">
-                                                    <img src="{{ asset('/media/svg/files/pdf.svg') }}" alt="icon" />
+                                                    <img src="{{ asset('/media/svg/files/pdf.svg') }}" alt="icon"/>
                                                 </div>
                                                 <!--end::Avatar-->
                                                 <!--begin::Details-->
                                                 <div class="ms-6">
-                                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Product Specifications</a>
+                                                    <a href="#"
+                                                       class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Product
+                                                        Specifications</a>
                                                     <div class="fw-semibold text-muted">230kb</div>
                                                 </div>
                                                 <!--end::Details-->
                                             </div>
                                             <!--begin::Menu-->
                                             <div class="min-w-100px">
-                                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                <select class="form-select form-select-solid form-select-sm"
+                                                        data-control="select2" data-hide-search="true"
+                                                        data-placeholder="Edit">
                                                     <option></option>
                                                     <option value="1">Remove</option>
                                                     <option value="2">Modify</option>
@@ -6254,23 +6859,28 @@ License: For each use you must have a valid license purchased only from above li
                                         </div>
                                         <!--end::File-->
                                         <!--begin::File-->
-                                        <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                        <div
+                                            class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Avatar-->
                                                 <div class="symbol symbol-35px">
-                                                    <img src="{{ asset('/media/svg/files/tif.svg') }}" alt="icon" />
+                                                    <img src="{{ asset('/media/svg/files/tif.svg') }}" alt="icon"/>
                                                 </div>
                                                 <!--end::Avatar-->
                                                 <!--begin::Details-->
                                                 <div class="ms-6">
-                                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Creative Poster</a>
+                                                    <a href="#"
+                                                       class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign
+                                                        Creative Poster</a>
                                                     <div class="fw-semibold text-muted">2.4mb</div>
                                                 </div>
                                                 <!--end::Details-->
                                             </div>
                                             <!--begin::Menu-->
                                             <div class="min-w-100px">
-                                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                <select class="form-select form-select-solid form-select-sm"
+                                                        data-control="select2" data-hide-search="true"
+                                                        data-placeholder="Edit">
                                                     <option></option>
                                                     <option value="1">Remove</option>
                                                     <option value="2">Modify</option>
@@ -6281,23 +6891,29 @@ License: For each use you must have a valid license purchased only from above li
                                         </div>
                                         <!--end::File-->
                                         <!--begin::File-->
-                                        <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                        <div
+                                            class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Avatar-->
                                                 <div class="symbol symbol-35px">
-                                                    <img src="{{ asset('/media/svg/files/folder-document.svg') }}" alt="icon" />
+                                                    <img src="{{ asset('/media/svg/files/folder-document.svg') }}"
+                                                         alt="icon"/>
                                                 </div>
                                                 <!--end::Avatar-->
                                                 <!--begin::Details-->
                                                 <div class="ms-6">
-                                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Landing Page Source</a>
+                                                    <a href="#"
+                                                       class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign
+                                                        Landing Page Source</a>
                                                     <div class="fw-semibold text-muted">1.12mb</div>
                                                 </div>
                                                 <!--end::Details-->
                                             </div>
                                             <!--begin::Menu-->
                                             <div class="min-w-100px">
-                                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                <select class="form-select form-select-solid form-select-sm"
+                                                        data-control="select2" data-hide-search="true"
+                                                        data-placeholder="Edit">
                                                     <option></option>
                                                     <option value="1">Remove</option>
                                                     <option value="2">Modify</option>
@@ -6308,23 +6924,28 @@ License: For each use you must have a valid license purchased only from above li
                                         </div>
                                         <!--end::File-->
                                         <!--begin::File-->
-                                        <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                        <div
+                                            class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Avatar-->
                                                 <div class="symbol symbol-35px">
-                                                    <img src="{{ asset('/media/svg/files/css.svg') }}" alt="icon" />
+                                                    <img src="{{ asset('/media/svg/files/css.svg') }}" alt="icon"/>
                                                 </div>
                                                 <!--end::Avatar-->
                                                 <!--begin::Details-->
                                                 <div class="ms-6">
-                                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Landing Page Styling</a>
+                                                    <a href="#"
+                                                       class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Landing
+                                                        Page Styling</a>
                                                     <div class="fw-semibold text-muted">85kb</div>
                                                 </div>
                                                 <!--end::Details-->
                                             </div>
                                             <!--begin::Menu-->
                                             <div class="min-w-100px">
-                                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                <select class="form-select form-select-solid form-select-sm"
+                                                        data-control="select2" data-hide-search="true"
+                                                        data-placeholder="Edit">
                                                     <option></option>
                                                     <option value="1">Remove</option>
                                                     <option value="2">Modify</option>
@@ -6335,23 +6956,28 @@ License: For each use you must have a valid license purchased only from above li
                                         </div>
                                         <!--end::File-->
                                         <!--begin::File-->
-                                        <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                        <div
+                                            class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Avatar-->
                                                 <div class="symbol symbol-35px">
-                                                    <img src="{{ asset('/media/svg/files/ai.svg') }}" alt="icon" />
+                                                    <img src="{{ asset('/media/svg/files/ai.svg') }}" alt="icon"/>
                                                 </div>
                                                 <!--end::Avatar-->
                                                 <!--begin::Details-->
                                                 <div class="ms-6">
-                                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Design Source Files</a>
+                                                    <a href="#"
+                                                       class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Design
+                                                        Source Files</a>
                                                     <div class="fw-semibold text-muted">48mb</div>
                                                 </div>
                                                 <!--end::Details-->
                                             </div>
                                             <!--begin::Menu-->
                                             <div class="min-w-100px">
-                                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                <select class="form-select form-select-solid form-select-sm"
+                                                        data-control="select2" data-hide-search="true"
+                                                        data-placeholder="Edit">
                                                     <option></option>
                                                     <option value="1">Remove</option>
                                                     <option value="2">Modify</option>
@@ -6366,19 +6992,23 @@ License: For each use you must have a valid license purchased only from above li
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Avatar-->
                                                 <div class="symbol symbol-35px">
-                                                    <img src="{{ asset('/media/svg/files/doc.svg') }}" alt="icon" />
+                                                    <img src="{{ asset('/media/svg/files/doc.svg') }}" alt="icon"/>
                                                 </div>
                                                 <!--end::Avatar-->
                                                 <!--begin::Details-->
                                                 <div class="ms-6">
-                                                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign Plan Document</a>
+                                                    <a href="#"
+                                                       class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Campaign
+                                                        Plan Document</a>
                                                     <div class="fw-semibold text-muted">27kb</div>
                                                 </div>
                                                 <!--end::Details-->
                                             </div>
                                             <!--begin::Menu-->
                                             <div class="min-w-100px">
-                                                <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                <select class="form-select form-select-solid form-select-sm"
+                                                        data-control="select2" data-hide-search="true"
+                                                        data-placeholder="Edit">
                                                     <option></option>
                                                     <option value="1">Remove</option>
                                                     <option value="2">Modify</option>
@@ -6415,7 +7045,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="fv-row mb-10">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-semibold mb-2">Gender
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Show your ads to either men or women, or select 'All' for both">
+                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                              title="Show your ads to either men or women, or select 'All' for both">
 												<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 													<span class="path1"></span>
 													<span class="path2"></span>
@@ -6424,14 +7055,19 @@ License: For each use you must have a valid license purchased only from above li
 											</span></label>
                                     <!--End::Label-->
                                     <!--begin::Row-->
-                                    <div class="row g-9" data-kt-buttons="true" data-kt-buttons-target="[data-kt-button='true']">
+                                    <div class="row g-9" data-kt-buttons="true"
+                                         data-kt-buttons-target="[data-kt-button='true']">
                                         <!--begin::Col-->
                                         <div class="col">
                                             <!--begin::Option-->
-                                            <label class="btn btn-outline btn-outline-dashed btn-active-light-primary active d-flex text-start p-6" data-kt-button="true">
+                                            <label
+                                                class="btn btn-outline btn-outline-dashed btn-active-light-primary active d-flex text-start p-6"
+                                                data-kt-button="true">
                                                 <!--begin::Radio-->
-                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-															<input class="form-check-input" type="radio" name="campaign_gender" value="1" checked="checked" />
+                                                <span
+                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+															<input class="form-check-input" type="radio"
+                                                                   name="campaign_gender" value="1" checked="checked"/>
 														</span>
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
@@ -6446,10 +7082,14 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Col-->
                                         <div class="col">
                                             <!--begin::Option-->
-                                            <label class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6" data-kt-button="true">
+                                            <label
+                                                class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6"
+                                                data-kt-button="true">
                                                 <!--begin::Radio-->
-                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-															<input class="form-check-input" type="radio" name="campaign_gender" value="2" />
+                                                <span
+                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+															<input class="form-check-input" type="radio"
+                                                                   name="campaign_gender" value="2"/>
 														</span>
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
@@ -6464,15 +7104,20 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Col-->
                                         <div class="col">
                                             <!--begin::Option-->
-                                            <label class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6" data-kt-button="true">
+                                            <label
+                                                class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6"
+                                                data-kt-button="true">
                                                 <!--begin::Radio-->
-                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-															<input class="form-check-input" type="radio" name="campaign_gender" value="3" />
+                                                <span
+                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+															<input class="form-check-input" type="radio"
+                                                                   name="campaign_gender" value="3"/>
 														</span>
                                                 <!--end::Radio-->
                                                 <!--begin::Info-->
                                                 <span class="ms-5">
-															<span class="fs-4 fw-bold text-gray-800 d-block">Female</span>
+															<span
+                                                                class="fs-4 fw-bold text-gray-800 d-block">Female</span>
 														</span>
                                                 <!--end::Info-->
                                             </label>
@@ -6487,7 +7132,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="fv-row mb-10">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-semibold mb-2">Age
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Select the minimum and maximum age of the people who will find your ad relevant.">
+                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                              title="Select the minimum and maximum age of the people who will find your ad relevant.">
 												<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 													<span class="path1"></span>
 													<span class="path2"></span>
@@ -6497,9 +7143,12 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--End::Label-->
                                     <!--begin::Slider-->
                                     <div class="d-flex flex-stack">
-                                        <div id="kt_modal_create_campaign_age_min" class="fs-7 fw-semibold text-muted"></div>
-                                        <div id="kt_modal_create_campaign_age_slider" class="noUi-sm w-100 ms-5 me-8"></div>
-                                        <div id="kt_modal_create_campaign_age_max" class="fs-7 fw-semibold text-muted"></div>
+                                        <div id="kt_modal_create_campaign_age_min"
+                                             class="fs-7 fw-semibold text-muted"></div>
+                                        <div id="kt_modal_create_campaign_age_slider"
+                                             class="noUi-sm w-100 ms-5 me-8"></div>
+                                        <div id="kt_modal_create_campaign_age_max"
+                                             class="fs-7 fw-semibold text-muted"></div>
                                     </div>
                                     <!--end::Slider-->
                                 </div>
@@ -6508,7 +7157,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="fv-row mb-10">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-semibold mb-2">Location
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Enter one or more location points for more specific targeting.">
+                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                              title="Enter one or more location points for more specific targeting.">
 												<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 													<span class="path1"></span>
 													<span class="path2"></span>
@@ -6517,7 +7167,9 @@ License: For each use you must have a valid license purchased only from above li
 											</span></label>
                                     <!--End::Label-->
                                     <!--begin::Tagify-->
-                                    <input class="form-control d-flex align-items-center" value="" id="kt_modal_create_campaign_location" data-kt-flags-path="{{ asset('/media/flags') }}" />
+                                    <input class="form-control d-flex align-items-center" value=""
+                                           id="kt_modal_create_campaign_location"
+                                           data-kt-flags-path="{{ asset('/media/flags') }}"/>
                                     <!--end::Tagify-->
                                 </div>
                                 <!--end::Input group-->
@@ -6544,7 +7196,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="fv-row mb-10">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-semibold mb-2">Campaign Duration
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Choose how long you want your ad to run for">
+                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                              title="Choose how long you want your ad to run for">
 												<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 													<span class="path1"></span>
 													<span class="path2"></span>
@@ -6555,19 +7208,26 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Duration option-->
                                     <div class="d-flex gap-9 mb-7">
                                         <!--begin::Button-->
-                                        <button type="button" class="btn btn-outline btn-outline-dashed btn-active-light-primary active" id="kt_modal_create_campaign_duration_all">Continuous duration
-                                            <br />
-                                            <span class="fs-7">Your ad will run continuously for a daily budget.</span></button>
+                                        <button type="button"
+                                                class="btn btn-outline btn-outline-dashed btn-active-light-primary active"
+                                                id="kt_modal_create_campaign_duration_all">Continuous duration
+                                            <br/>
+                                            <span class="fs-7">Your ad will run continuously for a daily budget.</span>
+                                        </button>
                                         <!--end::Button-->
                                         <!--begin::Button-->
-                                        <button type="button" class="btn btn-outline btn-outline-dashed btn-active-light-primary btn-outline-default" id="kt_modal_create_campaign_duration_fixed">Fixed duration
-                                            <br />
-                                            <span class="fs-7">Your ad will run on the specified dates only.</span></button>
+                                        <button type="button"
+                                                class="btn btn-outline btn-outline-dashed btn-active-light-primary btn-outline-default"
+                                                id="kt_modal_create_campaign_duration_fixed">Fixed duration
+                                            <br/>
+                                            <span class="fs-7">Your ad will run on the specified dates only.</span>
+                                        </button>
                                         <!--end::Button-->
                                     </div>
                                     <!--end::Duration option-->
                                     <!--begin::Datepicker-->
-                                    <input class="form-control form-control-solid d-none" placeholder="Pick date & time" id="kt_modal_create_campaign_datepicker" />
+                                    <input class="form-control form-control-solid d-none" placeholder="Pick date & time"
+                                           id="kt_modal_create_campaign_datepicker"/>
                                     <!--end::Datepicker-->
                                 </div>
                                 <!--end::Input group-->
@@ -6575,7 +7235,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="fv-row mb-10">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-semibold mb-2">Daily Budget
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Choose the budget allocated for each day. Higher budget will generate better results">
+                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                              title="Choose the budget allocated for each day. Higher budget will generate better results">
 												<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 													<span class="path1"></span>
 													<span class="path2"></span>
@@ -6587,7 +7248,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex flex-column text-center">
                                         <div class="d-flex align-items-start justify-content-center mb-7">
                                             <span class="fw-bold fs-4 mt-1 me-2">$</span>
-                                            <span class="fw-bold fs-3x" id="kt_modal_create_campaign_budget_label"></span>
+                                            <span class="fw-bold fs-3x"
+                                                  id="kt_modal_create_campaign_budget_label"></span>
                                             <span class="fw-bold fs-3x">.00</span>
                                         </div>
                                         <div id="kt_modal_create_campaign_budget_slider" class="noUi-sm"></div>
@@ -6609,19 +7271,26 @@ License: For each use you must have a valid license purchased only from above li
                                     <h1 class="fw-bold text-gray-900">Campaign Created!</h1>
                                     <!--end::Title-->
                                     <!--begin::Description-->
-                                    <div class="fw-semibold text-muted fs-4">You will receive an email with with the summary of your newly created campaign!</div>
+                                    <div class="fw-semibold text-muted fs-4">You will receive an email with with the
+                                        summary of your newly created campaign!
+                                    </div>
                                     <!--end::Description-->
                                 </div>
                                 <!--end::Heading-->
                                 <!--begin::Actions-->
                                 <div class="d-flex flex-center pb-20">
-                                    <button id="kt_modal_create_campaign_create_new" type="button" class="btn btn-lg btn-light me-3" data-kt-element="complete-start">Create New Campaign</button>
-                                    <a href="" class="btn btn-lg btn-primary" data-bs-toggle="tooltip" title="Coming Soon">View Campaign</a>
+                                    <button id="kt_modal_create_campaign_create_new" type="button"
+                                            class="btn btn-lg btn-light me-3" data-kt-element="complete-start">Create
+                                        New Campaign
+                                    </button>
+                                    <a href="" class="btn btn-lg btn-primary" data-bs-toggle="tooltip"
+                                       title="Coming Soon">View Campaign</a>
                                 </div>
                                 <!--end::Actions-->
                                 <!--begin::Illustration-->
                                 <div class="text-center px-4">
-                                    <img src="{{ asset('/media/illustrations/sketchy-1/9.png') }}" alt="" class="mww-100 mh-350px" />
+                                    <img src="{{ asset('/media/illustrations/sketchy-1/9.png') }}" alt=""
+                                         class="mww-100 mh-350px"/>
                                 </div>
                                 <!--end::Illustration-->
                             </div>
@@ -6631,11 +7300,13 @@ License: For each use you must have a valid license purchased only from above li
                         <div class="d-flex flex-stack pt-10">
                             <!--begin::Wrapper-->
                             <div class="me-2">
-                                <button type="button" class="btn btn-lg btn-light-primary me-3" data-kt-stepper-action="previous" data-kt-stepper-state="hide-on-last-step">
+                                <button type="button" class="btn btn-lg btn-light-primary me-3"
+                                        data-kt-stepper-action="previous" data-kt-stepper-state="hide-on-last-step">
                                     <i class="ki-duotone ki-arrow-left fs-3 me-1">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
-                                    </i>Back</button>
+                                    </i>Back
+                                </button>
                             </div>
                             <!--end::Wrapper-->
                             <!--begin::Wrapper-->
@@ -6647,9 +7318,11 @@ License: For each use you must have a valid license purchased only from above li
 												<span class="path2"></span>
 											</i></span>
                                     <span class="indicator-progress">Please wait...
-											<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+											<span
+                                                class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                 </button>
-                                <button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next">Continue
+                                <button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next">
+                                    Continue
                                     <i class="ki-duotone ki-arrow-right fs-3 ms-1 me-0">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -6692,7 +7365,8 @@ License: For each use you must have a valid license purchased only from above li
             <!--begin::Modal body-->
             <div class="modal-body py-lg-10 px-lg-10">
                 <!--begin::Stepper-->
-                <div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid" id="kt_modal_create_app_stepper">
+                <div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid"
+                     id="kt_modal_create_app_stepper">
                     <!--begin::Aside-->
                     <div class="d-flex justify-content-center justify-content-xl-start flex-row-auto w-100 w-xl-300px">
                         <!--begin::Nav-->
@@ -6825,7 +7499,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-5 fw-semibold mb-2">
                                             <span class="required">App Name</span>
-                                            <span class="ms-1" data-bs-toggle="tooltip" title="Specify your unique app name">
+                                            <span class="ms-1" data-bs-toggle="tooltip"
+                                                  title="Specify your unique app name">
 														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 															<span class="path1"></span>
 															<span class="path2"></span>
@@ -6835,7 +7510,8 @@ License: For each use you must have a valid license purchased only from above li
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="text" class="form-control form-control-lg form-control-solid" name="name" placeholder="" value="" />
+                                        <input type="text" class="form-control form-control-lg form-control-solid"
+                                               name="name" placeholder="" value=""/>
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->
@@ -6844,7 +7520,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-5 fw-semibold mb-4">
                                             <span class="required">Category</span>
-                                            <span class="ms-1" data-bs-toggle="tooltip" title="Select your app category">
+                                            <span class="ms-1" data-bs-toggle="tooltip"
+                                                  title="Select your app category">
 														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 															<span class="path1"></span>
 															<span class="path2"></span>
@@ -6879,7 +7556,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end:Label-->
                                                 <!--begin:Input-->
                                                 <span class="form-check form-check-custom form-check-solid">
-															<input class="form-check-input" type="radio" name="category" value="1" />
+															<input class="form-check-input" type="radio" name="category"
+                                                                   value="1"/>
 														</span>
                                                 <!--end:Input-->
                                             </label>
@@ -6902,7 +7580,8 @@ License: For each use you must have a valid license purchased only from above li
                                                     <!--end:Icon-->
                                                     <!--begin:Info-->
 															<span class="d-flex flex-column">
-																<span class="fw-bold fs-6">Face to Face Discussions</span>
+																<span
+                                                                    class="fw-bold fs-6">Face to Face Discussions</span>
 																<span class="fs-7 text-muted">Creating a clear text structure is just one aspect</span>
 															</span>
                                                     <!--end:Info-->
@@ -6910,7 +7589,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end:Label-->
                                                 <!--begin:Input-->
                                                 <span class="form-check form-check-custom form-check-solid">
-															<input class="form-check-input" type="radio" name="category" value="2" />
+															<input class="form-check-input" type="radio" name="category"
+                                                                   value="2"/>
 														</span>
                                                 <!--end:Input-->
                                             </label>
@@ -6940,7 +7620,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end:Label-->
                                                 <!--begin:Input-->
                                                 <span class="form-check form-check-custom form-check-solid">
-															<input class="form-check-input" type="radio" name="category" value="3" />
+															<input class="form-check-input" type="radio" name="category"
+                                                                   value="3"/>
 														</span>
                                                 <!--end:Input-->
                                             </label>
@@ -6960,7 +7641,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-5 fw-semibold mb-4">
                                             <span class="required">Select Framework</span>
-                                            <span class="ms-1" data-bs-toggle="tooltip" title="Specify your apps framework">
+                                            <span class="ms-1" data-bs-toggle="tooltip"
+                                                  title="Specify your apps framework">
 														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 															<span class="path1"></span>
 															<span class="path2"></span>
@@ -6993,7 +7675,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--end:Label-->
                                             <!--begin:Input-->
                                             <span class="form-check form-check-custom form-check-solid">
-														<input class="form-check-input" type="radio" checked="checked" name="framework" value="1" />
+														<input class="form-check-input" type="radio" checked="checked"
+                                                               name="framework" value="1"/>
 													</span>
                                             <!--end:Input-->
                                         </label>
@@ -7022,7 +7705,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--end:Label-->
                                             <!--begin:Input-->
                                             <span class="form-check form-check-custom form-check-solid">
-														<input class="form-check-input" type="radio" name="framework" value="2" />
+														<input class="form-check-input" type="radio" name="framework"
+                                                               value="2"/>
 													</span>
                                             <!--end:Input-->
                                         </label>
@@ -7052,7 +7736,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--end:Label-->
                                             <!--begin:Input-->
                                             <span class="form-check form-check-custom form-check-solid">
-														<input class="form-check-input" type="radio" name="framework" value="3" />
+														<input class="form-check-input" type="radio" name="framework"
+                                                               value="3"/>
 													</span>
                                             <!--end:Input-->
                                         </label>
@@ -7081,7 +7766,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--end:Label-->
                                             <!--begin:Input-->
                                             <span class="form-check form-check-custom form-check-solid">
-														<input class="form-check-input" type="radio" name="framework" value="4" />
+														<input class="form-check-input" type="radio" name="framework"
+                                                               value="4"/>
 													</span>
                                             <!--end:Input-->
                                         </label>
@@ -7100,7 +7786,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <label class="required fs-5 fw-semibold mb-2">Database Name</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="text" class="form-control form-control-lg form-control-solid" name="dbname" placeholder="" value="master_db" />
+                                        <input type="text" class="form-control form-control-lg form-control-solid"
+                                               name="dbname" placeholder="" value="master_db"/>
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->
@@ -7109,7 +7796,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-5 fw-semibold mb-4">
                                             <span class="required">Select Database Engine</span>
-                                            <span class="ms-1" data-bs-toggle="tooltip" title="Select your app database engine">
+                                            <span class="ms-1" data-bs-toggle="tooltip"
+                                                  title="Select your app database engine">
 														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 															<span class="path1"></span>
 															<span class="path2"></span>
@@ -7142,7 +7830,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <span class="form-check form-check-custom form-check-solid">
-														<input class="form-check-input" type="radio" name="dbengine" checked="checked" value="1" />
+														<input class="form-check-input" type="radio" name="dbengine"
+                                                               checked="checked" value="1"/>
 													</span>
                                             <!--end::Input-->
                                         </label>
@@ -7171,7 +7860,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <span class="form-check form-check-custom form-check-solid">
-														<input class="form-check-input" type="radio" name="dbengine" value="2" />
+														<input class="form-check-input" type="radio" name="dbengine"
+                                                               value="2"/>
 													</span>
                                             <!--end::Input-->
                                         </label>
@@ -7195,14 +7885,16 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--begin::Info-->
 														<span class="d-flex flex-column">
 															<span class="fw-bold fs-6">DynamoDB</span>
-															<span class="fs-7 text-muted">Microsoft Fast NoSQL Database</span>
+															<span
+                                                                class="fs-7 text-muted">Microsoft Fast NoSQL Database</span>
 														</span>
                                                 <!--end::Info-->
 													</span>
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <span class="form-check form-check-custom form-check-solid">
-														<input class="form-check-input" type="radio" name="dbengine" value="3" />
+														<input class="form-check-input" type="radio" name="dbengine"
+                                                               value="3"/>
 													</span>
                                             <!--end::Input-->
                                         </label>
@@ -7220,7 +7912,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
                                             <span class="required">Name On Card</span>
-                                            <span class="ms-1" data-bs-toggle="tooltip" title="Specify a card holder's name">
+                                            <span class="ms-1" data-bs-toggle="tooltip"
+                                                  title="Specify a card holder's name">
 														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 															<span class="path1"></span>
 															<span class="path2"></span>
@@ -7229,7 +7922,8 @@ License: For each use you must have a valid license purchased only from above li
 													</span>
                                         </label>
                                         <!--end::Label-->
-                                        <input type="text" class="form-control form-control-solid" placeholder="" name="card_name" value="Max Doe" />
+                                        <input type="text" class="form-control form-control-solid" placeholder=""
+                                               name="card_name" value="Max Doe"/>
                                     </div>
                                     <!--end::Input group-->
                                     <!--begin::Input group-->
@@ -7240,13 +7934,18 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Input wrapper-->
                                         <div class="position-relative">
                                             <!--begin::Input-->
-                                            <input type="text" class="form-control form-control-solid" placeholder="Enter card number" name="card_number" value="4111 1111 1111 1111" />
+                                            <input type="text" class="form-control form-control-solid"
+                                                   placeholder="Enter card number" name="card_number"
+                                                   value="4111 1111 1111 1111"/>
                                             <!--end::Input-->
                                             <!--begin::Card logos-->
                                             <div class="position-absolute translate-middle-y top-50 end-0 me-5">
-                                                <img src="{{ asset('/media/svg/card-logos/visa.svg') }}" alt="" class="h-25px" />
-                                                <img src="{{ asset('/media/svg/card-logos/mastercard.svg') }}" alt="" class="h-25px" />
-                                                <img src="{{ asset('/media/svg/card-logos/american-express.svg') }}" alt="" class="h-25px" />
+                                                <img src="{{ asset('/media/svg/card-logos/visa.svg') }}" alt=""
+                                                     class="h-25px"/>
+                                                <img src="{{ asset('/media/svg/card-logos/mastercard.svg') }}" alt=""
+                                                     class="h-25px"/>
+                                                <img src="{{ asset('/media/svg/card-logos/american-express.svg') }}"
+                                                     alt="" class="h-25px"/>
                                             </div>
                                             <!--end::Card logos-->
                                         </div>
@@ -7258,13 +7957,16 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Col-->
                                         <div class="col-md-8 fv-row">
                                             <!--begin::Label-->
-                                            <label class="required fs-6 fw-semibold form-label mb-2">Expiration Date</label>
+                                            <label class="required fs-6 fw-semibold form-label mb-2">Expiration
+                                                Date</label>
                                             <!--end::Label-->
                                             <!--begin::Row-->
                                             <div class="row fv-row">
                                                 <!--begin::Col-->
                                                 <div class="col-6">
-                                                    <select name="card_expiry_month" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                                    <select name="card_expiry_month"
+                                                            class="form-select form-select-solid" data-control="select2"
+                                                            data-hide-search="true" data-placeholder="Month">
                                                         <option></option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -7283,7 +7985,9 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Col-->
                                                 <!--begin::Col-->
                                                 <div class="col-6">
-                                                    <select name="card_expiry_year" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Year">
+                                                    <select name="card_expiry_year"
+                                                            class="form-select form-select-solid" data-control="select2"
+                                                            data-hide-search="true" data-placeholder="Year">
                                                         <option></option>
                                                         <option value="2024">2024</option>
                                                         <option value="2025">2025</option>
@@ -7308,7 +8012,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Label-->
                                             <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
                                                 <span class="required">CVV</span>
-                                                <span class="ms-1" data-bs-toggle="tooltip" title="Enter a card CVV code">
+                                                <span class="ms-1" data-bs-toggle="tooltip"
+                                                      title="Enter a card CVV code">
 															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 																<span class="path1"></span>
 																<span class="path2"></span>
@@ -7320,7 +8025,8 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Input wrapper-->
                                             <div class="position-relative">
                                                 <!--begin::Input-->
-                                                <input type="text" class="form-control form-control-solid" minlength="3" maxlength="4" placeholder="CVV" name="card_cvv" />
+                                                <input type="text" class="form-control form-control-solid" minlength="3"
+                                                       maxlength="4" placeholder="CVV" name="card_cvv"/>
                                                 <!--end::Input-->
                                                 <!--begin::CVV icon-->
                                                 <div class="position-absolute translate-middle-y top-50 end-0 me-3">
@@ -7340,13 +8046,17 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex flex-stack">
                                         <!--begin::Label-->
                                         <div class="me-5">
-                                            <label class="fs-6 fw-semibold form-label">Save Card for further billing?</label>
-                                            <div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+                                            <label class="fs-6 fw-semibold form-label">Save Card for further
+                                                billing?</label>
+                                            <div class="fs-7 fw-semibold text-muted">If you need more info, please check
+                                                budget planning
+                                            </div>
                                         </div>
                                         <!--end::Label-->
                                         <!--begin::Switch-->
                                         <label class="form-check form-switch form-check-custom form-check-solid">
-                                            <input class="form-check-input" type="checkbox" value="1" checked="checked" />
+                                            <input class="form-check-input" type="checkbox" value="1"
+                                                   checked="checked"/>
                                             <span class="form-check-label fw-semibold text-muted">Save Card</span>
                                         </label>
                                         <!--end::Switch-->
@@ -7362,11 +8072,14 @@ License: For each use you must have a valid license purchased only from above li
                                     <h1 class="fw-bold text-gray-900 mb-3">Release!</h1>
                                     <!--end::Heading-->
                                     <!--begin::Description-->
-                                    <div class="text-muted fw-semibold fs-3">Submit your app to kickstart your project.</div>
+                                    <div class="text-muted fw-semibold fs-3">Submit your app to kickstart your
+                                        project.
+                                    </div>
                                     <!--end::Description-->
                                     <!--begin::Illustration-->
                                     <div class="text-center px-4 py-15">
-                                        <img src="{{ asset('/media/illustrations/sketchy-1/9.png') }}" alt="" class="mw-100 mh-300px" />
+                                        <img src="{{ asset('/media/illustrations/sketchy-1/9.png') }}" alt=""
+                                             class="mw-100 mh-300px"/>
                                     </div>
                                     <!--end::Illustration-->
                                 </div>
@@ -7376,16 +8089,19 @@ License: For each use you must have a valid license purchased only from above li
                             <div class="d-flex flex-stack pt-10">
                                 <!--begin::Wrapper-->
                                 <div class="me-2">
-                                    <button type="button" class="btn btn-lg btn-light-primary me-3" data-kt-stepper-action="previous">
+                                    <button type="button" class="btn btn-lg btn-light-primary me-3"
+                                            data-kt-stepper-action="previous">
                                         <i class="ki-duotone ki-arrow-left fs-3 me-1">
                                             <span class="path1"></span>
                                             <span class="path2"></span>
-                                        </i>Back</button>
+                                        </i>Back
+                                    </button>
                                 </div>
                                 <!--end::Wrapper-->
                                 <!--begin::Wrapper-->
                                 <div>
-                                    <button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="submit">
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                            data-kt-stepper-action="submit">
 												<span class="indicator-label">Submit
 												<i class="ki-duotone ki-arrow-right fs-3 ms-2 me-0">
 													<span class="path1"></span>
@@ -7394,7 +8110,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <span class="indicator-progress">Please wait...
 												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                     </button>
-                                    <button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next">Continue
+                                    <button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next">
+                                        Continue
                                         <i class="ki-duotone ki-arrow-right fs-3 ms-1 me-0">
                                             <span class="path1"></span>
                                             <span class="path2"></span>
@@ -7441,15 +8158,20 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="mb-13 text-center">
                     <h1 class="mb-3">Upgrade a Plan</h1>
                     <div class="text-muted fw-semibold fs-5">If you need more info, please check
-                        <a href="#" class="link-primary fw-bold">Pricing Guidelines</a>.</div>
+                        <a href="#" class="link-primary fw-bold">Pricing Guidelines</a>.
+                    </div>
                 </div>
                 <!--end::Heading-->
                 <!--begin::Plans-->
                 <div class="d-flex flex-column">
                     <!--begin::Nav group-->
                     <div class="nav-group nav-group-outline mx-auto" data-kt-buttons="true">
-                        <button class="btn btn-color-gray-500 btn-active btn-active-secondary px-6 py-3 me-2 active" data-kt-plan="month">Monthly</button>
-                        <button class="btn btn-color-gray-500 btn-active btn-active-secondary px-6 py-3" data-kt-plan="annual">Annual</button>
+                        <button class="btn btn-color-gray-500 btn-active btn-active-secondary px-6 py-3 me-2 active"
+                                data-kt-plan="month">Monthly
+                        </button>
+                        <button class="btn btn-color-gray-500 btn-active btn-active-secondary px-6 py-3"
+                                data-kt-plan="annual">Annual
+                        </button>
                     </div>
                     <!--end::Nav group-->
                     <!--begin::Row-->
@@ -7459,12 +8181,16 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Tabs-->
                             <div class="nav flex-column">
                                 <!--begin::Tab link-->
-                                <label class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 active mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_startup">
+                                <label
+                                    class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 active mb-6"
+                                    data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_startup">
                                     <!--end::Description-->
                                     <div class="d-flex align-items-center me-2">
                                         <!--begin::Radio-->
-                                        <div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-                                            <input class="form-check-input" type="radio" name="plan" checked="checked" value="startup" />
+                                        <div
+                                            class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
+                                            <input class="form-check-input" type="radio" name="plan" checked="checked"
+                                                   value="startup"/>
                                         </div>
                                         <!--end::Radio-->
                                         <!--begin::Info-->
@@ -7478,7 +8204,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Price-->
                                     <div class="ms-5">
                                         <span class="mb-2">$</span>
-                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="39" data-kt-plan-price-annual="399">39</span>
+                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="39"
+                                              data-kt-plan-price-annual="399">39</span>
                                         <span class="fs-7 opacity-50">/
 												<span data-kt-element="period">Mon</span></span>
                                     </div>
@@ -7486,12 +8213,15 @@ License: For each use you must have a valid license purchased only from above li
                                 </label>
                                 <!--end::Tab link-->
                                 <!--begin::Tab link-->
-                                <label class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_advanced">
+                                <label
+                                    class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6"
+                                    data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_advanced">
                                     <!--end::Description-->
                                     <div class="d-flex align-items-center me-2">
                                         <!--begin::Radio-->
-                                        <div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-                                            <input class="form-check-input" type="radio" name="plan" value="advanced" />
+                                        <div
+                                            class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
+                                            <input class="form-check-input" type="radio" name="plan" value="advanced"/>
                                         </div>
                                         <!--end::Radio-->
                                         <!--begin::Info-->
@@ -7505,7 +8235,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Price-->
                                     <div class="ms-5">
                                         <span class="mb-2">$</span>
-                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="339" data-kt-plan-price-annual="3399">339</span>
+                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="339"
+                                              data-kt-plan-price-annual="3399">339</span>
                                         <span class="fs-7 opacity-50">/
 												<span data-kt-element="period">Mon</span></span>
                                     </div>
@@ -7513,18 +8244,24 @@ License: For each use you must have a valid license purchased only from above li
                                 </label>
                                 <!--end::Tab link-->
                                 <!--begin::Tab link-->
-                                <label class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_enterprise">
+                                <label
+                                    class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6"
+                                    data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_enterprise">
                                     <!--end::Description-->
                                     <div class="d-flex align-items-center me-2">
                                         <!--begin::Radio-->
-                                        <div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-                                            <input class="form-check-input" type="radio" name="plan" value="enterprise" />
+                                        <div
+                                            class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
+                                            <input class="form-check-input" type="radio" name="plan"
+                                                   value="enterprise"/>
                                         </div>
                                         <!--end::Radio-->
                                         <!--begin::Info-->
                                         <div class="flex-grow-1">
                                             <div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Enterprise
-                                                <span class="badge badge-light-success ms-2 py-2 px-3 fs-7">Popular</span></div>
+                                                <span
+                                                    class="badge badge-light-success ms-2 py-2 px-3 fs-7">Popular</span>
+                                            </div>
                                             <div class="fw-semibold opacity-75">Best value for 1000+ team</div>
                                         </div>
                                         <!--end::Info-->
@@ -7533,7 +8270,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Price-->
                                     <div class="ms-5">
                                         <span class="mb-2">$</span>
-                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="999" data-kt-plan-price-annual="9999">999</span>
+                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="999"
+                                              data-kt-plan-price-annual="9999">999</span>
                                         <span class="fs-7 opacity-50">/
 												<span data-kt-element="period">Mon</span></span>
                                     </div>
@@ -7541,12 +8279,15 @@ License: For each use you must have a valid license purchased only from above li
                                 </label>
                                 <!--end::Tab link-->
                                 <!--begin::Tab link-->
-                                <label class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_custom">
+                                <label
+                                    class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6"
+                                    data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_custom">
                                     <!--end::Description-->
                                     <div class="d-flex align-items-center me-2">
                                         <!--begin::Radio-->
-                                        <div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-                                            <input class="form-check-input" type="radio" name="plan" value="custom" />
+                                        <div
+                                            class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
+                                            <input class="form-check-input" type="radio" name="plan" value="custom"/>
                                         </div>
                                         <!--end::Radio-->
                                         <!--begin::Info-->
@@ -7577,7 +8318,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Heading-->
                                     <div class="pb-5">
                                         <h2 class="fw-bold text-gray-900">What’s in Startup Plan?</h2>
-                                        <div class="text-muted fw-semibold">Optimal for 10+ team size and new startup</div>
+                                        <div class="text-muted fw-semibold">Optimal for 10+ team size and new startup
+                                        </div>
                                     </div>
                                     <!--end::Heading-->
                                     <!--begin::Body-->
@@ -7602,7 +8344,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7620,7 +8363,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Accounting Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-muted flex-grow-1">Accounting Module</span>
                                             <i class="ki-duotone ki-cross-circle fs-1">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7629,7 +8373,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Network Platform</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-muted flex-grow-1">Network Platform</span>
                                             <i class="ki-duotone ki-cross-circle fs-1">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7638,7 +8383,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
                                             <i class="ki-duotone ki-cross-circle fs-1">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7654,7 +8400,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Heading-->
                                     <div class="pb-5">
                                         <h2 class="fw-bold text-gray-900">What’s in Startup Plan?</h2>
-                                        <div class="text-muted fw-semibold">Optimal for 100+ team size and grown company</div>
+                                        <div class="text-muted fw-semibold">Optimal for 100+ team size and grown
+                                            company
+                                        </div>
                                     </div>
                                     <!--end::Heading-->
                                     <!--begin::Body-->
@@ -7679,7 +8427,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7688,7 +8437,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7697,7 +8447,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7706,7 +8457,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Network Platform</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-muted flex-grow-1">Network Platform</span>
                                             <i class="ki-duotone ki-cross-circle fs-1">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7715,7 +8467,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
                                             <i class="ki-duotone ki-cross-circle fs-1">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7756,7 +8509,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7765,7 +8519,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7774,7 +8529,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7783,7 +8539,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Network Platform</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Network Platform</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7815,7 +8572,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="pt-1">
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Unlimited Users</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Unlimited Users</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7833,7 +8591,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7842,7 +8601,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7851,7 +8611,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7860,7 +8621,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Network Platform</span>
+                                            <span
+                                                class="fw-semibold fs-5 text-gray-700 flex-grow-1">Network Platform</span>
                                             <i class="ki-duotone ki-check-circle fs-1 text-success">
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
@@ -7977,7 +8739,8 @@ License: For each use you must have a valid license purchased only from above li
                         </div>
                         <!--end::Nav-->
                         <!--begin::Form-->
-                        <form class="mx-auto w-100 mw-600px pt-15 pb-10" novalidate="novalidate" id="kt_modal_create_project_form" method="post">
+                        <form class="mx-auto w-100 mw-600px pt-15 pb-10" novalidate="novalidate"
+                              id="kt_modal_create_project_form" method="post">
                             <!--begin::Type-->
                             <div class="current" data-kt-stepper-element="content">
                                 <!--begin::Wrapper-->
@@ -7996,9 +8759,11 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Input group-->
                                     <div class="fv-row mb-15" data-kt-buttons="true">
                                         <!--begin::Option-->
-                                        <label class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6 mb-6 active">
+                                        <label
+                                            class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6 mb-6 active">
                                             <!--begin::Input-->
-                                            <input class="btn-check" type="radio" checked="checked" name="project_type" value="1" />
+                                            <input class="btn-check" type="radio" checked="checked" name="project_type"
+                                                   value="1"/>
                                             <!--end::Input-->
                                             <!--begin::Label-->
                                             <span class="d-flex">
@@ -8020,9 +8785,10 @@ License: For each use you must have a valid license purchased only from above li
                                         </label>
                                         <!--end::Option-->
                                         <!--begin::Option-->
-                                        <label class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6">
+                                        <label
+                                            class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6">
                                             <!--begin::Input-->
-                                            <input class="btn-check" type="radio" name="project_type" value="2" />
+                                            <input class="btn-check" type="radio" name="project_type" value="2"/>
                                             <!--end::Input-->
                                             <!--begin::Label-->
                                             <span class="d-flex">
@@ -8046,10 +8812,12 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Input group-->
                                     <!--begin::Actions-->
                                     <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-lg btn-primary" data-kt-element="type-next">
+                                        <button type="button" class="btn btn-lg btn-primary"
+                                                data-kt-element="type-next">
                                             <span class="indicator-label">Project Settings</span>
                                             <span class="indicator-progress">Please wait...
-													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													<span
+                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                         </button>
                                     </div>
                                     <!--end::Actions-->
@@ -8086,8 +8854,10 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Icon-->
                                                 <!--begin::Info-->
                                                 <div class="ms-4">
-                                                    <h3 class="dfs-3 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                                                    <span class="fw-semibold fs-4 text-muted">Upload up to 10 files</span>
+                                                    <h3 class="dfs-3 fw-bold text-gray-900 mb-1">Drop files here or
+                                                        click to upload.</h3>
+                                                    <span
+                                                        class="fw-semibold fs-4 text-muted">Upload up to 10 files</span>
                                                 </div>
                                                 <!--end::Info-->
                                             </div>
@@ -8101,7 +8871,9 @@ License: For each use you must have a valid license purchased only from above li
                                         <label class="required fs-6 fw-semibold mb-2">Customer</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select..." name="settings_customer">
+                                        <select class="form-select form-select-solid" data-control="select2"
+                                                data-hide-search="true" data-placeholder="Select..."
+                                                name="settings_customer">
                                             <option></option>
                                             <option value="1">Keenthemes</option>
                                             <option value="2">CRM App</option>
@@ -8124,7 +8896,9 @@ License: For each use you must have a valid license purchased only from above li
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="text" class="form-control form-control-solid" placeholder="Enter Project Name" value="StockPro Mobile App" name="settings_name" />
+                                        <input type="text" class="form-control form-control-solid"
+                                               placeholder="Enter Project Name" value="StockPro Mobile App"
+                                               name="settings_name"/>
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->
@@ -8134,7 +8908,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <label class="required fs-6 fw-semibold mb-2">Project Description</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <textarea class="form-control form-control-solid" rows="3" placeholder="Enter Project Description" name="settings_description">Experience share market at your fingertips with TICK PRO stock investment mobile trading app</textarea>
+                                        <textarea class="form-control form-control-solid" rows="3"
+                                                  placeholder="Enter Project Description" name="settings_description">Experience share market at your fingertips with TICK PRO stock investment mobile trading app</textarea>
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->
@@ -8156,7 +8931,8 @@ License: For each use you must have a valid license purchased only from above li
                                             </i>
                                             <!--end::Icon-->
                                             <!--begin::Input-->
-                                            <input class="form-control form-control-solid ps-12" placeholder="Pick date range" name="settings_release_date" />
+                                            <input class="form-control form-control-solid ps-12"
+                                                   placeholder="Pick date range" name="settings_release_date"/>
                                             <!--end::Input-->
                                         </div>
                                         <!--end::Wrapper-->
@@ -8169,7 +8945,9 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Label-->
                                             <div class="me-5">
                                                 <label class="required fs-6 fw-semibold">Notifications</label>
-                                                <div class="fs-7 fw-semibold text-muted">Allow Notifications by Phone or Email</div>
+                                                <div class="fs-7 fw-semibold text-muted">Allow Notifications by Phone or
+                                                    Email
+                                                </div>
                                             </div>
                                             <!--end::Label-->
                                             <!--begin::Checkboxes-->
@@ -8177,7 +8955,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--begin::Checkbox-->
                                                 <label class="form-check form-check-custom form-check-solid me-10">
                                                     <!--begin::Input-->
-                                                    <input class="form-check-input h-20px w-20px" type="checkbox" value="email" name="settings_notifications[]" />
+                                                    <input class="form-check-input h-20px w-20px" type="checkbox"
+                                                           value="email" name="settings_notifications[]"/>
                                                     <!--end::Input-->
                                                     <!--begin::Label-->
                                                     <span class="form-check-label fw-semibold">Email</span>
@@ -8187,7 +8966,9 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--begin::Checkbox-->
                                                 <label class="form-check form-check-custom form-check-solid">
                                                     <!--begin::Input-->
-                                                    <input class="form-check-input h-20px w-20px" type="checkbox" value="phone" checked="checked" name="settings_notifications[]" />
+                                                    <input class="form-check-input h-20px w-20px" type="checkbox"
+                                                           value="phone" checked="checked"
+                                                           name="settings_notifications[]"/>
                                                     <!--end::Input-->
                                                     <!--begin::Label-->
                                                     <span class="form-check-label fw-semibold">Phone</span>
@@ -8202,11 +8983,15 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Input group-->
                                     <!--begin::Actions-->
                                     <div class="d-flex flex-stack">
-                                        <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="settings-previous">Project Type</button>
-                                        <button type="button" class="btn btn-lg btn-primary" data-kt-element="settings-next">
+                                        <button type="button" class="btn btn-lg btn-light me-3"
+                                                data-kt-element="settings-previous">Project Type
+                                        </button>
+                                        <button type="button" class="btn btn-lg btn-primary"
+                                                data-kt-element="settings-next">
                                             <span class="indicator-label">Budget</span>
                                             <span class="indicator-progress">Please wait...
-													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													<span
+                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                         </button>
                                     </div>
                                     <!--end::Actions-->
@@ -8234,7 +9019,9 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
                                             <span class="required">Setup Budget</span>
-                                            <span class="lh-1 ms-1" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="&lt;div class=&#039;p-4 rounded bg-light&#039;&gt; &lt;div class=&#039;d-flex flex-stack text-muted mb-4&#039;&gt; &lt;i class=&quot;ki-duotone ki-bank fs-3 me-3&quot;&gt;&lt;span class=&quot;path1&quot;&gt;&lt;/span&gt;&lt;span class=&quot;path2&quot;&gt;&lt;/span&gt;&lt;/i&gt; &lt;div class=&#039;fw-bold&#039;&gt;INCBANK **** 1245 STATEMENT&lt;/div&gt; &lt;/div&gt; &lt;div class=&#039;d-flex flex-stack fw-semibold text-gray-600&#039;&gt; &lt;div&gt;Amount&lt;/div&gt; &lt;div&gt;Transaction&lt;/div&gt; &lt;/div&gt; &lt;div class=&#039;separator separator-dashed my-2&#039;&gt;&lt;/div&gt; &lt;div class=&#039;d-flex flex-stack text-gray-900 fw-bold mb-2&#039;&gt; &lt;div&gt;USD345.00&lt;/div&gt; &lt;div&gt;KEENTHEMES*&lt;/div&gt; &lt;/div&gt; &lt;div class=&#039;d-flex flex-stack text-muted mb-2&#039;&gt; &lt;div&gt;USD75.00&lt;/div&gt; &lt;div&gt;Hosting fee&lt;/div&gt; &lt;/div&gt; &lt;div class=&#039;d-flex flex-stack text-muted&#039;&gt; &lt;div&gt;USD3,950.00&lt;/div&gt; &lt;div&gt;Payrol&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;">
+                                            <span class="lh-1 ms-1" data-bs-toggle="popover" data-bs-trigger="hover"
+                                                  data-bs-html="true"
+                                                  data-bs-content="&lt;div class=&#039;p-4 rounded bg-light&#039;&gt; &lt;div class=&#039;d-flex flex-stack text-muted mb-4&#039;&gt; &lt;i class=&quot;ki-duotone ki-bank fs-3 me-3&quot;&gt;&lt;span class=&quot;path1&quot;&gt;&lt;/span&gt;&lt;span class=&quot;path2&quot;&gt;&lt;/span&gt;&lt;/i&gt; &lt;div class=&#039;fw-bold&#039;&gt;INCBANK **** 1245 STATEMENT&lt;/div&gt; &lt;/div&gt; &lt;div class=&#039;d-flex flex-stack fw-semibold text-gray-600&#039;&gt; &lt;div&gt;Amount&lt;/div&gt; &lt;div&gt;Transaction&lt;/div&gt; &lt;/div&gt; &lt;div class=&#039;separator separator-dashed my-2&#039;&gt;&lt;/div&gt; &lt;div class=&#039;d-flex flex-stack text-gray-900 fw-bold mb-2&#039;&gt; &lt;div&gt;USD345.00&lt;/div&gt; &lt;div&gt;KEENTHEMES*&lt;/div&gt; &lt;/div&gt; &lt;div class=&#039;d-flex flex-stack text-muted mb-2&#039;&gt; &lt;div&gt;USD75.00&lt;/div&gt; &lt;div&gt;Hosting fee&lt;/div&gt; &lt;/div&gt; &lt;div class=&#039;d-flex flex-stack text-muted&#039;&gt; &lt;div&gt;USD3,950.00&lt;/div&gt; &lt;div&gt;Payrol&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;">
 														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
 															<span class="path1"></span>
 															<span class="path2"></span>
@@ -8244,9 +9031,15 @@ License: For each use you must have a valid license purchased only from above li
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Dialer-->
-                                        <div class="position-relative w-lg-250px" id="kt_modal_create_project_budget_setup" data-kt-dialer="true" data-kt-dialer-min="50" data-kt-dialer-max="50000" data-kt-dialer-step="100" data-kt-dialer-prefix="$" data-kt-dialer-decimals="2">
+                                        <div class="position-relative w-lg-250px"
+                                             id="kt_modal_create_project_budget_setup" data-kt-dialer="true"
+                                             data-kt-dialer-min="50" data-kt-dialer-max="50000"
+                                             data-kt-dialer-step="100" data-kt-dialer-prefix="$"
+                                             data-kt-dialer-decimals="2">
                                             <!--begin::Decrease control-->
-                                            <button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0" data-kt-dialer-control="decrease">
+                                            <button type="button"
+                                                    class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 start-0"
+                                                    data-kt-dialer-control="decrease">
                                                 <i class="ki-duotone ki-minus-circle fs-1">
                                                     <span class="path1"></span>
                                                     <span class="path2"></span>
@@ -8254,10 +9047,14 @@ License: For each use you must have a valid license purchased only from above li
                                             </button>
                                             <!--end::Decrease control-->
                                             <!--begin::Input control-->
-                                            <input type="text" class="form-control form-control-solid border-0 ps-12" data-kt-dialer-control="input" placeholder="Amount" name="budget_setup" readonly="readonly" value="$50" />
+                                            <input type="text" class="form-control form-control-solid border-0 ps-12"
+                                                   data-kt-dialer-control="input" placeholder="Amount"
+                                                   name="budget_setup" readonly="readonly" value="$50"/>
                                             <!--end::Input control-->
                                             <!--begin::Increase control-->
-                                            <button type="button" class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0" data-kt-dialer-control="increase">
+                                            <button type="button"
+                                                    class="btn btn-icon btn-active-color-gray-700 position-absolute translate-middle-y top-50 end-0"
+                                                    data-kt-dialer-control="increase">
                                                 <i class="ki-duotone ki-plus-circle fs-1">
                                                     <span class="path1"></span>
                                                     <span class="path2"></span>
@@ -8274,14 +9071,19 @@ License: For each use you must have a valid license purchased only from above li
                                         <label class="fs-6 fw-semibold mb-2">Budget Usage</label>
                                         <!--end::Label-->
                                         <!--begin::Row-->
-                                        <div class="row g-9" data-kt-buttons="true" data-kt-buttons-target="[data-kt-button='true']">
+                                        <div class="row g-9" data-kt-buttons="true"
+                                             data-kt-buttons-target="[data-kt-button='true']">
                                             <!--begin::Col-->
                                             <div class="col-md-6 col-lg-12 col-xxl-6">
                                                 <!--begin::Option-->
-                                                <label class="btn btn-outline btn-outline-dashed btn-active-light-primary active d-flex text-start p-6" data-kt-button="true">
+                                                <label
+                                                    class="btn btn-outline btn-outline-dashed btn-active-light-primary active d-flex text-start p-6"
+                                                    data-kt-button="true">
                                                     <!--begin::Radio-->
-                                                    <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-																<input class="form-check-input" type="radio" name="budget_usage" value="1" checked="checked" />
+                                                    <span
+                                                        class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+																<input class="form-check-input" type="radio"
+                                                                       name="budget_usage" value="1" checked="checked"/>
 															</span>
                                                     <!--end::Radio-->
                                                     <!--begin::Info-->
@@ -8297,10 +9099,14 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Col-->
                                             <div class="col-md-6 col-lg-12 col-xxl-6">
                                                 <!--begin::Option-->
-                                                <label class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6" data-kt-button="true">
+                                                <label
+                                                    class="btn btn-outline btn-outline-dashed btn-active-light-primary d-flex text-start p-6"
+                                                    data-kt-button="true">
                                                     <!--begin::Radio-->
-                                                    <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-																<input class="form-check-input" type="radio" name="budget_usage" value="2" />
+                                                    <span
+                                                        class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+																<input class="form-check-input" type="radio"
+                                                                       name="budget_usage" value="2"/>
 															</span>
                                                     <!--end::Radio-->
                                                     <!--begin::Info-->
@@ -8324,12 +9130,15 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Label-->
                                             <div class="me-5">
                                                 <label class="fs-6 fw-semibold">Allow Changes in Budget</label>
-                                                <div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+                                                <div class="fs-7 fw-semibold text-muted">If you need more info, please
+                                                    check budget planning
+                                                </div>
                                             </div>
                                             <!--end::Label-->
                                             <!--begin::Switch-->
                                             <label class="form-check form-switch form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="1" name="budget_allow" checked="checked" />
+                                                <input class="form-check-input" type="checkbox" value="1"
+                                                       name="budget_allow" checked="checked"/>
                                                 <span class="form-check-label fw-semibold text-muted">Allowed</span>
                                             </label>
                                             <!--end::Switch-->
@@ -8339,11 +9148,15 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Input group-->
                                     <!--begin::Actions-->
                                     <div class="d-flex flex-stack">
-                                        <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="budget-previous">Project Settings</button>
-                                        <button type="button" class="btn btn-lg btn-primary" data-kt-element="budget-next">
+                                        <button type="button" class="btn btn-lg btn-light me-3"
+                                                data-kt-element="budget-previous">Project Settings
+                                        </button>
+                                        <button type="button" class="btn btn-lg btn-primary"
+                                                data-kt-element="budget-next">
                                             <span class="indicator-label">Build Team</span>
                                             <span class="indicator-progress">Please wait...
-													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													<span
+                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                         </button>
                                     </div>
                                     <!--end::Actions-->
@@ -8372,7 +9185,9 @@ License: For each use you must have a valid license purchased only from above li
                                         <label class="fs-6 fw-semibold mb-2">Invite Teammates</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="text" class="form-control form-control-solid" placeholder="Add project memnbers by name or email.." name="invite_teammates" />
+                                        <input type="text" class="form-control form-control-solid"
+                                               placeholder="Add project memnbers by name or email.."
+                                               name="invite_teammates"/>
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->
@@ -8384,17 +9199,20 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Users-->
                                         <div class="mh-300px scroll-y me-n7 pe-7">
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-6.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-6.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Smith</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma
+                                                            Smith</a>
                                                         <div class="fw-semibold text-muted">smith@kpmg.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8402,7 +9220,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2" selected="selected">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8412,17 +9231,21 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <span class="symbol-label bg-light-danger text-danger fw-semibold">M</span>
+                                                        <span
+                                                            class="symbol-label bg-light-danger text-danger fw-semibold">M</span>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody
+                                                            Macy</a>
                                                         <div class="fw-semibold text-muted">melody@altbox.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8430,7 +9253,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1" selected="selected">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8440,17 +9264,20 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Max Smith</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Max
+                                                            Smith</a>
                                                         <div class="fw-semibold text-muted">max@kt.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8458,7 +9285,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3" selected="selected">Can Edit</option>
@@ -8468,17 +9296,20 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-5.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-5.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Sean Bean</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Sean
+                                                            Bean</a>
                                                         <div class="fw-semibold text-muted">sean@dellito.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8486,7 +9317,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2" selected="selected">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8496,17 +9328,20 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian Cox</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian
+                                                            Cox</a>
                                                         <div class="fw-semibold text-muted">brian@exchange.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8514,7 +9349,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3" selected="selected">Can Edit</option>
@@ -8524,17 +9360,21 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <span class="symbol-label bg-light-warning text-warning fw-semibold">C</span>
+                                                        <span
+                                                            class="symbol-label bg-light-warning text-warning fw-semibold">C</span>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela Collins</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela
+                                                            Collins</a>
                                                         <div class="fw-semibold text-muted">mik@pex.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8542,7 +9382,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2" selected="selected">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8552,17 +9393,20 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-9.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-9.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis
+                                                            Mitcham</a>
                                                         <div class="fw-semibold text-muted">f.mit@kpmg.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8570,7 +9414,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3" selected="selected">Can Edit</option>
@@ -8580,17 +9425,21 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <span class="symbol-label bg-light-danger text-danger fw-semibold">O</span>
+                                                        <span
+                                                            class="symbol-label bg-light-danger text-danger fw-semibold">O</span>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia Wild</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia
+                                                            Wild</a>
                                                         <div class="fw-semibold text-muted">olivia@corpmail.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8598,7 +9447,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2" selected="selected">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8608,17 +9458,21 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <span class="symbol-label bg-light-primary text-primary fw-semibold">N</span>
+                                                        <span
+                                                            class="symbol-label bg-light-primary text-primary fw-semibold">N</span>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Neil Owen</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Neil
+                                                            Owen</a>
                                                         <div class="fw-semibold text-muted">owen.neil@gmail.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8626,7 +9480,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1" selected="selected">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8636,17 +9491,20 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-23.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-23.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan Wilson</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan
+                                                            Wilson</a>
                                                         <div class="fw-semibold text-muted">dam@consilting.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8654,7 +9512,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3" selected="selected">Can Edit</option>
@@ -8664,17 +9523,21 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <span class="symbol-label bg-light-danger text-danger fw-semibold">E</span>
+                                                        <span
+                                                            class="symbol-label bg-light-danger text-danger fw-semibold">E</span>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Bold</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma
+                                                            Bold</a>
                                                         <div class="fw-semibold text-muted">emma@intenso.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8682,7 +9545,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2" selected="selected">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8692,17 +9556,20 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-12.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-12.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana Crown</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana
+                                                            Crown</a>
                                                         <div class="fw-semibold text-muted">ana.cf@limtel.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8710,7 +9577,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1" selected="selected">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8720,17 +9588,21 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <span class="symbol-label bg-light-info text-info fw-semibold">A</span>
+                                                        <span
+                                                            class="symbol-label bg-light-info text-info fw-semibold">A</span>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert Doe</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert
+                                                            Doe</a>
                                                         <div class="fw-semibold text-muted">robert@benko.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8738,7 +9610,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3" selected="selected">Can Edit</option>
@@ -8748,17 +9621,20 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-13.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-13.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John
+                                                            Miller</a>
                                                         <div class="fw-semibold text-muted">miller@mapple.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8766,7 +9642,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3" selected="selected">Can Edit</option>
@@ -8776,17 +9653,21 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <span class="symbol-label bg-light-success text-success fw-semibold">L</span>
+                                                        <span
+                                                            class="symbol-label bg-light-success text-success fw-semibold">L</span>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy Kunic</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy
+                                                            Kunic</a>
                                                         <div class="fw-semibold text-muted">lucy.m@fentech.com</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8794,7 +9675,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2" selected="selected">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8804,17 +9686,20 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
-                                            <div class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed">
                                                 <!--begin::Details-->
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-21.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-21.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan Wilder</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan
+                                                            Wilder</a>
                                                         <div class="fw-semibold text-muted">ethan@loop.com.au</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8822,7 +9707,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1" selected="selected">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3">Can Edit</option>
@@ -8837,12 +9723,14 @@ License: For each use you must have a valid license purchased only from above li
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px symbol-circle">
-                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-21.jpg') }}" />
+                                                        <img alt="Pic" src="{{ asset('/media/avatars/300-21.jpg') }}"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-5">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan Wilder</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan
+                                                            Wilder</a>
                                                         <div class="fw-semibold text-muted">ethan@loop.com.au</div>
                                                     </div>
                                                     <!--end::Details-->
@@ -8850,7 +9738,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Details-->
                                                 <!--begin::Access menu-->
                                                 <div class="ms-2 w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true">
                                                         <option value="1">Guest</option>
                                                         <option value="2">Owner</option>
                                                         <option value="3" selected="selected">Can Edit</option>
@@ -8868,23 +9757,29 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Label-->
                                         <div class="me-5 fw-semibold">
                                             <label class="fs-6">Adding Users by Team Members</label>
-                                            <div class="fs-7 text-muted">If you need more info, please check budget planning</div>
+                                            <div class="fs-7 text-muted">If you need more info, please check budget
+                                                planning
+                                            </div>
                                         </div>
                                         <!--end::Label-->
                                         <!--begin::Switch-->
                                         <label class="form-check form-switch form-check-custom form-check-solid">
-                                            <input class="form-check-input" type="checkbox" value="" checked="checked" />
+                                            <input class="form-check-input" type="checkbox" value="" checked="checked"/>
                                         </label>
                                         <!--end::Switch-->
                                     </div>
                                     <!--end::Notice-->
                                     <!--begin::Actions-->
                                     <div class="d-flex flex-stack">
-                                        <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="team-previous">Budget</button>
-                                        <button type="button" class="btn btn-lg btn-primary" data-kt-element="team-next">
+                                        <button type="button" class="btn btn-lg btn-light me-3"
+                                                data-kt-element="team-previous">Budget
+                                        </button>
+                                        <button type="button" class="btn btn-lg btn-primary"
+                                                data-kt-element="team-next">
                                             <span class="indicator-label">Set Target</span>
                                             <span class="indicator-progress">Please wait...
-													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													<span
+                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                         </button>
                                     </div>
                                     <!--end::Actions-->
@@ -8910,7 +9805,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Input group-->
                                     <div class="fv-row mb-8">
                                         <label class="fs-6 fw-semibold mb-2">Target Title</label>
-                                        <input type="text" class="form-control form-control-solid" placeholder="Enter Target Title" name="Project Launch" />
+                                        <input type="text" class="form-control form-control-solid"
+                                               placeholder="Enter Target Title" name="Project Launch"/>
                                     </div>
                                     <!--end::Input group-->
                                     <!--begin::Input group-->
@@ -8918,7 +9814,9 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Col-->
                                         <div class="col-md-6 fv-row">
                                             <label class="required fs-6 fw-semibold mb-2">Assign</label>
-                                            <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select a Team Member" name="target_assign">
+                                            <select class="form-select form-select-solid" data-control="select2"
+                                                    data-hide-search="true" data-placeholder="Select a Team Member"
+                                                    name="target_assign">
                                                 <option></option>
                                                 <option value="1">Karina Clark</option>
                                                 <option value="2" selected="selected">Robert Doe</option>
@@ -8943,7 +9841,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 </i>
                                                 <!--end::Icon-->
                                                 <!--begin::Datepicker-->
-                                                <input class="form-control form-control-solid ps-12" placeholder="Pick date range" name="target_due_date" />
+                                                <input class="form-control form-control-solid ps-12"
+                                                       placeholder="Pick date range" name="target_due_date"/>
                                                 <!--end::Datepicker-->
                                             </div>
                                         </div>
@@ -8953,13 +9852,15 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--begin::Input group-->
                                     <div class="fv-row mb-8">
                                         <label class="fs-6 fw-semibold mb-2">Target Details</label>
-                                        <textarea class="form-control form-control-solid" rows="2" name="target_details" placeholder="Type Target Details">Experience share market at your fingertips with TICK PRO stock investment mobile trading app</textarea>
+                                        <textarea class="form-control form-control-solid" rows="2" name="target_details"
+                                                  placeholder="Type Target Details">Experience share market at your fingertips with TICK PRO stock investment mobile trading app</textarea>
                                     </div>
                                     <!--end::Input group-->
                                     <!--begin::Input group-->
                                     <div class="fv-row mb-8">
                                         <label class="required fs-6 fw-semibold mb-2">Tags</label>
-                                        <input class="form-control form-control-solid" value="Important, Urgent" name="target_tags" />
+                                        <input class="form-control form-control-solid" value="Important, Urgent"
+                                               name="target_tags"/>
                                     </div>
                                     <!--end::Input group-->
                                     <!--begin::Input group-->
@@ -8969,12 +9870,15 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Label-->
                                             <div class="me-5">
                                                 <label class="fs-6 fw-semibold">Allow Changes in Budget</label>
-                                                <div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+                                                <div class="fs-7 fw-semibold text-muted">If you need more info, please
+                                                    check budget planning
+                                                </div>
                                             </div>
                                             <!--end::Label-->
                                             <!--begin::Switch-->
                                             <label class="form-check form-switch form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="1" name="target_allow" checked="checked" />
+                                                <input class="form-check-input" type="checkbox" value="1"
+                                                       name="target_allow" checked="checked"/>
                                                 <span class="form-check-label fw-semibold text-muted">Allowed</span>
                                             </label>
                                             <!--end::Switch-->
@@ -8989,7 +9893,9 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Label-->
                                             <div class="me-5">
                                                 <label class="fs-6 fw-semibold">Notifications</label>
-                                                <div class="fs-7 fw-semibold text-muted">Allow Notifications by Phone or Email</div>
+                                                <div class="fs-7 fw-semibold text-muted">Allow Notifications by Phone or
+                                                    Email
+                                                </div>
                                             </div>
                                             <!--end::Label-->
                                             <!--begin::Checkboxes-->
@@ -8997,7 +9903,8 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--begin::Checkbox-->
                                                 <label class="form-check form-check-custom form-check-solid me-10">
                                                     <!--begin::Input-->
-                                                    <input class="form-check-input h-20px w-20px" type="checkbox" value="email" name="target_notifications[]" />
+                                                    <input class="form-check-input h-20px w-20px" type="checkbox"
+                                                           value="email" name="target_notifications[]"/>
                                                     <!--end::Input-->
                                                     <!--begin::Label-->
                                                     <span class="form-check-label fw-semibold">Email</span>
@@ -9007,7 +9914,9 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--begin::Checkbox-->
                                                 <label class="form-check form-check-custom form-check-solid">
                                                     <!--begin::Input-->
-                                                    <input class="form-check-input h-20px w-20px" type="checkbox" value="phone" checked="checked" name="target_notifications[]" />
+                                                    <input class="form-check-input h-20px w-20px" type="checkbox"
+                                                           value="phone" checked="checked"
+                                                           name="target_notifications[]"/>
                                                     <!--end::Input-->
                                                     <!--begin::Label-->
                                                     <span class="form-check-label fw-semibold">Phone</span>
@@ -9022,11 +9931,15 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Input group-->
                                     <!--begin::Actions-->
                                     <div class="d-flex flex-stack">
-                                        <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="targets-previous">Build a Team</button>
-                                        <button type="button" class="btn btn-lg btn-primary" data-kt-element="targets-next">
+                                        <button type="button" class="btn btn-lg btn-light me-3"
+                                                data-kt-element="targets-previous">Build a Team
+                                        </button>
+                                        <button type="button" class="btn btn-lg btn-primary"
+                                                data-kt-element="targets-next">
                                             <span class="indicator-label">Upload Files</span>
                                             <span class="indicator-progress">Please wait...
-													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													<span
+                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                         </button>
                                     </div>
                                     <!--end::Actions-->
@@ -9063,8 +9976,10 @@ License: For each use you must have a valid license purchased only from above li
                                                 <!--end::Icon-->
                                                 <!--begin::Info-->
                                                 <div class="ms-4">
-                                                    <h3 class="dfs-3 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                                                    <span class="fw-semibold fs-4 text-muted">Upload up to 10 files</span>
+                                                    <h3 class="dfs-3 fw-bold text-gray-900 mb-1">Drop files here or
+                                                        click to upload.</h3>
+                                                    <span
+                                                        class="fw-semibold fs-4 text-muted">Upload up to 10 files</span>
                                                 </div>
                                                 <!--end::Info-->
                                             </div>
@@ -9080,23 +9995,28 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--begin::Files-->
                                         <div class="mh-300px scroll-y me-n7 pe-7">
                                             <!--begin::File-->
-                                            <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px">
-                                                        <img src="{{ asset('/media/svg/files/pdf.svg') }}" alt="icon" />
+                                                        <img src="{{ asset('/media/svg/files/pdf.svg') }}" alt="icon"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-6">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Avionica Technical Requirements</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Avionica
+                                                            Technical Requirements</a>
                                                         <div class="fw-semibold text-muted">230kb</div>
                                                     </div>
                                                     <!--end::Details-->
                                                 </div>
                                                 <!--begin::Menu-->
                                                 <div class="min-w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true"
+                                                            data-placeholder="Edit">
                                                         <option></option>
                                                         <option value="1">Remove</option>
                                                         <option value="2">Modify</option>
@@ -9107,23 +10027,28 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::File-->
                                             <!--begin::File-->
-                                            <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px">
-                                                        <img src="{{ asset('/media/svg/files/doc.svg') }}" alt="icon" />
+                                                        <img src="{{ asset('/media/svg/files/doc.svg') }}" alt="icon"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-6">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">9 Degree CURD draftplan</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">9
+                                                            Degree CURD draftplan</a>
                                                         <div class="fw-semibold text-muted">3.6mb</div>
                                                     </div>
                                                     <!--end::Details-->
                                                 </div>
                                                 <!--begin::Menu-->
                                                 <div class="min-w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true"
+                                                            data-placeholder="Edit">
                                                         <option></option>
                                                         <option value="1">Remove</option>
                                                         <option value="2">Modify</option>
@@ -9134,23 +10059,28 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::File-->
                                             <!--begin::File-->
-                                            <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px">
-                                                        <img src="{{ asset('/media/svg/files/css.svg') }}" alt="icon" />
+                                                        <img src="{{ asset('/media/svg/files/css.svg') }}" alt="icon"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-6">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">User CRUD Styles</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">User
+                                                            CRUD Styles</a>
                                                         <div class="fw-semibold text-muted">85kb</div>
                                                     </div>
                                                     <!--end::Details-->
                                                 </div>
                                                 <!--begin::Menu-->
                                                 <div class="min-w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true"
+                                                            data-placeholder="Edit">
                                                         <option></option>
                                                         <option value="1">Remove</option>
                                                         <option value="2">Modify</option>
@@ -9161,23 +10091,28 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <!--end::File-->
                                             <!--begin::File-->
-                                            <div class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
+                                            <div
+                                                class="d-flex flex-stack py-4 border border-top-0 border-left-0 border-right-0 border-dashed">
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px">
-                                                        <img src="{{ asset('/media/svg/files/ai.svg') }}" alt="icon" />
+                                                        <img src="{{ asset('/media/svg/files/ai.svg') }}" alt="icon"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-6">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Design Initial Logo</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Design
+                                                            Initial Logo</a>
                                                         <div class="fw-semibold text-muted">40kb</div>
                                                     </div>
                                                     <!--end::Details-->
                                                 </div>
                                                 <!--begin::Menu-->
                                                 <div class="min-w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true"
+                                                            data-placeholder="Edit">
                                                         <option></option>
                                                         <option value="1">Remove</option>
                                                         <option value="2">Modify</option>
@@ -9192,19 +10127,23 @@ License: For each use you must have a valid license purchased only from above li
                                                 <div class="d-flex align-items-center">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-35px">
-                                                        <img src="{{ asset('/media/svg/files/tif.svg') }}" alt="icon" />
+                                                        <img src="{{ asset('/media/svg/files/tif.svg') }}" alt="icon"/>
                                                     </div>
                                                     <!--end::Avatar-->
                                                     <!--begin::Details-->
                                                     <div class="ms-6">
-                                                        <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Tower Hill Bilboard</a>
+                                                        <a href="#"
+                                                           class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Tower
+                                                            Hill Bilboard</a>
                                                         <div class="fw-semibold text-muted">27mb</div>
                                                     </div>
                                                     <!--end::Details-->
                                                 </div>
                                                 <!--begin::Menu-->
                                                 <div class="min-w-100px">
-                                                    <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" data-placeholder="Edit">
+                                                    <select class="form-select form-select-solid form-select-sm"
+                                                            data-control="select2" data-hide-search="true"
+                                                            data-placeholder="Edit">
                                                         <option></option>
                                                         <option value="1">Remove</option>
                                                         <option value="2">Modify</option>
@@ -9225,12 +10164,15 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Label-->
                                             <div class="me-5">
                                                 <label class="fs-6 fw-semibold">Allow Changes in Budget</label>
-                                                <div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+                                                <div class="fs-7 fw-semibold text-muted">If you need more info, please
+                                                    check budget planning
+                                                </div>
                                             </div>
                                             <!--end::Label-->
                                             <!--begin::Switch-->
                                             <label class="form-check form-switch form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="1" name="target_allow" checked="checked" />
+                                                <input class="form-check-input" type="checkbox" value="1"
+                                                       name="target_allow" checked="checked"/>
                                                 <span class="form-check-label fw-semibold text-muted">Allowed</span>
                                             </label>
                                             <!--end::Switch-->
@@ -9240,11 +10182,15 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Input group-->
                                     <!--begin::Actions-->
                                     <div class="d-flex flex-stack">
-                                        <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="files-previous">Set First Target</button>
-                                        <button type="button" class="btn btn-lg btn-primary" data-kt-element="files-next">
+                                        <button type="button" class="btn btn-lg btn-light me-3"
+                                                data-kt-element="files-previous">Set First Target
+                                        </button>
+                                        <button type="button" class="btn btn-lg btn-primary"
+                                                data-kt-element="files-next">
                                             <span class="indicator-label">Complete</span>
                                             <span class="indicator-progress">Please wait...
-													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													<span
+                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                         </button>
                                     </div>
                                     <!--end::Actions-->
@@ -9262,19 +10208,25 @@ License: For each use you must have a valid license purchased only from above li
                                         <h1 class="fw-bold text-gray-900">Project Created!</h1>
                                         <!--end::Title-->
                                         <!--begin::Description-->
-                                        <div class="text-muted fw-semibold fs-4">If you need more info, please check how to create project</div>
+                                        <div class="text-muted fw-semibold fs-4">If you need more info, please check how
+                                            to create project
+                                        </div>
                                         <!--end::Description-->
                                     </div>
                                     <!--end::Heading-->
                                     <!--begin::Actions-->
                                     <div class="d-flex flex-center pb-20">
-                                        <button type="button" class="btn btn-lg btn-light me-3" data-kt-element="complete-start">Create New Project</button>
-                                        <a href="" class="btn btn-lg btn-primary" data-bs-toggle="tooltip" title="Coming Soon">View Project</a>
+                                        <button type="button" class="btn btn-lg btn-light me-3"
+                                                data-kt-element="complete-start">Create New Project
+                                        </button>
+                                        <a href="" class="btn btn-lg btn-primary" data-bs-toggle="tooltip"
+                                           title="Coming Soon">View Project</a>
                                     </div>
                                     <!--end::Actions-->
                                     <!--begin::Illustration-->
                                     <div class="text-center px-4">
-                                        <img src="{{ asset('/media/illustrations/sketchy-1/9.png') }}" alt="" class="mww-100 mh-350px" />
+                                        <img src="{{ asset('/media/illustrations/sketchy-1/9.png') }}" alt=""
+                                             class="mww-100 mh-350px"/>
                                     </div>
                                     <!--end::Illustration-->
                                 </div>
@@ -9321,11 +10273,12 @@ License: For each use you must have a valid license purchased only from above li
                 </div>
                 <!--end::Content-->
                 <!--begin::Search-->
-                <div id="kt_modal_users_search_handler" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="inline">
+                <div id="kt_modal_users_search_handler" data-kt-search-keypress="true" data-kt-search-min-length="2"
+                     data-kt-search-enter="enter" data-kt-search-layout="inline">
                     <!--begin::Form-->
                     <form data-kt-search-element="form" class="w-100 position-relative mb-5" autocomplete="off">
                         <!--begin::Hidden input(Added to disable form autocomplete)-->
-                        <input type="hidden" />
+                        <input type="hidden"/>
                         <!--end::Hidden input-->
                         <!--begin::Icon-->
                         <i class="ki-duotone ki-magnifier fs-2 fs-lg-1 text-gray-500 position-absolute top-50 ms-5 translate-middle-y">
@@ -9334,15 +10287,20 @@ License: For each use you must have a valid license purchased only from above li
                         </i>
                         <!--end::Icon-->
                         <!--begin::Input-->
-                        <input type="text" class="form-control form-control-lg form-control-solid px-15" name="search" value="" placeholder="Search by username, full name or email..." data-kt-search-element="input" />
+                        <input type="text" class="form-control form-control-lg form-control-solid px-15" name="search"
+                               value="" placeholder="Search by username, full name or email..."
+                               data-kt-search-element="input"/>
                         <!--end::Input-->
                         <!--begin::Spinner-->
-                        <span class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-5" data-kt-search-element="spinner">
+                        <span class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-5"
+                              data-kt-search-element="spinner">
 									<span class="spinner-border h-15px w-15px align-middle text-muted"></span>
 								</span>
                         <!--end::Spinner-->
                         <!--begin::Reset-->
-                        <span class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 me-5 d-none" data-kt-search-element="clear">
+                        <span
+                            class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 me-5 d-none"
+                            data-kt-search-element="clear">
 									<i class="ki-duotone ki-cross fs-2 fs-lg-1 me-0">
 										<span class="path1"></span>
 										<span class="path2"></span>
@@ -9361,10 +10319,11 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Users-->
                             <div class="mh-375px scroll-y me-n7 pe-7">
                                 <!--begin::User-->
-                                <a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+                                <a href="#"
+                                   class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle me-5">
-                                        <img alt="Pic" src="{{ asset('/media/avatars/300-6.jpg') }}" />
+                                        <img alt="Pic" src="{{ asset('/media/avatars/300-6.jpg') }}"/>
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Info-->
@@ -9376,7 +10335,8 @@ License: For each use you must have a valid license purchased only from above li
                                 </a>
                                 <!--end::User-->
                                 <!--begin::User-->
-                                <a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+                                <a href="#"
+                                   class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle me-5">
                                         <span class="symbol-label bg-light-danger text-danger fw-semibold">M</span>
@@ -9391,10 +10351,11 @@ License: For each use you must have a valid license purchased only from above li
                                 </a>
                                 <!--end::User-->
                                 <!--begin::User-->
-                                <a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+                                <a href="#"
+                                   class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle me-5">
-                                        <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                        <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Info-->
@@ -9406,10 +10367,11 @@ License: For each use you must have a valid license purchased only from above li
                                 </a>
                                 <!--end::User-->
                                 <!--begin::User-->
-                                <a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+                                <a href="#"
+                                   class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle me-5">
-                                        <img alt="Pic" src="{{ asset('/media/avatars/300-5.jpg') }}" />
+                                        <img alt="Pic" src="{{ asset('/media/avatars/300-5.jpg') }}"/>
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Info-->
@@ -9421,10 +10383,11 @@ License: For each use you must have a valid license purchased only from above li
                                 </a>
                                 <!--end::User-->
                                 <!--begin::User-->
-                                <a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
+                                <a href="#"
+                                   class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle me-5">
-                                        <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                        <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Info-->
@@ -9449,17 +10412,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='0']" value="0" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='0']"
+                                                   value="0"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-6.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-6.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Smith</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma
+                                                Smith</a>
                                             <div class="fw-semibold text-muted">smith@kpmg.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9467,7 +10433,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2" selected="selected">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9485,7 +10452,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='1']" value="1" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='1']"
+                                                   value="1"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
@@ -9495,7 +10464,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody
+                                                Macy</a>
                                             <div class="fw-semibold text-muted">melody@altbox.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9503,7 +10473,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1" selected="selected">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9521,17 +10492,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='2']" value="2" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='2']"
+                                                   value="2"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-1.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Max Smith</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Max
+                                                Smith</a>
                                             <div class="fw-semibold text-muted">max@kt.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9539,7 +10513,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3" selected="selected">Can Edit</option>
@@ -9557,17 +10532,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='3']" value="3" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='3']"
+                                                   value="3"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-5.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-5.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Sean Bean</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Sean
+                                                Bean</a>
                                             <div class="fw-semibold text-muted">sean@dellito.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9575,7 +10553,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2" selected="selected">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9593,17 +10572,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='4']" value="4" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='4']"
+                                                   value="4"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-25.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian Cox</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Brian
+                                                Cox</a>
                                             <div class="fw-semibold text-muted">brian@exchange.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9611,7 +10593,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3" selected="selected">Can Edit</option>
@@ -9629,17 +10612,21 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='5']" value="5" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='5']"
+                                                   value="5"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <span class="symbol-label bg-light-warning text-warning fw-semibold">C</span>
+                                            <span
+                                                class="symbol-label bg-light-warning text-warning fw-semibold">C</span>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela Collins</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Mikaela
+                                                Collins</a>
                                             <div class="fw-semibold text-muted">mik@pex.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9647,7 +10634,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2" selected="selected">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9665,17 +10653,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='6']" value="6" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='6']"
+                                                   value="6"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-9.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-9.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis
+                                                Mitcham</a>
                                             <div class="fw-semibold text-muted">f.mit@kpmg.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9683,7 +10674,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3" selected="selected">Can Edit</option>
@@ -9701,7 +10693,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='7']" value="7" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='7']"
+                                                   value="7"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
@@ -9711,7 +10705,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia Wild</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia
+                                                Wild</a>
                                             <div class="fw-semibold text-muted">olivia@corpmail.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9719,7 +10714,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2" selected="selected">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9737,17 +10733,21 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='8']" value="8" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='8']"
+                                                   value="8"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <span class="symbol-label bg-light-primary text-primary fw-semibold">N</span>
+                                            <span
+                                                class="symbol-label bg-light-primary text-primary fw-semibold">N</span>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Neil Owen</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Neil
+                                                Owen</a>
                                             <div class="fw-semibold text-muted">owen.neil@gmail.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9755,7 +10755,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1" selected="selected">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9773,17 +10774,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='9']" value="9" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='9']"
+                                                   value="9"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-23.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-23.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan Wilson</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Dan
+                                                Wilson</a>
                                             <div class="fw-semibold text-muted">dam@consilting.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9791,7 +10795,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3" selected="selected">Can Edit</option>
@@ -9809,7 +10814,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='10']" value="10" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='10']"
+                                                   value="10"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
@@ -9819,7 +10826,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma Bold</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Emma
+                                                Bold</a>
                                             <div class="fw-semibold text-muted">emma@intenso.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9827,7 +10835,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2" selected="selected">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9845,17 +10854,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='11']" value="11" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='11']"
+                                                   value="11"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-12.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-12.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana Crown</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana
+                                                Crown</a>
                                             <div class="fw-semibold text-muted">ana.cf@limtel.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9863,7 +10875,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1" selected="selected">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9881,7 +10894,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='12']" value="12" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='12']"
+                                                   value="12"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
@@ -9891,7 +10906,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert Doe</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Robert
+                                                Doe</a>
                                             <div class="fw-semibold text-muted">robert@benko.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9899,7 +10915,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3" selected="selected">Can Edit</option>
@@ -9917,17 +10934,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='13']" value="13" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='13']"
+                                                   value="13"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-13.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-13.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John Miller</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">John
+                                                Miller</a>
                                             <div class="fw-semibold text-muted">miller@mapple.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9935,7 +10955,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3" selected="selected">Can Edit</option>
@@ -9953,17 +10974,21 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='14']" value="14" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='14']"
+                                                   value="14"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <span class="symbol-label bg-light-success text-success fw-semibold">L</span>
+                                            <span
+                                                class="symbol-label bg-light-success text-success fw-semibold">L</span>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy Kunic</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Lucy
+                                                Kunic</a>
                                             <div class="fw-semibold text-muted">lucy.m@fentech.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -9971,7 +10996,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2" selected="selected">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -9989,17 +11015,20 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='15']" value="15" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='15']"
+                                                   value="15"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle">
-                                            <img alt="Pic" src="{{ asset('/media/avatars/300-21.jpg') }}" />
+                                            <img alt="Pic" src="{{ asset('/media/avatars/300-21.jpg') }}"/>
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan Wilder</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ethan
+                                                Wilder</a>
                                             <div class="fw-semibold text-muted">ethan@loop.com.au</div>
                                         </div>
                                         <!--end::Details-->
@@ -10007,7 +11036,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1" selected="selected">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3">Can Edit</option>
@@ -10025,7 +11055,9 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="d-flex align-items-center">
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" name="users" data-kt-check="true" data-kt-check-target="[data-user-id='16']" value="16" />
+                                            <input class="form-check-input" type="checkbox" name="users"
+                                                   data-kt-check="true" data-kt-check-target="[data-user-id='16']"
+                                                   value="16"/>
                                         </label>
                                         <!--end::Checkbox-->
                                         <!--begin::Avatar-->
@@ -10035,7 +11067,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Avatar-->
                                         <!--begin::Details-->
                                         <div class="ms-5">
-                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
+                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody
+                                                Macy</a>
                                             <div class="fw-semibold text-muted">melody@altbox.com</div>
                                         </div>
                                         <!--end::Details-->
@@ -10043,7 +11076,8 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Details-->
                                     <!--begin::Access menu-->
                                     <div class="ms-2 w-100px">
-                                        <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
+                                        <select class="form-select form-select-solid form-select-sm"
+                                                data-control="select2" data-hide-search="true">
                                             <option value="1">Guest</option>
                                             <option value="2">Owner</option>
                                             <option value="3" selected="selected">Can Edit</option>
@@ -10056,8 +11090,12 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Users-->
                             <!--begin::Actions-->
                             <div class="d-flex flex-center mt-15">
-                                <button type="reset" id="kt_modal_users_search_reset" data-bs-dismiss="modal" class="btn btn-active-light me-3">Cancel</button>
-                                <button type="submit" id="kt_modal_users_search_submit" class="btn btn-primary">Add Selected Users</button>
+                                <button type="reset" id="kt_modal_users_search_reset" data-bs-dismiss="modal"
+                                        class="btn btn-active-light me-3">Cancel
+                                </button>
+                                <button type="submit" id="kt_modal_users_search_submit" class="btn btn-primary">Add
+                                    Selected Users
+                                </button>
                             </div>
                             <!--end::Actions-->
                         </div>
@@ -10072,7 +11110,8 @@ License: For each use you must have a valid license purchased only from above li
                             <!--end::Message-->
                             <!--begin::Illustration-->
                             <div class="text-center px-5">
-                                <img src="{{ asset('/media/illustrations/sketchy-1/1.png') }}" alt="" class="w-100 h-200px h-sm-325px" />
+                                <img src="{{ asset('/media/illustrations/sketchy-1/1.png') }}" alt=""
+                                     class="w-100 h-200px h-sm-325px"/>
                             </div>
                             <!--end::Illustration-->
                         </div>
@@ -10091,7 +11130,7 @@ License: For each use you must have a valid license purchased only from above li
 <!--end::Modal - Users Search-->
 <!--end::Modals-->
 <!--begin::Javascript-->
-@include("layout.partials.javascript")
+@include("dashboard.partials.javascript")
 <!--end::Custom Javascript-->
 <!--end::Javascript-->
 </body>
