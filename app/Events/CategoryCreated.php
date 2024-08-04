@@ -37,7 +37,7 @@ class CategoryCreated implements ShouldBroadcastNow
         ];
     }
 
-    public function broadcastWith()
+    public function broadcastWith(): array
     {
         return ['category' => $this->category->toArray()];
     }

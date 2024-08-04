@@ -30,6 +30,7 @@ class AddCategory extends Command
         $category = Category::create([
             "name" => "pashatest",
             "description" => "test",
+            "type" => "test"
         ]);
         event(new CategoryCreated($category));
     }

@@ -32,6 +32,19 @@ class AddCategory extends Component
         $this->reset(['name', 'description', 'type']);
     }
 
+    public function getListeners(): array
+    {
+        return [
+            'echo:categories,CategoryCreated' => 'updateCategories',
+        ];
+    }
+
+    public function updateCategories($event): void
+    {
+        $this->categories = Category::all();
+    }
+
+
     public function render()
     {
         return view('livewire.categories.add-category');
